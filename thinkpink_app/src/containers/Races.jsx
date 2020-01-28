@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./Races.module.css";
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../constants";
+import NavbarDark from "../components/NavbarDark.jsx";
+
 
 const Races = () => {
   return (
     <div>
-        <NavLink to={ROUTES.home}>Home</NavLink> 
-        <NavLink to={ROUTES.races}>Kies een race</NavLink> 
+          <NavbarDark />
           <p>Dit is de racepagina</p>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
     </div>
