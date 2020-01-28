@@ -6,7 +6,8 @@ const Home = () => {
   return (
     <div>
         <NavbarDark />
-        <p>Dit is de homePagina</p>
+      <p>Dit is de homePagina</p>
+      <button className="App-button_primair">Primaire button</button>
     </div>
   );
 };

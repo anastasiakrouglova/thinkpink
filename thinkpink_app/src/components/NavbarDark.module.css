@@ -1,0 +1,23 @@
+.nav_link__text {
+    color: white;
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+}
+
+
+.nav_link__active {
+    text-decoration: underline;
+}
+
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+
+}
+
+
+

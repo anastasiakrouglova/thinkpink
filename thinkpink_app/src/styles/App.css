@@ -1,3 +1,5 @@
+@import "./typo.module.css";
+
 .App {
   text-align: center;
 }
@@ -5,11 +7,13 @@
 .App-logo {
   height: 10vmin;
   pointer-events: none;
+  padding: 1rem;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    //transition: background-image 4s;
   }
 } */
 
@@ -18,8 +22,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -28,11 +30,55 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.App-button_primair {
+  font-family: "poppinsextrabold_italic";
+  padding: 14px 32px;
+  background-image: linear-gradient(60deg, #FF6D9E, #F980B3);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, .5);
+  margin: 1rem;
+  transition: background-image 0.5s;
+  cursor: pointer;
+}
+
+.App-button_primair:focus {
+  outline: none;
+}
+
+.App-button_primair:hover {
+  box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, .2);
+  transform: scale(1.1);
+  transition: all ease-in-out 0.2s;
+}
+
+
+/* .button {
+  background-image: linear-gradient(78deg, #46bdff 0%, #1379ff 100%);
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  border: none;
+  color: white;
+
+  height: 4rem;
+  width: 15rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  transition: transform ease-in 60ms;
+} */
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
