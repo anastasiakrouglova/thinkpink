@@ -51,7 +51,47 @@
 .App-button_primair:hover {
   box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, .2);
   transform: scale(1.1);
-  transition: all ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+}
+
+
+.App-input_search {
+  width: 80vw;
+  display: flex;
+  border: none;
+  border-radius: 20rem;
+  padding: 0.6rem;
+  padding-left: 0.8rem;
+  margin: 2rem;
+}
+
+.App-input_search:focus {
+  outline: none;
+}
+
+.App-input_container {
+  display: flex;
+  justify-content: center;
+}
+
+.App-input_search__button {
+  height: 2rem;
+  background-color: #E6618F;
+  border: none;
+  margin-right:4rem;
+  margin-top: 2rem;
+  margin-left: -4rem;
+  width: 3rem;
+  border-radius: 0 1rem 1rem 1rem;
+  transition: 0.2s
+}
+
+.App-input_search__button:focus {
+outline: none;
+}
+
+.App-input_search__button:hover {
+  background-color: #D03971;
 }
 
 

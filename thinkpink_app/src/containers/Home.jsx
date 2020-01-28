@@ -8,6 +8,7 @@ const Home = () => {
         <NavbarDark />
       <p>Dit is de homePagina</p>
       <button className="App-button_primair">Primaire button</button>
+      <a class={styles.play_btn} href="#"></a>
     </div>
   );
 };

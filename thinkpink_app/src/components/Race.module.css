@@ -1,0 +1,48 @@
+.race_container {
+    background-color: white;
+    width: 40vw;
+    color: black;
+    border-radius: 0.5rem;
+    display: flex;
+    text-decoration: none;
+}
+
+.race_textcontainer{
+    margin: 0.5rem;
+}
+
+
+.race_city{
+    color: #83344E;
+    text-decoration: none;
+}
+
+
+.race_country {
+    color: #83344E;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.race_quantity {
+    opacity: 0.5;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.race_quantity__teams {
+    display: flex;
+}
+
+.race_quantity__people {
+
+}
+
+.race_date {
+    background-color: #E6618F;
+    display: flex;
+    color: white;
+    padding: 0.9rem;
+}
