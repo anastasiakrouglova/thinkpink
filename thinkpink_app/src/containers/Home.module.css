@@ -1,6 +1,29 @@
 body {
     background: #444;
+    height: 100vh;
   }
+
+
+  .container {
+    height: 100vh;
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 3;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
+    height: 20rem;
+  }
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+
+
   
   .play_btn {
     width: 100px;
