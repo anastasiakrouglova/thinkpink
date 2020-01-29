@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Home.module.css";
 import NavbarDark from "../components/NavbarDark.jsx";
 import Video from "../components/Video.jsx"
@@ -7,6 +7,7 @@ import { render } from 'react-dom'
 import { VideoScroll } from 'react-video-scroll'
 
 import { Controller, Scene } from "react-scrollmagic";
+import Sequence from "../components/Sequence.jsx";
 
 // const setStyles = (wrapperEl, videoEl, playbackRate) => {
 //   wrapperEl.style.marginTop = `calc(180% - ${Math.floor(videoEl.duration) *
@@ -18,6 +19,7 @@ import { Controller, Scene } from "react-scrollmagic";
 // }
 
 function Home() {
+  const ref = useRef();
   return (
     <div className={styles.container}>
       <div className={styles.navbar}><NavbarDark className={styles.navbar} /></div>
@@ -26,7 +28,8 @@ function Home() {
         <Scene duration="200%" triggerHook="onLeave" pin>
             {progress => (
             <div style={{ height: "100vh", position: "relative" }}>
-              <Video progress={progress}/>
+              {/* <Video ref={ref} progress={progress}/> */}
+              <Sequence ref={ref} progress={progress} />
               </div>
             )}
           </Scene>
