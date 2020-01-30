@@ -1,4 +1,4 @@
-import { Shoes } from "../assets/imgsequence2";
+import { Shoes } from "../assets/imgsequence";
 import { useImage } from "../containers/hooks.jsx";
 
 const ShoesArray = () => {
