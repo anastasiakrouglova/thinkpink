@@ -20,10 +20,21 @@ function Home() {
       </section>
 
       <section className={styles.section2}>
-        <p className={styles.number}>01</p>
-        <p className={styles.h1}>Wat is race for the cure?</p>
-        <p className={styles.body}>Race For The Cure is een sportief evenement waarin solidariteit een belangrijke rol speelt in het gevecht tegen borstkanker. De race is origineel onstaat vanuit een initiatief van ‘Think Pink’’. Deze race heeft zich ondertussen uitgebreid over meer dan 20 landen in het Europees continent. De hele dag is gevuld met animatie en intense emoties.</p>
-        <video src="../assets/video/test.mp4"></video>
+        <div>
+          <p className={styles.number}>01</p>
+          <p className={styles.h1}>Wat is race for the cure?</p>
+          <p className={styles.body}>Race For The Cure is een sportief evenement waarin solidariteit een belangrijke rol speelt in het gevecht tegen borstkanker. De race is origineel onstaat vanuit een initiatief van ‘Think Pink’’. Deze race heeft zich ondertussen uitgebreid over meer dan 20 landen in het Europees continent. De hele dag is gevuld met animatie en intense emoties.</p>
+        </div>
+        <iframe className={styles.video} width="520" height="430" src="https://www.youtube.com/embed/oUm-b265nt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+
+      <section className={styles.section3}>
+        <div>
+          <p className={styles.number}>02</p>
+          <p className={styles.h1}>Lotgenoten staan centraal</p>
+          <p className={styles.body}>Op dit evenement draait het allemaal rond de lotgenoten en hun sociaal vangnet. Je kan ze makkelijk spotten met hun roze T-shirt. Loop met hen mee in een witte T-shirt zo vormen we een grote beweging tegen borstkanker. Zo ben je zelf ook in beweging en heb je minder kans op kanker. </p>
+        </div>
+        <img className={styles.img_lotgenoot} width="520" height="430" src="../assets/images/home/lotgenoten.png" alt="lotgenoten"/>
       </section>
       
       <Controller>
