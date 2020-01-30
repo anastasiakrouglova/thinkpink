@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, setState } from "react";
 
 const defaultState = { image: undefined, status: "loading" };
 export const useImage = (url, crossOrigin) => {
