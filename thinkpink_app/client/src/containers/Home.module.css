@@ -28,6 +28,15 @@ body {
   z-index: 2;
 }
 
+.section2 {
+  position: absolute;
+  top: 105%;
+  left: 10%;
+  z-index: 2;
+}
+
+
+
 
 .h0_outlined {
   composes: App-h0-outlined from "../styles/App.css"
@@ -37,11 +46,21 @@ body {
   composes: App-h0-notOutlined from "../styles/App.css"
 }
 
+.number {
+  composes: App-h1-number from "../styles/App.css"
+}
+
+.h1 {
+  composes: App-h1 from "../styles/App.css"
+}
+
+.body {
+  composes: App-body from "../styles/App.css";
+  width: 20rem;
+}
+
+
 .primair_button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  z-index: 2;
   composes: App-button_primair from "../styles/App.css"
 }
 
