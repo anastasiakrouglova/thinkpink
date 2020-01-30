@@ -53,6 +53,15 @@ body {
   padding-right: 4rem;
 }
 
+.background_image {
+  position: absolute;
+  background-image: url('../assets/images/headerHome.png');
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
 
 .h0_outlined {
   composes: App-h0-outlined from "../styles/App.css"

@@ -6,6 +6,7 @@
     display: flex;
     text-decoration: none;
     margin: 2rem;
+    box-shadow: 10px 13px 31px -15px rgba(0,0,0,0.2);
 }
 
 .race_textcontainer{

@@ -213,6 +213,28 @@ import A190 from "./0190.jpg";
 //   console.log('test');
 // }
 
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(
+  require.context('./', false, /\.(png|jpe?g|svg)$/)
+);
+//console.log(images);
+
+
+
+// export const Shoes = () => {
+//   for (let i = 0; i < 300; i++) {
+//   Array.of(
+//     images
+//   )
+// }
+// }
+
+
+
 export const Shoes = Array.of(
   A0,
   A1,

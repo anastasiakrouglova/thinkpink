@@ -18,7 +18,7 @@
 } */
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -129,6 +129,11 @@ outline: none;
 .App-body {
   font-size: 1rem;
   line-height: 1.6rem;
+}
+
+.App-background-header {
+  height: 22rem;
+  background-image: url("../assets/images/header.png")
 }
 
 /* .button {

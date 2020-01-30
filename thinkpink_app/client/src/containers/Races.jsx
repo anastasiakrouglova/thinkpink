@@ -8,12 +8,13 @@ import { ROUTES } from "../constants";
 const Races = () => {
   return (
     <div>
-      <NavbarDark />
-
-      <p>Samen staan we sterk.</p>
-      <div className="App-input_container">
-        <input className="App-input_search" type="text" placeholder="Search..." />
-        <button className="App-input_search__button"><img src="../assets/images/icons/search.svg" alt="search"/></button>
+      <div className="App-background-header">
+        <NavbarDark />
+        <p className={styles.h1}>Samen staan we sterk.</p>
+        <div className="App-input_container">
+          <input className="App-input_search" type="text" placeholder="Search..." />
+          <button className="App-input_search__button"><img src="../assets/images/icons/search.svg" alt="search"/></button>
+        </div>
       </div>
       <NavLink className={styles.navlink} to={ROUTES.detail}><Race/></NavLink> 
     </div>

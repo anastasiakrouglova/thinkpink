@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}><NavbarDark className={styles.navbar} /></div>
-      
+      <div className={styles.background_image}></div>
       <section className={styles.title}>
           <span className={styles.h0_outlined}>Race</span> <br/>
           <span className={styles.h0_subtitle}>For The Cure</span> <br />
