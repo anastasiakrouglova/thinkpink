@@ -1,3 +1,5 @@
+
+
 body {
     background: #444;
     height: 100vh;
@@ -26,9 +28,15 @@ body {
   z-index: 2;
 }
 
+.primair_button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  z-index: 2;
+  composes: App-button_primair from "../styles/App.css"
+}
 
 
-  
   .play_btn {
     width: 100px;
     height: 100px;
