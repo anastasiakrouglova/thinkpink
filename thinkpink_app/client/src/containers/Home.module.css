@@ -23,7 +23,7 @@ body {
 
 .title {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   z-index: 2;
 }
@@ -33,9 +33,25 @@ body {
   top: 105%;
   left: 10%;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.section3 {
+  position: absolute;
+  top: 205%;
+  left: 10%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.img_lotgenoot {
+  padding-right: 4rem;
+}
 
 
 .h0_outlined {
@@ -57,6 +73,10 @@ body {
 .body {
   composes: App-body from "../styles/App.css";
   width: 20rem;
+}
+
+.video {
+  padding: 2rem;
 }
 
 

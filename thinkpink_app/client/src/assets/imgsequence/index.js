@@ -192,8 +192,28 @@ import A173 from "./0173.jpg";
 import A174 from "./0174.jpg";
 import A175 from "./0175.jpg";
 import A176 from "./0176.jpg";
+import A177 from "./0177.jpg";
+import A178 from "./0178.jpg";
+import A179 from "./0179.jpg";
 
-export const AirPods = Array.of(
+import A180 from "./0180.jpg";
+import A181 from "./0181.jpg";
+import A182 from "./0182.jpg";
+import A183 from "./0183.jpg";
+import A184 from "./0184.jpg";
+import A185 from "./0185.jpg";
+import A186 from "./0186.jpg";
+import A187 from "./0187.jpg";
+import A188 from "./0188.jpg";
+import A189 from "./0189.jpg";
+
+import A190 from "./0190.jpg";
+
+// for (let i = 0; i < 100; i++) {
+//   console.log('test');
+// }
+
+export const Shoes = Array.of(
   A0,
   A1,
   A2,
@@ -387,5 +407,22 @@ export const AirPods = Array.of(
   A173,
   A174,
   A175,
-  A176
+  A176,
+  A177,
+  A178,
+  A179,
+
+  A180,
+  A181,
+  A182,
+  A183,
+  A184,
+  A185,
+  A186,
+  A187,
+  A188,
+  A189,
+
+  A190,
+
 );

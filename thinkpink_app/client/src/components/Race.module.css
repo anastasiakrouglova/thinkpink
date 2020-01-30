@@ -5,11 +5,14 @@
     border-radius: 0.5rem;
     display: flex;
     text-decoration: none;
+    margin: 2rem;
 }
 
 .race_textcontainer{
     margin: 0.5rem;
 }
+
+
 
 
 .race_city{
