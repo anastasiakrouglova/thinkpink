@@ -23,9 +23,18 @@ body {
 
 .title {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   z-index: 2;
+}
+
+
+.h0_outlined {
+  composes: App-h0-outlined from "../styles/App.css"
+}
+
+.h0_subtitle {
+  composes: App-h0-notOutlined from "../styles/App.css"
 }
 
 .primair_button {

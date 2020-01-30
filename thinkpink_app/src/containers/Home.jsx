@@ -11,16 +11,19 @@ function Home() {
     <div className={styles.container}>
       <div className={styles.navbar}><NavbarDark className={styles.navbar} /></div>
       <section>
-        <p className={styles.title}>Race For The Cure</p>
+        <p className={styles.title}>
+          <span className={styles.h0_outlined}>Race</span> <br/>
+          <span className={styles.h0_subtitle}>For The Cure</span>
+        </p>
         <button className={styles.primair_button}>Schrijf je in voor deze race</button>
       </section>
 
-      <section>
+      {/* <section>
         <p>01</p>
         <p>Wat is race for the cure?</p>
         <p>Race For The Cure is een sportief evenement waarin solidariteit een belangrijke rol speelt in het gevecht tegen borstkanker. De race is origineel onstaat vanuit een initiatief van ‘Think Pink’’. Deze race heeft zich ondertussen uitgebreid over meer dan 20 landen in het Europees continent. De hele dag is gevuld met animatie en intense emoties.</p>
-        {/* <video src="../assets/video/test.mp4"></video> */}
-      </section>
+        <video src="../assets/video/test.mp4"></video>
+      </section> */}
       
       <Controller>
         <Scene duration="200%" triggerHook="onLeave" pin>

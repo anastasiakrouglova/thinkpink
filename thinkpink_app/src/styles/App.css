@@ -95,6 +95,19 @@ outline: none;
 }
 
 
+.App-h0-outlined {
+  font-size: 10rem;
+  -webkit-text-stroke: 1px #FED6E0;
+  color: transparent;
+  font-family: 'poppinsextrabold_italic'
+}
+
+.App-h0-notOutlined {
+  color: #FED6E0;
+  font-family: 'poppinsextrabold_italic'
+}
+
+
 /* .button {
   background-image: linear-gradient(78deg, #46bdff 0%, #1379ff 100%);
   padding: 1rem 3rem;
