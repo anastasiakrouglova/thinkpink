@@ -7,8 +7,9 @@ import { ROUTES } from "../constants";
 
 const Detail = () => {
   return (
-    <div className={styles.detail_container}>
-    <NavbarDark />
+    <div>
+      <NavbarDark />
+      <div className={styles.detail_container}>
       <NavLink to={ROUTES.races}>Terug naar raceoverzicht</NavLink>
       <section>
         <div>
@@ -33,7 +34,7 @@ const Detail = () => {
               <p>1.174</p>
             </div>
           </div>
-          <p>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
+          <p className={styles.detail_body}>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
             Geniet van dit onvergetelijk moment dat draait rond liefde met je eigen groep.</p>
           <button>Schrijf je in voor deze race</button>
         </div>
@@ -54,7 +55,13 @@ const Detail = () => {
             </p>
           </div>
         </div>
-      </section>
+        </section>
+
+
+
+
+
+        </div>
     </div>
   );
 };

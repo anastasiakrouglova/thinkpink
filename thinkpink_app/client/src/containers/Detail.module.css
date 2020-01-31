@@ -1,3 +1,10 @@
 .detail_container {
     color: black;
+    margin: 2rem;
+}
+
+
+.detail_body {
+    width: 30rem;
+    composes: App-body from "../styles/App.css"
 }
