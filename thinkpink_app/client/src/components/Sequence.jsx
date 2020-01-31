@@ -5,7 +5,7 @@ import ImageArray from "./ImageArray.jsx";
 const ImageSequence = forwardRef(({ progress }, ref) => {
   const newImages = ImageArray();
 
-  let index = Math.round(progress * 1 * (newImages.length - 1));
+  let index = Math.round(progress * 0.9 * (newImages.length - 1));
 
   if (newImages[index][1] !== undefined) {
     if (newImages[index][1] === "loading") {

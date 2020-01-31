@@ -32,11 +32,46 @@ function Home() {
         <div>
           <p className={styles.number}>02</p>
           <p className={styles.h1}>Lotgenoten staan centraal</p>
+        </div>
+        <div className={styles.role_container}>
+          <div>
+            <p className={styles.h2}>Team Captain</p>
+            <p className={styles.body}>Een groep kan zowel groot als
+                klein zijn, jij bent de verantwoordelijke
+                in je subgroep dat minstens 10
+                deelnemers telt. Ben je dus bijvoorbeeld een directeur van een vereniging? Dan is deze taak op je rug geschreven! </p>
+          </div>
+          <div>
+            <p className={styles.h2}>Lotgenoot</p>
+            <p className={styles.body}>
+              Ik ben een overlever!
+              Ja je bent er één! Neem de roze t-shirt en loop op een prachtig natuurdomein omringd door vele supporters!
+            </p>
+          </div>
+          <div>
+            <p className={styles.h2}>Supporter</p>
+            <p className={styles.body}>
+              Wil je solo lopen of je gewoon toevoegen aan een bestaande groep? Dan staat supporteer op je lijf geschreven.
+            </p>
+          </div>
+          
+        </div>
+          {/* <p className={styles.body}>Op dit evenement draait het allemaal rond de lotgenoten en hun sociaal vangnet. Je kan ze makkelijk spotten met hun roze T-shirt. Loop met hen mee in een witte T-shirt zo vormen we een grote beweging tegen borstkanker. Zo ben je zelf ook in beweging en heb je minder kans op kanker. </p> */}
+        {/* <img className={styles.img_lotgenoot} width="520" height="430" src="../assets/images/home/lotgenoten.png" alt="lotgenoten"/> */}
+      </section>
+
+      
+        {/* <div>
+          <p className={styles.number}>02</p>
+          <p className={styles.h1}>Lotgenoten staan centraal</p>
           <p className={styles.body}>Op dit evenement draait het allemaal rond de lotgenoten en hun sociaal vangnet. Je kan ze makkelijk spotten met hun roze T-shirt. Loop met hen mee in een witte T-shirt zo vormen we een grote beweging tegen borstkanker. Zo ben je zelf ook in beweging en heb je minder kans op kanker. </p>
         </div>
-        <img className={styles.img_lotgenoot} width="520" height="430" src="../assets/images/home/lotgenoten.png" alt="lotgenoten"/>
+        <img className={styles.img_lotgenoot} width="520" height="430" src="../assets/images/home/lotgenoten.png" alt="lotgenoten"/> */}
+
+      <section className={styles.section4}>
+        <img className={styles.challenges} src="../assets/home/challenges.png" alt="challenge"/>
       </section>
-      
+
       <Controller>
         <Scene duration="200%" triggerHook="onLeave" pin>
             {progress => (
