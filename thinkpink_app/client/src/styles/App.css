@@ -50,14 +50,47 @@
   cursor: pointer;
 }
 
-.App-button_primair:focus {
-  outline: none;
-}
-
 .App-button_primair:hover {
   box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, .2);
   transform: scale(1.1);
   transition: transform ease-in-out 0.2s;
+}
+
+.App-button_secundair-outline {
+  background-color: transparent;
+  border: 2px solid var(--pink-primair);
+  color: var(--pink-primair);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'poppinsbold';
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+.App-button_secundair-outline:hover {
+  background-color: var(--pink-primair);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 1rem;
+  font-family: 'poppinsbold';
+  border-radius: 1rem;
+}
+
+
+.App-button_secundair {
+  background-color: var(--pink-primair);
+  border: 1px solid transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'poppinsbold';
+  border-radius: 1rem;
+  margin-left: 0.7rem;
+  margin-top: 3rem;
+}
+
+.App-button_secundair:hover {
+  background-color: var(--pink-primair-focus);
 }
 
 
@@ -69,9 +102,12 @@
   padding: 0.6rem;
   padding-left: 0.8rem;
   margin: 2rem;
+  box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, .2);
 }
 
-.App-input_search:focus {
+
+
+.App-input_search, .App-button_primair, .App-button_secundair:focus {
   outline: none;
 }
 
@@ -124,9 +160,26 @@ outline: none;
   margin-left: -2rem;
 }
 
+.App-h1-number-primaircolor {
+  font-size: 5rem;
+  -webkit-text-stroke: 1px var(--pink-primair);
+  color: transparent;
+  font-family: 'poppinsextrabold';
+  opacity: 0.6;
+  margin-left: -2rem;
+}
+
 .App-h1 {
   font-size: 3rem;
   color: var(--pink-darkbackground);
+  font-family: 'poppinsbold';
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+}
+
+.App-h1-primaircolor {
+  font-size: 3rem;
+  color: var(--pink-primair);
   font-family: 'poppinsbold';
   margin-top: -3rem;
   margin-bottom: 2rem;
