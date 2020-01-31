@@ -1,10 +1,85 @@
+@import "../styles/colors.module.css";
+
 .detail_container {
     color: black;
     margin: 2rem;
+
 }
 
+.backButton {
+    color: var(--pink-primair);
+    text-decoration: none;
+    font-size: 1rem;
+}
 
 .detail_body {
     width: 30rem;
     composes: App-body from "../styles/App.css"
+}
+
+.country {
+    font-family: 'poppinsextrabold_italic';
+    opacity: 0.3;
+    font-size: 0.9rem;
+}
+
+.city {
+    font-family: 'poppinsextrabold_italic';
+    font-size: 3.5rem;
+}
+
+.city_container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.uppertitle {
+    font-family: 'poppinssemibold';
+    composes: App-subtitle from "../styles/App.css";
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+}
+
+.uppertitle_container {
+    display: flex;
+    align-items: center;
+}
+
+.info_container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.info {
+    font-family: 'poppinssemibold';
+    font-size: 1.5rem;
+    padding-top: 0.4rem;
+}
+
+.detail_container_info {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: 80rem;
+}
+
+.counter_container {
+    background-color: red;
+    width: 20rem;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    height: 1rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: -3rem;
+    margin-left: 1.5rem;
+}
+
+.info_image {
+    z-index: -2;
+
 }

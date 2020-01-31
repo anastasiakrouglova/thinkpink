@@ -11,6 +11,11 @@
   padding: 1rem;
 }
 
+.App-subtitle {
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

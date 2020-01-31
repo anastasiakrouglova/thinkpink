@@ -10,37 +10,47 @@ const Detail = () => {
     <div>
       <NavbarDark />
       <div className={styles.detail_container}>
-      <NavLink to={ROUTES.races}>Terug naar raceoverzicht</NavLink>
-      <section>
+      <NavLink className={styles.backButton} to={ROUTES.races}>&#8592; Terug naar raceoverzicht</NavLink>
+      <section className={styles.detail_container_info}>
         <div>
-          <h1>
-            <span>Antwerpen</span>  
-            <span>België</span>
+          <h1 className={styles.city_container}>
+            <span className={styles.city}>Antwerpen</span>  
+            <span className={styles.country}>&nbsp; (België)</span>
           </h1>
-          <div>
+          <div className={styles.info_container}>
+              
             <div>
-              <img src="../assets/images/icons/search.svg" alt="search"/>
-              <p>Startlocatie</p>
-              <p>Graanmarkt</p>
+              <div className={styles.uppertitle_container}>
+                <img src="../assets/images/icons/locationPink.svg" alt="search"/>
+                <p className={styles.uppertitle}>Startlocatie</p>
+              </div>
+              <p className={styles.info}>Graanmarkt</p>
             </div>
+              
             <div>
-              <img src="../assets/images/icons/search.svg" alt="search"/>
-              <p>Starttijd</p>
-              <p>11:00 uur</p>
+              <div className={styles.uppertitle_container}>
+                <img src="../assets/images/icons/clockPink.svg" alt="search"/>
+                <p className={styles.uppertitle}>Starttijd</p>
+              </div>
+              <p className={styles.info}>11:00 uur</p>
             </div>
+              
             <div>
-              <img src="../assets/images/icons/search.svg" alt="search"/>
-              <p>Deelnemers</p>
-              <p>1.174</p>
+              <div className={styles.uppertitle_container}>
+               <img src="../assets/images/icons/personPink.svg" alt="search"/>
+               <p className={styles.uppertitle}>Deelnemers</p>
+              </div>
+              <p className={styles.info}>1.174</p>
             </div>
+              
           </div>
           <p className={styles.detail_body}>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
             Geniet van dit onvergetelijk moment dat draait rond liefde met je eigen groep.</p>
-          <button>Schrijf je in voor deze race</button>
+          <button className="App-button_primair">Schrijf je in voor deze race</button>
         </div>
         <div>
-        <img src="../assets/images/icons/search.svg" alt="search"/>
-          <div>
+        <img className={styles.info_image} src="../assets/images/cities/antwerpen_condensed.png" alt="image city"/>
+          <div className={styles.counter_container}>
             <p>
               <span>04</span>
               <span>dagen</span>
@@ -56,10 +66,6 @@ const Detail = () => {
           </div>
         </div>
         </section>
-
-
-
-
 
         </div>
     </div>

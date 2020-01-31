@@ -34,8 +34,7 @@
 }
 
 .race_quantity {
-    opacity: 0.5;
-    font-size: 0.9rem;
+    composes: App-subtitle from "../styles/App.css";
     display: flex;
     justify-content: flex-end;
     align-items: center;
