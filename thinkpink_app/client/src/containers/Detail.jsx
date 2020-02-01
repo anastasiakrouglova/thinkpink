@@ -136,9 +136,9 @@ const Detail = () => {
             <img className={styles.profile_detail} src="../assets/images/people/rita.png" width="100" alt="profile picture"/>
             <p className={styles.card_text}>#TeamRita Verbeeck</p>
             <div>
-            <button className="App-button_secundair-outline">info</button>
-              <button className="App-button_secundair">Join Team</button>
-              </div>
+              <NavLink className="App-button_secundair-outline" to={ROUTES.info}>info</NavLink>
+              <NavLink className="App-button_secundair"to={ROUTES.join}>Join Team</NavLink>
+            </div>
           </div>
 
         
