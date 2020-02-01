@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Detail.module.css";
-import NavbarDark from "../components/NavbarDark.jsx";
+import NavbarWhite from "../components/NavbarWhite.jsx";
 
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
@@ -8,11 +8,11 @@ import { ROUTES } from "../constants";
 const Detail = () => {
   return (
     <div>
-      <NavbarDark />
+      <NavbarWhite />
       <div className={styles.detail_container}>
       <NavLink className={styles.backButton} to={ROUTES.races}>&#8592; Terug naar raceoverzicht</NavLink>
       <section className={styles.detail_container_info}>
-        <div>
+        <div className={styles.info_container_text}>
           <h1 className={styles.city_container}>
             <span className={styles.city}>Antwerpen</span>  
             <span className={styles.country}>&nbsp; (België)</span>
@@ -46,7 +46,9 @@ const Detail = () => {
           </div>
           <p className={styles.detail_body}>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
             Geniet van dit onvergetelijk moment dat draait rond liefde met je eigen groep.</p>
-          <button className="App-button_primair">Schrijf je in voor deze race</button>
+          <div className={styles.primair_button}>
+            <button className="App-button_primair">Schrijf je in voor deze race</button>
+          </div>
         </div>
         <div>
         <img className={styles.info_image} src="../assets/images/cities/antwerpen_condensed.png" alt="image city"/>
@@ -69,48 +71,48 @@ const Detail = () => {
 
         <section className={styles.container_program}>
           <div className={styles.container_map}>
-            <img src="../assets/images/maps/map.png" alt="map" />
+            <img className={styles.map} src="../assets/images/maps/map.png" alt="map" />
             <button className={styles.backButton}>Send to maps</button>
           </div>
-          <div>
+          <div className={styles.program_section}>
             <p className="App-h1-number-primaircolor">01</p>
             <h2 className="App-h1-primaircolor">Programma</h2>
             <table>
             <div>
-                <tr>
-                  <td>9u</td>
-                  <td>Daginschrijvingen + Ophalen t-shirts</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>9u</td>
+                  <td className={styles.program_activity}>Daginschrijvingen + Ophalen t-shirts</td>
                 </tr>
-                <tr>
-                  <td>10u15</td>
-                  <td>Zumba</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>10u15</td>
+                  <td className={styles.program_activity}>Zumba</td>
                 </tr>
-                <tr>
-                  <td>10u30</td>
-                  <td>Kids for the Cure 800m (6-10 jaar)</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>10u30</td>
+                  <td className={styles.program_activity}>Kids for the Cure 800m (6-10 jaar)</td>
                 </tr>
-                <tr>
-                  <td>11</td>
-                  <td>Start RUN 6km</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>11</td>
+                  <td className={styles.program_activity}>Start RUN 6km</td>
                 </tr>
               </div>
             
               <div>
-                <tr>
-                  <td>11u30</td>
-                  <td>Start Walk 3km</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>11u30</td>
+                  <td className={styles.program_activity}>Start Walk 3km</td>
                 </tr>
-                <tr>
-                  <td>12u</td>
-                  <td>Tapas-en aperitiefmoment</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>12u</td>
+                  <td className={styles.program_activity}>Tapas-en aperitiefmoment</td>
                 </tr>
-                <tr>
-                  <td>9-14u</td>
-                  <td>Gezondheidsmarkt</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>9-14u</td>
+                  <td className={styles.program_activity}>Gezondheidsmarkt</td>
                 </tr>
-                <tr>
-                  <td>9-18u</td>
-                  <td>Geef om Haar-knipdag</td>
+                <tr className={styles.program_tr}>
+                  <td className={styles.program_time}>9-18u</td>
+                  <td className={styles.program_activity}>Geef om Haar-knipdag</td>
                 </tr>
               </div>   
               
@@ -122,7 +124,7 @@ const Detail = () => {
           <div className={styles.section2_container_title}>
             <p className="App-h1-number-primaircolor">02</p>
             <h2 className="App-h1-primaircolor">Loop voor...</h2>
-            <p className="App-body">Om je in te schrijven dien je een lotgenoot te kiezen om te steunen. Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is uit solidariteit voor de mensen die kanker overleefd hebben.</p>
+            <p className={styles.info_lotgenoot}>Om je in te schrijven dien je een lotgenoot te kiezen om te steunen. Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is uit solidariteit voor de mensen die kanker overleefd hebben.</p>
           </div>
           <div className="App-input_container">
           <input className="App-input_search" type="text" placeholder="Search..." />
