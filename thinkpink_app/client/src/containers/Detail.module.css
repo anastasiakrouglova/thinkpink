@@ -11,23 +11,7 @@
     flex-direction: column;
 }
 
-.backButton {
-    color: var(--pink-primair);
-    text-decoration: none;
-    font-size: 1rem;
-    background-color: transparent;
-    border: 0 solid transparent;
-    font-family: 'poppinsbold';
-    margin-top: 1rem;
-}
 
-.backButton:hover {
-    color: var(--pink-primair-focus);
-}
-
-.backButton:focus {
-    outline: none;
-}
 
 .detail_body {
     width: 30rem;

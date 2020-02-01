@@ -10,7 +10,7 @@ const Detail = () => {
     <div>
       <NavbarWhite />
       <div className={styles.detail_container}>
-      <NavLink className={styles.backButton} to={ROUTES.races}>&#8592; Terug naar raceoverzicht</NavLink>
+      <NavLink className="App-backbutton" to={ROUTES.races}>&#8592; Terug naar raceoverzicht</NavLink>
       <section className={styles.detail_container_info}>
         <div className={styles.info_container_text}>
           <h1 className={styles.city_container}>

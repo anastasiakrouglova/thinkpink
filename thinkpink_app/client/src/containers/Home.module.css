@@ -51,6 +51,20 @@ body {
   left: 0%;
   z-index: 2;
   margin-top: -3rem;
+  background-image: url('../assets/images/challengeBackground.png');
+  width: 100%;
+  height: 40rem;
+}
+
+.section5 {
+  position: absolute;
+  top: 380%;
+  left: 0%;
+  z-index: 2;
+  margin-top: -3rem;
+  background-image: url('../assets/images/run.png');
+  width: 100%;
+  height: 30rem;
 }
 
 
@@ -79,6 +93,30 @@ body {
   background-size: cover;
 }
 
+.container_challenge {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.container_challenges {
+  display: flex;
+  padding: 3rem;
+  justify-content: space-between;
+}
+
+.challenges__image {
+  margin-bottom: 2rem;
+  width: 3rem;
+}
+
+.challenges__title {
+  padding-left: 5rem;
+  padding-top: 4rem;
+}
 
 .h0_outlined {
   composes: App-h0-outlined from "../styles/App.css"

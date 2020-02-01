@@ -63,7 +63,7 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: 'poppinsbold';
-  border-radius: 1rem;
+  border-radius: 10px;
   margin-top: 3rem;
 }
 
@@ -79,12 +79,12 @@
 
 .App-button_secundair {
   background-color: var(--pink-primair);
-  border: 1px solid transparent;
+  border: 1px solid var(--pink-primair);
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: 'poppinsbold';
-  border-radius: 1rem;
+  border-radius: 10px;
   margin-left: 0.7rem;
   margin-top: 3rem;
 }
@@ -103,6 +103,24 @@
   padding-left: 0.8rem;
   margin: 2rem;
   box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, .2);
+}
+
+.App-backbutton {
+  color: var(--pink-primair);
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  font-family: 'poppinsbold';
+  margin-top: 1rem;
+}
+
+.App-backbutton:hover {
+  color: var(--pink-primair-focus);
+}
+
+.App-backbutton:focus {
+  outline: none;
 }
 
 
