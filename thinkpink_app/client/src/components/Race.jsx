@@ -5,7 +5,7 @@ import styles from "./Race.module.css"
 
 const Race = () => {
     return (
-        <div className={styles.race_container}>
+        <div className="App-card">
             <img src="../assets/images/cities/antwerpen.png" alt="photo city" width="150" />
             <div className={styles.race_textcontainer}>
                 <p className={styles.race_city}>Antwerpen</p>
