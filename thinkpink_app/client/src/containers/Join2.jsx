@@ -10,10 +10,7 @@ const Join = () => {
     <div>
         <div>
           <NavbarWhite />
-          <h1>Bedankt voor je enthousiasme!</h1>
-          <p>kies hoe je een lotgenoot wilt toevoegen:</p>
-
-          <NavLink to="ROUTES.join2">test</NavLink>
+          <h1>Tweede pagina van de join</h1>
         </div>
     </div>
   );

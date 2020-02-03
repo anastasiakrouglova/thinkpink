@@ -72,7 +72,7 @@ const Detail = () => {
         <section className={styles.container_program}>
           <div className={styles.container_map}>
             <img className={styles.map} src="../assets/images/maps/map.png" alt="map" />
-            <button className={styles.backButton}>Send to maps</button>
+            <button className="App-backbutton"> Send to maps</button>
           </div>
           <div className={styles.program_section}>
             <p className="App-h1-number-primaircolor">01</p>
@@ -121,28 +121,53 @@ const Detail = () => {
         </section>
 
         <section className={styles.section2}>
-          <div className={styles.section2_container_title}>
-            <p className="App-h1-number-primaircolor">02</p>
-            <h2 className="App-h1-primaircolor">Loop voor...</h2>
-            <p className={styles.info_lotgenoot}>Om je in te schrijven dien je een lotgenoot te kiezen om te steunen. Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is uit solidariteit voor de mensen die kanker overleefd hebben.</p>
-          </div>
-          <div className="App-input_container">
-          <input className="App-input_search" type="text" placeholder="Search..." />
-          <button className="App-input_search__button"><img src="../assets/images/icons/search.svg" alt="search"/></button>
-        </div>
+            <div className={styles.section2_container_title}>
+              <p className="App-h1-number-primaircolor">02</p>
+              <h2 className="App-h1-primaircolor">Loop voor...</h2>
+              <p className={styles.info_lotgenoot}>Om je in te schrijven dien je een lotgenoot te kiezen om te steunen. Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is uit solidariteit voor de mensen die kanker overleefd hebben.</p>
+            </div>
+            <div className="App-input_container">
+            <input className="App-input_search" type="text" placeholder="Search..." />
+            <button className="App-input_search__button"><img src="../assets/images/icons/search.svg" alt="search"/></button>
+            </div>
           
-          
-          <div className={styles.card}>
-            <img className={styles.profile_detail} src="../assets/images/people/rita.png" width="100" alt="profile picture"/>
-            <p className={styles.card_text}>#TeamRita Verbeeck</p>
-            <div>
+          <div className={styles.section2_container}>
+            <div className={styles.card}>
+             <img className={styles.profile_detail} src="../assets/images/people/rita.png" width="100" alt="profile picture"/>
+             <p className={styles.card_text}>#TeamRita Verbeeck</p>
+              <div>
               <NavLink className="App-button_secundair-outline" to={ROUTES.info}>info</NavLink>
               <NavLink className="App-button_secundair"to={ROUTES.join}>Join Team</NavLink>
+              </div>
+            </div>
+
+            <div className={styles.cardSurvivor}>
+              <p className={styles.card_text}>Nieuwe lotgenoot inschrijven?</p>
+              <NavLink className={styles.button_white} to={ROUTES.join}>Create a team</NavLink>
             </div>
           </div>
+        </section>
 
-        
-        
+
+        <section className={styles.section34container}>
+          <div>
+            <div className={styles.section3_container_title}>
+             <p className="App-h1-number-primaircolor">03</p>
+             <h2 className="App-h1-primaircolor">Sponsors</h2>
+            </div>
+            <img className={styles.sponsorlogo} src="../assets/images/sponsors/skoda.png" alt="skoda" />
+            <img className={styles.sponsorlogo} src="../assets/images/sponsors/wam.png" alt="wam" />
+            <img className={styles.sponsorlogo} src="../assets/images/sponsors/freemasons.png" alt="freemasons"/>
+          </div>
+
+          <div>
+            <div className={styles.section3_container_title}>
+             <p className="App-h1-number-primaircolor">04</p>
+             <h2 className="App-h1-primaircolor">Vorige editie</h2>
+            </div>
+            <iframe width="640" height="480" src="https://www.youtube.com/embed/_Ta1huWC9i8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
         </section>
 
 

@@ -65,6 +65,8 @@
   font-family: 'poppinsbold';
   border-radius: 10px;
   margin-top: 3rem;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
 .App-button_secundair-outline:hover {
@@ -73,7 +75,6 @@
   color: white;
   font-size: 1rem;
   font-family: 'poppinsbold';
-  border-radius: 1rem;
 }
 
 
@@ -87,10 +88,35 @@
   border-radius: 10px;
   margin-left: 0.7rem;
   margin-top: 3rem;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
 .App-button_secundair:hover {
+  border: 1px solid var(--pink-primair-focus);
   background-color: var(--pink-primair-focus);
+}
+
+
+.App-button_secundair-white {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'poppinsbold';
+  border-radius: 10px;
+  margin-top: 3rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.App-button_secundair-white:hover {
+  background-color: white;
+  border: 2px solid transparent;
+  color: var(--pink-primair);
+  font-size: 1rem;
+  font-family: 'poppinsbold';
 }
 
 
@@ -270,4 +296,9 @@ outline: none;
   to {
     opacity: 1;
   }
+}
+
+
+.App-navlink {
+  text-decoration: none;
 }

@@ -8,6 +8,7 @@ import Races from "./Races";
 import Detail from "./Detail";
 import Info from "./Info";
 import Join from "./Join";
+import Join2 from "./Join2";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <Route path={ROUTES.detail} component={Detail} />
         <Route path={ROUTES.info} component={Info} />
         <Route path={ROUTES.join} component={Join} />
+        <Route path={ROUTES.join2} component={Join2} />
       </Switch>
     </main>
   );

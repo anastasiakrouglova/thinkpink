@@ -3,5 +3,6 @@ export const ROUTES = {
     races: `/races`,
     detail: `/detail`,
     info: `/info`,
-    join: `/join`
+    join: `/join`,
+    join2: `/join2`
   };

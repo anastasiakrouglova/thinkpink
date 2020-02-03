@@ -180,12 +180,27 @@
 .card {
     background-image: url('../assets/images/cards/cardDetail.png');
     background-repeat: no-repeat;
+    background-size: cover;
     width: 15rem;
     height: 20rem;
-    margin-top: 6rem;
     display:flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 1rem;
+    margin: 6rem 1rem 1rem 1rem;
+}
+
+.cardSurvivor {
+    background-image: url('../assets/images/cards/cardSurvivor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15rem;
+    height: 20rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 6rem 1rem 1rem 1rem;
 }
 
 .profile_detail {
@@ -194,10 +209,12 @@
 
 .card_text {
     color: white;
-    font-family: 'poppinsbold';
+    font-family: 'poppinsextrabold_italic';
     text-align: center;
     margin-top: 1rem;
     padding: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 }
 
 .info_lotgenoot {
@@ -219,4 +236,31 @@
 
 .program_activity {
     font-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+
+.sponsorlogo {
+    width: 10rem;
+    padding: 2rem;
+}
+
+
+.section3_container_title {
+    margin: 2rem;
+}
+
+
+.section34container {
+    display: flex;
+}
+
+
+.section2_container {
+    display: flex;
+}
+
+.button_white {
+   composes: App-button_secundair-white from "../styles/App.css";
+   margin-top: 8rem;
 }
