@@ -69,7 +69,9 @@ body {
 
 
 .role_container {
+  width: 90vw;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding-top: 14rem;
   align-items: flex-start;
@@ -103,9 +105,13 @@ body {
 }
 
 .container_challenges {
-  display: flex;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-area: 'container_challenge container_challenge container_challenge container_challenge';
+  /* display: flex;
   padding: 3rem;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .challenges__image {
@@ -239,3 +245,35 @@ body {
   
     }
   }
+
+  .subcontainer_challenges {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+/* .role_subcontainer {
+  padding-right: 9rem;
+} */
+
+@media screen and (max-width: 1170px) {
+  .container_challenges {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: '. container_challenge container_challenge .'
+    '. container_challenge container_challenge .';
+  }
+}
+
+
+@media screen and (max-width: 670px) {
+  .container_challenges {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: 'container_challenge'
+    'container_challenge'
+    'container_challenge'
+    'container_challenge';
+  }
+}

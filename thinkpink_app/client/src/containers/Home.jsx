@@ -34,14 +34,14 @@ function Home() {
           <p className={styles.h1}>Lotgenoten staan centraal</p>
         </div>
         <div className={styles.role_container}>
-          <div>
+          <div className={styles.role_subcontainer}>
             <p className={styles.h2}>Team Captain</p>
             <p className={styles.body}>Een groep kan zowel groot als
                 klein zijn, jij bent de verantwoordelijke
                 in je subgroep dat minstens 10
                 deelnemers telt. Ben je dus bijvoorbeeld een directeur van een vereniging? Dan is deze taak op je rug geschreven! </p>
           </div>
-          <div>
+          <div className={styles.role_subcontainer}>
             <p className={styles.h2}>Lotgenoot</p>
             <p className={styles.body}>
               Ik ben een overlever!
@@ -75,22 +75,22 @@ function Home() {
           <p className="App-body">Probeer met je team zoveel mogelijk challenges te volbrengen en word beloond!</p>
         </div>
         <div className={styles.container_challenges}>
-          <div className={styles.container_challenge}>
-            <img className={styles.challenges__image}src="../assets/images/icons/radio.svg" alt="icon radio"/>
-            <p className="App-body">Bij 150km beweging opgeteld met je supporters , zal jullie groepummer afgespeeld worden bij de finish.</p>
-          </div>
-          <div className={styles.container_challenge}>
-            <img className={styles.challenges__image}src="../assets/images/icons/travel.svg" alt="icon travel"/>
-            <p className="App-body">Vanaf 50 supporters krijg je een gepersonaliseerd tentje.</p>
-          </div>
-          <div className={styles.container_challenge}>
-            <img className={styles.challenges__image}src="../assets/images/icons/massage.svg" alt="icon massage"/>
-            <p className="App-body">Bak met je team koekjes en verkoop ze op je stand! Je team krijgt dan een gratis massage na de finish.</p>
-          </div>
-          <div className={styles.container_challenge}>
-            <img className={styles.challenges__image}src="../assets/images/icons/photograph.svg" alt="icon photograph"/>
-            <p className="App-body">Vanaf 10 donaties voor je team krijgt elk lid een professionele groepsfoto cadeau getrokken op de race.</p>
-          </div>
+            <div className={styles.container_challenge}>
+              <img className={styles.challenges__image}src="../assets/images/icons/radio.svg" alt="icon radio"/>
+              <p className="App-body">Bij 150km beweging opgeteld met je supporters , zal jullie groepummer afgespeeld worden bij de finish.</p>
+            </div>
+            <div className={styles.container_challenge}>
+              <img className={styles.challenges__image}src="../assets/images/icons/travel.svg" alt="icon travel"/>
+              <p className="App-body">Vanaf 50 supporters krijg je een gepersonaliseerd tentje.</p>
+            </div>
+            <div className={styles.container_challenge}>
+              <img className={styles.challenges__image}src="../assets/images/icons/massage.svg" alt="icon massage"/>
+              <p className="App-body">Bak met je team koekjes en verkoop ze op je stand! Je team krijgt dan een gratis massage na de finish.</p>
+            </div>
+            <div className={styles.container_challenge}>
+              <img className={styles.challenges__image}src="../assets/images/icons/photograph.svg" alt="icon photograph"/>
+              <p className="App-body">Vanaf 10 donaties voor je team krijgt elk lid een professionele groepsfoto cadeau getrokken op de race.</p>
+            </div>
         </div>
       </section>
 

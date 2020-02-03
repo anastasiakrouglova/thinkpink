@@ -18,9 +18,9 @@ const Race = () => {
                         <p >1354 people</p>
                 </div>
                 <p className={styles.race_date}>
-                    <span>sept - </span>
-                    <span>27 - </span>
-                    <span>2020</span>
+                    <span className={styles.month}>sept</span>
+                    <span className={styles.date}>27</span>
+                    <span className={styles.month}>2020</span>
                 </p>
             </div>
         </div>
