@@ -1,0 +1,73 @@
+.title {
+    composes: App-title from '../styles/App.css';
+}
+
+.subtitle {
+    color: black;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem
+}
+
+.cardlotgenoot {
+    color: black;
+    text-decoration: none;
+    background-image: url('../assets/images/shoesCards/survivor.jpg');
+    background-size: cover;
+    height: 30rem;
+    width: 28rem;
+    background-position: center;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.cardteamcaptain {
+    color: black;
+    text-decoration: none;
+    background-image: url('../assets/images/shoesCards/teamcaptain.jpg');
+    background-size: cover;
+    height: 30rem;
+    width: 28rem;
+    background-position: center;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: center;
+}
+
+
+.cardlotgenoot_navlink {
+    color: white;
+    text-decoration:none;
+    text-align: center;
+}
+
+
+.infotext {
+    font-family: 'poppinsextrabold_italic';
+    line-height: 2rem;
+    font-size: 1.2rem;
+    margin: 5rem 2rem 1rem 2rem;
+}
+
+
+.price {
+    font-family: 'poppinsextrabold_italic';
+    font-size: 3rem;
+}
+
+.card_button {
+    composes: App-button_secundair from "../styles/App.css";
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+}
+
+.exclusief {
+    opacity: 0.8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}

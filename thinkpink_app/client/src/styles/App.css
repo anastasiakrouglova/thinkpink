@@ -16,6 +16,13 @@
   font-size: 0.9rem;
 }
 
+.App-title {
+  color: #614B50;
+  font-family: 'poppinsbold';
+  text-align: center;
+  font-size: 2rem;
+}
+
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
