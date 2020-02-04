@@ -3,6 +3,7 @@ export const ROUTES = {
     races: `/races`,
     detail: `/detail`,
     info: `/info`,
-    join: `/join`,
-    join2: `/join2`
+    survivororteamcaptain: `/survivororteamcaptain`,
+    supporterorgroup: `/supporterorgroup`,
+    lotgenoot2: `/lotgenoot2`
   };

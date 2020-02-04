@@ -137,13 +137,13 @@ const Detail = () => {
              <p className={styles.card_text}>#TeamRita Verbeeck</p>
               <div>
               <NavLink className="App-button_secundair-outline" to={ROUTES.info}>info</NavLink>
-              <NavLink className="App-button_secundair"to={ROUTES.join}>Join Team</NavLink>
+              <NavLink className="App-button_secundair"to={ROUTES.supporterorgroup}>Join Team</NavLink>
               </div>
             </div>
 
             <div className={styles.cardSurvivor}>
-              <p className={styles.card_text}>Nieuwe lotgenoot inschrijven?</p>
-              <NavLink className={styles.button_white} to={ROUTES.join}>Create a team</NavLink>
+              <p className={styles.card_text}>Nieuwe lotgenoot of Team Captain inschrijven?</p>
+              <NavLink className={styles.button_white} to={ROUTES.survivororteamcaptain}>Create a team</NavLink>
             </div>
           </div>
         </section>
@@ -167,10 +167,7 @@ const Detail = () => {
             </div>
             <iframe width="640" height="480" src="https://www.youtube.com/embed/_Ta1huWC9i8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-
         </section>
-
-
         </div>
     </div>
   );
