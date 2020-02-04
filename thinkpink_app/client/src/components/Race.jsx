@@ -15,7 +15,7 @@ const Race = () => {
                         <p>28 teams</p>
 
                         <img className={styles.race_quantity__people} src="../assets/images/icons/people.svg" alt="people icon"/>
-                        <p >1354 people</p>
+                        <p>1354 people</p>
                 </div>
                 <p className={styles.race_date}>
                     <span className={styles.month}>sept</span>

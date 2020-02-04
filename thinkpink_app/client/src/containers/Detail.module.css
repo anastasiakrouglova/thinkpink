@@ -2,20 +2,22 @@
 
 .detail_container {
     color: black;
-    margin: 2rem;
+    margin: 4rem;
 
 }
 
 .container_map {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem;
 }
 
 
 
 .detail_body {
     width: 30rem;
-    composes: App-body from "../styles/App.css"
+    composes: App-body from "../styles/App.css";
+    margin-bottom: 4rem;
 }
 
 .country {
@@ -122,7 +124,7 @@
     max-width: 70rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
     .container_program {
         flex-direction: column;
         justify-content: center;
@@ -213,8 +215,19 @@
     text-align: center;
     margin-top: 1rem;
     padding: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.card_text2 {
+    color: white;
+    font-family: 'poppinsextrabold_italic';
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .info_lotgenoot {
@@ -262,5 +275,16 @@
 
 .button_white {
    composes: App-button_secundair-white from "../styles/App.css";
-   margin-top: 8rem;
+   margin-top: 6rem;
+}
+
+
+.button_secundair_outlined {
+    margin-right: 0.7rem;
+    composes: App-button_secundair-outline from "../styles/App.css"
+}
+
+
+.button_inschrijven {
+    composes: App-button_primair from "../styles/App.css";
 }

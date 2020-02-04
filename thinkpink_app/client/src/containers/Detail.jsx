@@ -46,8 +46,8 @@ const Detail = () => {
           </div>
           <p className={styles.detail_body}>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
             Geniet van dit onvergetelijk moment dat draait rond liefde met je eigen groep.</p>
-          <div className={styles.primair_button}>
-            <button className="App-button_primair">Schrijf je in voor deze race</button>
+            <div className={styles.primair_button}>
+              <a className={styles.button_inschrijven} href="#inschrijven">Schrijf je in voor deze race</a>
           </div>
         </div>
         <div>
@@ -120,7 +120,7 @@ const Detail = () => {
           </div>
         </section>
 
-        <section className={styles.section2}>
+        <section className={styles.section2} id="inschrijven">
             <div className={styles.section2_container_title}>
               <p className="App-h1-number-primaircolor">02</p>
               <h2 className="App-h1-primaircolor">Loop voor...</h2>
@@ -136,13 +136,13 @@ const Detail = () => {
              <img className={styles.profile_detail} src="../assets/images/people/rita.png" width="100" alt="profile picture"/>
              <p className={styles.card_text}>#TeamRita Verbeeck</p>
               <div>
-              <NavLink className="App-button_secundair-outline" to={ROUTES.info}>info</NavLink>
-              <NavLink className="App-button_secundair"to={ROUTES.supporterorgroup}>Join Team</NavLink>
+              <NavLink className={styles.button_secundair_outlined} to={ROUTES.info}>info</NavLink>
+              <NavLink className={"App-button_secundair"} to={ROUTES.supporterorgroup}>Join Team</NavLink>
               </div>
             </div>
 
             <div className={styles.cardSurvivor}>
-              <p className={styles.card_text}>Nieuwe lotgenoot of Team Captain inschrijven?</p>
+              <p className={styles.card_text2}>Nieuwe lotgenoot of Team Captain inschrijven?</p>
               <NavLink className={styles.button_white} to={ROUTES.survivororteamcaptain}>Create a team</NavLink>
             </div>
           </div>

@@ -17,7 +17,7 @@ const Join = () => {
           <div className={styles.cardlotgenoot}>
             <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.lotgenoot2}>
               <p className={styles.infotext}>
-                Ik ben een <span>lotgenoot</span> en wil mijn eigen pagina
+                Ik ben een <span className={styles.lotgenoot}>lotgenoot</span> en wil mijn eigen pagina
                 onderhouden
               </p>
               <p className={styles.price}>€15</p>
@@ -29,11 +29,12 @@ const Join = () => {
           <div className={styles.cardteamcaptain}>
             <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.lotgenoot2}>
               <p className={styles.infotext}>
-                Ik ben een <span>Team Captain</span> en wil een pagina aanmaken
+                Ik ben een <span className={styles.teamcaptain}>Team Captain</span> en wil een pagina aanmaken
                 voor een lotgenoot die ik ken
               </p>
-              <p className={styles.exclusief}>excl. ticket lotgenoot</p>
+              
               <p className={styles.price}>€15</p>
+              <span className={styles.exclusief}>(excl. ticket lotgenoot)</span>
               <div className={styles.container_button}>
                 <button className={styles.card_button}>registreer een teamcaptain</button>
               </div>
@@ -41,8 +42,8 @@ const Join = () => {
           </div>
 
         </div>
-        <div>
-          <NavLink to={ROUTES.detail}>terug</NavLink>
+        <div className={styles.backbutton_container}>
+          <NavLink className={styles.backbutton} to={ROUTES.detail}>&#8592; terug</NavLink>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@
 }
 
 .cardlotgenoot {
+    composes: App-card from "../styles/App.css";
     color: black;
     text-decoration: none;
     background-image: url('../assets/images/shoesCards/survivor.jpg');
@@ -19,10 +20,12 @@
     width: 28rem;
     background-position: center;
     margin: 2rem;
-    border-radius: 1rem;
+
+
 }
 
 .cardteamcaptain {
+    composes: App-card from "../styles/App.css";
     color: black;
     text-decoration: none;
     background-image: url('../assets/images/shoesCards/teamcaptain.jpg');
@@ -31,7 +34,6 @@
     width: 28rem;
     background-position: center;
     margin: 2rem;
-    border-radius: 1rem;
 }
 
 .container_cards {
@@ -44,30 +46,66 @@
     color: white;
     text-decoration:none;
     text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 20% 20% 1fr;
+    grid-template-areas: "text"
+    "prijs"
+    "button"
+    ".";
+    align-items: center;
+    
 }
 
 
 .infotext {
+    grid-area: text;
     font-family: 'poppinsextrabold_italic';
     line-height: 2rem;
-    font-size: 1.2rem;
-    margin: 5rem 2rem 1rem 2rem;
+    font-size: 1rem;
+    margin: 2rem 2rem 0rem 2rem;
 }
 
 
 .price {
     font-family: 'poppinsextrabold_italic';
     font-size: 3rem;
+    grid-area: prijs;
 }
 
 .card_button {
     composes: App-button_secundair from "../styles/App.css";
-    margin-bottom: 0rem;
-    margin-top: 1rem;
+}
+
+.container_button {
+    grid-area: button;
 }
 
 .exclusief {
+    grid-area: prijs;
     opacity: 0.8;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    margin-top: 4rem;
+}
+
+
+.backbutton {
+    composes: App-button_secundair-outline from "../styles/App.css";
     margin-bottom: 2rem;
+}
+
+
+.backbutton_container {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.lotgenoot {
+    color: var(--pink-primair)
+}
+
+.teamcaptain {
+    color: #00A3FF;
 }

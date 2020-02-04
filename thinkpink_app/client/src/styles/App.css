@@ -55,6 +55,7 @@
   margin-top: 2rem;
   transition: background-image 0.5s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .App-button_primair:hover {
@@ -67,7 +68,7 @@
   background-color: transparent;
   border: 2px solid var(--pink-primair);
   color: var(--pink-primair);
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   font-size: 1rem;
   font-family: 'poppinsbold';
   border-radius: 10px;
@@ -89,12 +90,10 @@
   background-color: var(--pink-primair);
   border: 1px solid var(--pink-primair);
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   font-size: 1rem;
   font-family: 'poppinsbold';
   border-radius: 10px;
-  margin-left: 0.7rem;
-  margin-top: 3rem;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -263,18 +262,18 @@ outline: none;
 
 .App-card {
   background-color: white;
-  width: 40vw;
+  width: 50vw;
   color: black;
   border-radius: 0.5rem;
   display: flex;
   text-decoration: none;
   margin: 2rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .App-card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
 }
 
 /* .button {
