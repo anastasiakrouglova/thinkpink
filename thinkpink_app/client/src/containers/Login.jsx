@@ -6,13 +6,11 @@ import { ROUTES } from "../constants";
 
 import FormInput from "../components/FormInput.jsx"
 
-const Signup = () => {
+const Login = () => {
   return (
       <div className="App-formcontainer">
-        
         <NavbarWhite />
-        <h1 className="App-form-h1">Sign Up</h1>
-        <p className="App-form-text">We gebruiken deze informatie om het inschrijvingsproces zo vlot mogelijk te laten verlopen en voor de veiligheid tijdens het evenement. Uw informatie wordt niet gedeeld met andere partijen.</p>
+        <h1 className="App-form-h1">Log in</h1>
 
           <FormInput/>
           
@@ -20,4 +18,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

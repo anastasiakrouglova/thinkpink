@@ -5,5 +5,6 @@ export const ROUTES = {
     info: `/info`,
     survivororteamcaptain: `/survivororteamcaptain`,
     supporterorgroup: `/supporterorgroup`,
-    lotgenoot2: `/lotgenoot2`
+    signup: `/signup`,
+    login: `/login`
   };

@@ -15,7 +15,7 @@ const Join = () => {
         <div className={styles.container_cards}>
 
           <div className={styles.cardlotgenoot}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.lotgenoot2}>
+            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.signup}>
               <p className={styles.infotext}>
                 Ik wil graag alleen deelnemen als <span className={styles.lotgenoot}>supporter</span> voor een lotgenoot
               </p>
@@ -26,7 +26,7 @@ const Join = () => {
             </NavLink>
           </div>
           <div className={styles.cardteamcaptain}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.lotgenoot2}>
+            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.signup}>
               <p className={styles.infotext}>
                 Ik wil graag <span className={styles.teamcaptain}>een groep</span> inschrijven voor een lotgenoot
               </p>

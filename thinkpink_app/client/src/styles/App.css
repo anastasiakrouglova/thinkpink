@@ -308,3 +308,46 @@ outline: none;
 .App-navlink {
   text-decoration: none;
 }
+
+
+
+/* FORM */
+
+
+.App-formcontainer {
+  color: black;
+}
+
+.App-form-h1 {
+  font-size: 3rem;
+  font-family: 'poppinsbold';
+  color: var(--brown-title);
+  margin-bottom: 2rem;
+}
+
+.App-form-text {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.App-form-input-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.App-form-label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+
+.App-form-input {
+  padding: 0.5rem 1rem;
+}
+
+.App-form-input:focus {
+  outline: none;
+}
+
