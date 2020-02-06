@@ -8,7 +8,8 @@ import Races from "./Races";
 import Detail from "./Detail";
 import Info from "./Info";
 import SurvivorOrTeamcaptain from "./SurvivorOrTeamcaptain";
-import Lotgenoot2 from "./Lotgenoot2";
+import Signup from "./Signup";
+import Login from "./Login";
 import SupporterOrGroup from "./SupporterOrGroup";
 
 class App extends Component {
@@ -22,7 +23,8 @@ class App extends Component {
         <Route path={ROUTES.info} component={Info} />
         <Route path={ROUTES.survivororteamcaptain} component={SurvivorOrTeamcaptain} />
         <Route path={ROUTES.supporterorgroup} component={SupporterOrGroup} />
-        <Route path={ROUTES.lotgenoot2} component={Lotgenoot2} />
+        <Route path={ROUTES.signup} component={Signup} />
+        <Route path={ROUTES.login} component={Login} />
       </Switch>
     </main>
   );

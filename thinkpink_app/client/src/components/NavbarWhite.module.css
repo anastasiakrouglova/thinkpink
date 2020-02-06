@@ -7,7 +7,7 @@
 
 
 .nav_link__active {
-    text-decoration: underline;
+    font-family: 'poppinsbold';
     color: #EE77A0;
 }
 
@@ -33,4 +33,10 @@
     width: 1.2rem;
     margin-left: 3rem;
     margin-bottom: -0.3rem;
+}
+
+
+.personIcon {
+    margin-bottom: -0.3rem;
+    margin-right: 0.5rem;
 }
