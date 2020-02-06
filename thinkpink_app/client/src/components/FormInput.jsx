@@ -1,24 +1,15 @@
 import React from "react";
+import { inject } from "mobx-react";
 //import styles from "./FormInput.module.css"
 
-class FormInput extends React.Component {
-    constructor(props) {
-        super(props) 
-        this.state = {
-            text: 'voornaampje',
-            width: 30,
-
-        }
-    }
-    render() {
+const FormInput = ({raceStore}) => {
         return (
             <div className="App-form-input-container">
-                <label className="App-form-label">{this.state.text}</label>
+                <label className="App-form-label">{raceStore.myLabel}</label>
                 <input className="App-form-input" placeholder="John Doe" type="text" size="15"/>
             </div>
         )
-    }
 }
 
 
-export default FormInput
+export default inject(`raceStore`)(FormInput)

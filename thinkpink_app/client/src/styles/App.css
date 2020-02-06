@@ -345,6 +345,8 @@ outline: none;
 
 .App-form-input {
   padding: 0.5rem 1rem;
+  margin: 0rem 1rem 1rem 0rem;
+  max-width: 20rem;
 }
 
 .App-form-input:focus {
