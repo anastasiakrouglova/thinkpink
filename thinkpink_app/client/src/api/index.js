@@ -6,17 +6,23 @@ class Api {
       getAll = async () => {
           //const r = await fetch(`api/${this.entity}`);
         const r = await fetch(`http://localhost:4000/api/races`);
+        //console.log(r);
+        return await r.json();
+      };
+  
+      getById = async id => {
+        const r = await fetch(`http://localhost:4000/api/races/${id}`);
         console.log(r);
         return await r.json();
       };
     
-    //   create = async race => {
-    //     const r = await fetch(
-    //       `${this.entity}`,
-    //       this.getOptions(`post`, race.values)
-    //     );
-    //     return await r.json();
-    //   };
+      create = async race => {
+        const r = await fetch(
+          `${this.entity}`,
+          this.getOptions(`post`, race.values)
+        );
+        return await r.json();
+      };
     
     //   update = async race => {
     //     const r = await fetch(

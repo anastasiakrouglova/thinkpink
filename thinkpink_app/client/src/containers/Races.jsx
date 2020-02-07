@@ -7,8 +7,9 @@ import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 
 const Races = ({ raceStore }) => {
-  const { racelijst } = raceStore;
+  // const raceDetail = raceStore.findById(id);
 
+  const { racelijst } = raceStore;
   return (
     <div>
       <div className="App-background-header">
@@ -22,11 +23,10 @@ const Races = ({ raceStore }) => {
       
       {
         racelijst.map(race => (
-          <NavLink className={styles.navlink} to={ROUTES.detail}><Race key={race.id} race={race} /></NavLink> 
+          <NavLink className={styles.navlink} to={"/detail/" + race.id}><Race key={race.id} race={race} /></NavLink> 
           
         ))
       }
-      
       
     </div>
   );

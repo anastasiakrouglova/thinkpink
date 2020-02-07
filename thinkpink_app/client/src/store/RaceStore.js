@@ -20,10 +20,33 @@ class RaceStore {
     runInAction(() => this.racelijst.push(race));
     console.log(this.racelijst);
   };
+
+
+  getOne = id => {
+    this.api.getById(id).then(d => this._addRace(d));
+
+    console.log(id);
+  };
+
+
+  findById = id => {
+    console.log(this.racelijst);
+    //const racelijst = this.racelijst;
+    const race = this.racelijst.find(test => test._id === id);
+    console.log(race);
+
+    if (!race) {
+      this.api.getById(id).then(this._addrace);
+    }
+    console.log(this.api.getById(id).then(this._addrace));
+
+    return race;
+  };
 }
 
 decorate(RaceStore, {
-  racelijst: observable
+  racelijst: observable,
+  _addRace: action,
 });
 
 export default RaceStore;

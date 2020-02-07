@@ -19,7 +19,12 @@ class App extends Component {
       <Switch>
         <Route path={ROUTES.home} exact strict component={Home} />
         <Route path={ROUTES.races} component={Races} />
+        
         <Route path={ROUTES.detail} component={Detail} />
+        {/* <Route
+          path={ROUTES.detail}
+          render={({ match }) => <Detail id={match.params.id} />}
+        /> */}
         <Route path={ROUTES.info} component={Info} />
         <Route path={ROUTES.survivororteamcaptain} component={SurvivorOrTeamcaptain} />
         <Route path={ROUTES.supporterorgroup} component={SupporterOrGroup} />

@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./Detail.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
+import { inject, observer, PropTypes } from "mobx-react";
 
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 
-const Detail = () => {
+const Detail = ({ raceStore, id }) => {
+  const race = raceStore.findById(id);
+  //const { racelijst } = raceStore;
+  // this.$store.state.workouts[$route.params.id - 1].level
+
   return (
     <div>
       <NavbarWhite />
@@ -173,4 +178,9 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+
+Detail.propTypes = {
+  raceStore: PropTypes.observableObject.isRequired
+};
+
+export default inject(`raceStore`)(observer(Detail));

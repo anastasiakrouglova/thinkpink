@@ -6,6 +6,7 @@ exports.create = (req, res) => {
   }
 
   const race = new Race({
+
     city: req.body.city,
     country: req.body.country,
     month: req.body.month,
