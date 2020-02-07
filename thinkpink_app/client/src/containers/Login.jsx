@@ -40,8 +40,9 @@ const Login = () => {
           </div>
 
           <div className={styles.buttonContainer}>
-            <NavLink className={styles.secundair_button} to={ROUTES.signup}>Sign up</NavLink>
-            <input className="App-button_secundair" type="submit" value="Log in"/>
+            <NavLink className={styles.secundair_button} to={ROUTES.signup}>Nog geen account?</NavLink>
+            <input className="App-button_secundair" type="submit" value="Log in" />
+            <NavLink to={ROUTES.signup}>HARDCODED LINK LOG IN</NavLink>
           </div>
 
         </form>

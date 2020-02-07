@@ -24,7 +24,7 @@ const app = express();
 
 // BUILD PAS GEBRUIKEN WNR DEPLOYEN ON HEROKU
 app.use(express.static(path.resolve(__dirname, "../client/build/")));
-//app.use(express.static(path.resolve(__dirname, "../client/")));
+// app.use(express.static(path.resolve(__dirname, "../client/src")));
 
 
 app.use(cors());
@@ -38,6 +38,10 @@ require("./app/routes/races.routes.js")(app);
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client/build/", "index.html"));
 });
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../client/src", "index.js"));
+// });
 
 app.use(cors({credentials: true, origin: '*' }));
 

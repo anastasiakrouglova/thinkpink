@@ -6,8 +6,15 @@ exports.create = (req, res) => {
   }
 
   const race = new Race({
-    name: req.body.name,
-    desc: req.body.desc,
+    city: req.body.city,
+    country: req.body.country,
+    month: req.body.month,
+    date: req.body.date,
+    year: req.body.year,
+    startLocation: req.body.startLocation,
+    startTime: req.body.startTime,
+    description: req.body.description,
+    sponsors: req.body.sponsors,
     raceId: req.body.raceId
   });
 
@@ -30,84 +37,75 @@ exports.findAll = async (req, res) => {
   }
 };
 
-// exports.findAll = async (req, res) => {
-//   try {
-//     console.log(race);
-//     console.log('llalal')
-//     const race = await Race.findAll();
+exports.findOne = async (req, res) => {
+  try {
+    const race = await Race.findOne({
+      _id: req.params.raceId
+    });
 
-//     res.send(race);
-//   } catch (err) {
-//     console.log(race);
-//     console.log('llalal')
-//     res.status(500).send({
-//       err: err.race || "Error finding all races (from findAll function)"
-//     });
-//   }
-// };
+    if (race) {
+      res.send(race);
+    } else {
+      res.status(404).send("Race not found (findOne function)");
+    }
+  } catch (err) {
+    if (err.kind === "ObjectId") {
+      return res.status(500).send("No valid raceId");
+    }
+    return res.status(500).send(err);
+  }
+};
 
-// exports.findOne = async (req, res) => {
-//   try {
-//     const race = await Race.findOne({
-//       _id: req.params.raceId
-//     });
+exports.update = async (req, res) => {
+  if (!req.body.name) {
+    return res.status(400).send("Name can not be empty.");
+  }
 
-//     if (race) {
-//       res.send(race);
-//     } else {
-//       res.status(404).send("Race not found (findOne function)");
-//     }
-//   } catch (err) {
-//     if (err.kind === "ObjectId") {
-//       return res.status(500).send("No valid raceId");
-//     }
-//     return res.status(500).send(err);
-//   }
-// };
+  try {
+    const race = await Race.findOneAndUpdate(
+      {
+        _id: req.params.raceId,
+        city: req.body.city,
+        country: req.body.country,
+        month: req.body.month,
+        date: req.body.date,
+        year: req.body.year,
+        startLocation: req.body.startLocation,
+        startTime: req.body.startTime,
+        description: req.body.description,
+        sponsors: req.body.sponsors,
+      },
+      {
+        new: true
+      }
+    );
 
-// exports.update = async (req, res) => {
-//   if (!req.body.name) {
-//     return res.status(400).send("Name can not be empty.");
-//   }
+    if (!race) {
+      return res.status(404).send("No race found (update function)");
+    }
 
-//   try {
-//     const race = await Race.findOneAndUpdate(
-//       {
-//         _id: req.params.raceId,
-//         name: req.body.name,
-//         desc: req.body.desc
-//       },
-//       {
-//         new: true
-//       }
-//     );
+    res.send(race);
+  } catch {
+    if (err.kind === "ObjectId") {
+      return res.status(417).send("No valid raceId");
+    }
+    return res.status(500).send(err);
+  }
+};
 
-//     if (!race) {
-//       return res.status(404).send("No race found (update function)");
-//     }
-
-//     res.send(race);
-//   } catch {
-//     if (err.kind === "ObjectId") {
-//       return res.status(417).send("No valid raceId");
-//     }
-//     return res.status(500).send(err);
-//   }
-// };
-
-// exports.delete = async (req, res) => {
-//   try {
-//     const race = await Race.findOneAndRemove({
-//       _id: req.params.raceId
-//     });
-//     if (!race) {
-//       return res.status(404).send("No race found (delete function)");
-//     }
-//     res.send(race);
-//   } catch (err) {
-//     if (err.kind === "ObjectId") {
-//       return res.status(417).send("No valid raceId");
-//     }
-//     return res.status(500).send(err);
-//   }
-// };
+exports.delete = async (req, res) => {
+  try {
+    const race = await Race.findOneAndRemove({
+      _id: req.params.raceId
+    });
+    if (!race) {
+      return res.status(404).send("No race found (delete function)");
+    }
+    res.send(race);
+  } catch (err) {
+    if (err.kind === "ObjectId") {
+      return res.status(417).send("No valid raceId");
+    }
+    return res.status(500).send(err);
+  }
+};
