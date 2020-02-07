@@ -16,14 +16,6 @@ const Signup = ({ uiStore }) => {
   const yearInput = React.createRef()
   const countryNumberInput = React.createRef()
   
-  const handleSubmit = e => {
-    e.preventDefault();
-    // authStore
-    //   .login(emailInput.current.value, pwdInput.current.value)
-    //   .then(() => {
-    //     history.push(ROUTES.login)
-    //   })
-  }
   
   return (
       <div className="App-formcontainer">

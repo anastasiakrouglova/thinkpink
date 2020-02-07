@@ -7,7 +7,6 @@ import styles from "./LoginForm.module.css";
 
 const formValid = ({ formErrors, ...rest}) => {
   let valid = true
-
   // validate form errors being empty
   Object.values(formErrors).forEach(val => {
     val.length > 0 && (valid = false)
@@ -17,6 +16,9 @@ const formValid = ({ formErrors, ...rest}) => {
   Object.values(rest).forEach(val => {
     val === `` && (valid = false)
   });
+
+
+
 
   return valid;
 }
@@ -29,7 +31,9 @@ class LoginForm extends Component {
     super();
     this.state = {
       email: ``, pwd: ``,
-      formErrors:  {email: ``, pwd: ``} };
+      formErrors: { email: ``, pwd: `` }
+    };
+    
   }
 
   handleChange = e => {
@@ -58,9 +62,13 @@ class LoginForm extends Component {
 
     const { uiStore, history } = this.props;
 
+    console.log(uiStore);
+
     if (formValid(this.state)) {
-      uiStore.login(emailInput.current.value, pwdInput.current.value).then(() => {
-        history.push(ROUTES.aankopen);
+      uiStore
+        .login(emailInput.current.value, pwdInput.current.value)
+        .then(() => {
+        history.push(ROUTES.formwelcome);
       });
     }
   };
@@ -95,3 +103,70 @@ class LoginForm extends Component {
 }
 
 export default inject(`uiStore`)(withRouter(LoginForm));
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import { inject } from "mobx-react";
+// import { withRouter } from "react-router-dom";
+// import { ROUTES } from "../../constants";
+
+// //import stylesForm from "../../styles/form.module.css";
+// import styles from "./LoginForm.module.css";
+
+// const LoginForm = ({ uiStore, history }) => {
+//   const emailInput = React.createRef();
+//   const pwdInput = React.createRef();
+
+//   const handleSubmit = e => {
+//     e.preventDefault();
+    
+//     uiStore
+//       .login(emailInput.current.value, pwdInput.current.value)
+//       .then(() => {
+//         history.push(ROUTES.formwelcome);
+//       });
+//   };
+
+//   return (
+//     <>
+//       <form onSubmit={handleSubmit} >
+//         <div >
+//           <label htmlFor="email" >
+//             Email
+//           </label>
+//           <input
+//             type="email"
+//             name="email"
+//             id="email="
+//             ref={emailInput}
+//           />
+//         </div>
+//         <div >
+//           <label htmlFor="username" >
+//             Password
+//           </label>
+//           <input
+//             type="password"
+//             name="password"
+//             id="password"
+//             ref={pwdInput}
+//           />
+//         </div>
+//         <input type="submit" value="Login" />
+//       </form>
+//     </>
+//   );
+// };
+
+// export default inject(`uiStore`)(withRouter(LoginForm));
+

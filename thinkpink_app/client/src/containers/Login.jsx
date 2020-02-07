@@ -12,6 +12,7 @@ const Login = () => {
   
   const handleSubmit = e => {
     e.preventDefault();
+
     // authStore
     //   .login(emailInput.current.value, pwdInput.current.value)
     //   .then(() => {
