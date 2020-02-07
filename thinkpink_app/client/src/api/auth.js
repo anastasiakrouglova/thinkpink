@@ -1,6 +1,6 @@
 class Auth {
     login = (email, password) => {
-      return fetch(`/auth/login`, {
+      return fetch(`http://localhost:4000/auth/login`, {
         method: `POST`,
         headers: {
           "content-type": `application/json`
@@ -19,7 +19,7 @@ class Auth {
     };
   
     logout = () => {
-      return fetch(`/auth/logout`, {
+      return fetch(`http://localhost:4000/auth/logout`, {
         method: `POST`,
         headers: {
           "content-type": `application/json`
@@ -27,15 +27,15 @@ class Auth {
       });
     };
   
-    register = (name, namePartner, email, password) => {
-      return fetch(`/auth/register`, {
+    register = (name, surname, email, password) => {
+      return fetch(`http://localhost:4000/auth/register`, {
         method: `POST`,
         headers: {
           "content-type": `application/json`
         },
         body: JSON.stringify({
           name,
-          namePartner,
+          surname,
           email,
           password
         })

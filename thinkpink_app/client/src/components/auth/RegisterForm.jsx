@@ -24,8 +24,8 @@ class RegisterForm extends Component {
   constructor() {
     super();
     this.state = {
-      email: ``, pwd: ``, pwd2: ``, name: ``, namePartner: ``,
-      formErrors:  {email: ``, pwd: ``, pwd2: ``, name: ``, namePartner: ``} };
+      email: ``, pwd: ``, pwd2: ``, name: ``, surname: ``,
+      formErrors:  {email: ``, pwd: ``, pwd2: ``, name: ``, surname: ``} };
   }
 
   handleChange = e => {
@@ -55,23 +55,27 @@ class RegisterForm extends Component {
     e.preventDefault();
 
     const { uiStore, history } = this.props;
-    const {name, namePartner, email, pwd} = this.state;
+    const {name, surname, email, pwd} = this.state;
 
     if (formValid(this.state)) {
-      uiStore.register(name, namePartner, email, pwd).then(() => {
+      uiStore.register(name, surname, email, pwd).then(() => {
+        console.log('form is valid!')
         history.push(ROUTES.login);
       });
     }
   };
 
   render() {
-    const { formErrors, name, namePartner, email, pwd, pwd2 } = this.state;
+    const { formErrors, name, surname, email, pwd, pwd2 } = this.state;
     return (
       <>
         <form onSubmit={this.handleSubmit} className={styles.formContainer}>
-          <label htmlFor="name" className={styles.label}>
-            Name
+        <div className={styles.name_container}>
+          <div className="App-form-input-container">
+          <label htmlFor="name" className={styles.label}>Voornaam</label>
             <input
+              required
+              placeholder="John"
               className={styles.inputfield}
               type="name"
               name="name"
@@ -79,21 +83,26 @@ class RegisterForm extends Component {
               value={name}
               onChange={this.handleChange}
             />
-          </label>
-          <label htmlFor="namePartner" className={styles.label}>
-            Name partner
+          </div>
+          <div className="App-form-input-container">
+            <label htmlFor="surname" className={styles.label}>Familienaam</label>
             <input
+              required
+              placeholder="Doe"
               className={styles.inputfield}
-              type="namePartner"
-              name="namePartner"
-              id="namePartner"
-              value={namePartner}
+              type="surname"
+              name="surname"
+              id="surname"
+              value={surname}
               onChange={this.handleChange}
             />
-          </label>
-          <label htmlFor="email" className={styles.label}>
-            Email
+            </div>
+          </div>
+          <div className="App-form-input-container">
+          <label htmlFor="email" className={styles.label}>Email</label>
             <input
+              required
+              placeholder="johndoe@gmail.com"
               className={formErrors.email.length > 0 ? styles.inputfieldError : styles.inputfield}
               type="email"
               name="email"
@@ -103,11 +112,15 @@ class RegisterForm extends Component {
             />
             {formErrors.email.length > 0 && (
               <span>{formErrors.email}</span>
-            )}
-          </label>
-          <label htmlFor="pwd" className={styles.label}>
-            Password
+              )} 
+          </div>
+
+          <div className="App-form-input-container">
+          <label htmlFor="pwd" className={styles.label}>Wachtwoord</label>
+            
             <input
+              required
+              placeholder="*****"
               className={formErrors.pwd2.length > 0 ? styles.inputfieldError : styles.inputfield}
               type="password"
               name="pwd"
@@ -118,10 +131,13 @@ class RegisterForm extends Component {
             {formErrors.pwd.length > 0 && (
               <span>{formErrors.pwd}</span>
             )}
-          </label>
-          <label htmlFor="pwd2" className={styles.label}>
-            Repeat password
+            
+          </div>
+          <div className="App-form-input-container">
+          <label htmlFor="pwd2" className={styles.label}>Repeat password</label>
             <input
+              required
+              placeholder="*****"
               className={formErrors.pwd2.length > 0 ? styles.inputfieldError : styles.inputfield}
               type="password"
               name="pwd2"
@@ -132,11 +148,12 @@ class RegisterForm extends Component {
             {formErrors.pwd2.length > 0 && (
               <span>{formErrors.pwd2}</span>
             )}
-          </label>
+          </div>
           <input
+            required
             className={styles.loginButton}
             type="submit"
-            value="Register"
+            value="Sign up"
             disabled={pwd && pwd !== pwd2}
           />
         </form>

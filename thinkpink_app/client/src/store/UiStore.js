@@ -4,6 +4,7 @@ import { getUserFromCookie } from "../utils/index.js";
 
 class UiStore {
   authUser = null;
+  role = `Teamcaptain [hardcoded]`;
 
   constructor(rootStore) {
     this.rootStore = rootStore;
@@ -26,7 +27,7 @@ class UiStore {
       });
   };
 
-  register = (name, namePartner, email, pwd) => this.authService.register(name, namePartner, email, pwd);
+  register = (name, surname, email, pwd) => this.authService.register(name, surname, email, pwd);
 
   logout = () => {
     this.authService.logout().then(() => this.setUser(null));

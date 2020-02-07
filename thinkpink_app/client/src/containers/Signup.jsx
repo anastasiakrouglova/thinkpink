@@ -4,8 +4,9 @@ import NavbarWhite from "../components/NavbarWhite.jsx";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 import { inject } from "mobx-react";
+import RegisterForm from "../components/auth/RegisterForm";
 
-const Signup = ({ raceStore }) => {
+const Signup = ({ uiStore }) => {
   const firstnameInput = React.createRef()
   const lastnameInput = React.createRef()
   const emailInput = React.createRef()
@@ -31,10 +32,11 @@ const Signup = ({ raceStore }) => {
       <div className={styles.container_signup}>
       <div className={styles.img_container}></div>
       
-      <form className={styles.formcontainer} onSubmeit={handleSubmit}>
-      <h1 className="App-form-h1">Sign Up - {raceStore.role}</h1>
+      <div>
+      <h1 className="App-form-h1">Sign Up - {uiStore.role}</h1>
         <p className="App-form-text">We gebruiken deze informatie om het inschrijvingsproces zo vlot mogelijk te laten verlopen en voor de veiligheid tijdens het evenement. Uw informatie wordt niet gedeeld met andere partijen.</p>
 
+        <RegisterForm />  
         <button className={styles.label}><img src="../assets/images/icons/fotobutton.svg" alt="foto"/> Voeg een foto van jezelf toe</button>
           
         <div className={styles.name_container}>
@@ -131,10 +133,10 @@ const Signup = ({ raceStore }) => {
         <NavLink className={styles.secundair_button} to={ROUTES.login}>Log in</NavLink>
         <input className="App-button_secundair" type="submit" value="Sign Up"/>
         </div>
-        </form>
+        </div>
       </div>
     </div>
   );
 };
 
-export default inject(`raceStore`)(Signup);
+export default inject(`uiStore`)(Signup);
