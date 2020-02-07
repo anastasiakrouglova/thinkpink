@@ -31,10 +31,12 @@ const Signup = ({ raceStore }) => {
       <div className={styles.container_signup}>
       <div className={styles.img_container}></div>
       
-        <form className={styles.formcontainer} onSubmeit={handleSubmit}>
+      <form className={styles.formcontainer} onSubmeit={handleSubmit}>
       <h1 className="App-form-h1">Sign Up - {raceStore.role}</h1>
-        <p className="App-form-text">We gebruiken dez informatie om het inschrijvingsproces zo vlot mogelijk te laten verlopen en voor de veiligheid tijdens het evenement. Uw informatie wordt niet gedeeld met andere partijen.</p>
+        <p className="App-form-text">We gebruiken deze informatie om het inschrijvingsproces zo vlot mogelijk te laten verlopen en voor de veiligheid tijdens het evenement. Uw informatie wordt niet gedeeld met andere partijen.</p>
 
+        <button className={styles.label}><img src="../assets/images/icons/fotobutton.svg" alt="foto"/> Voeg een foto van jezelf toe</button>
+          
         <div className={styles.name_container}>
           <div className="App-form-input-container">
             <label htmlFor="firstname" className={styles.label}>Voornaam</label>

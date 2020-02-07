@@ -6,5 +6,6 @@ export const ROUTES = {
     survivororteamcaptain: `/survivororteamcaptain`,
     supporterorgroup: `/supporterorgroup`,
     signup: `/signup`,
-    login: `/login`
+    login: `/login`,
+    formwelcome: `/formwelcome`
   };
