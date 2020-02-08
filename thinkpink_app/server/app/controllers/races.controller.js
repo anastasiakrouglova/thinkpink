@@ -6,7 +6,6 @@ exports.create = (req, res) => {
   }
 
   const race = new Race({
-
     city: req.body.city,
     country: req.body.country,
     month: req.body.month,
@@ -31,10 +30,10 @@ exports.create = (req, res) => {
 
 exports.findAll = async (req, res) => {
   try {
-    const race = await Race.find({raceId: req.raceId});
+    const race = await Race.find({ raceId: req.raceId });
     res.send(race);
   } catch (err) {
-    res.status(500).send({err: err.race|| 'Error'});
+    res.status(500).send({ err: err.race || "Error" });
   }
 };
 
@@ -74,7 +73,7 @@ exports.update = async (req, res) => {
         startLocation: req.body.startLocation,
         startTime: req.body.startTime,
         description: req.body.description,
-        sponsors: req.body.sponsors,
+        sponsors: req.body.sponsors
       },
       {
         new: true
