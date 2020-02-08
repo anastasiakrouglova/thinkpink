@@ -49,18 +49,92 @@ export class StepThree extends React.Component {
                <h1 className="App-form-h1">Laten we het vieren!</h1>
                <p className={styles.form_textWelcome}>Je teamcaptain Rita heeft ervoor gekozen om <span className={styles.form_pinkText_normal}>“If I Ain’t Got You - Alicia Keys”</span> als groepsnummer te gebruiken.</p>
                 
-                <form>
                   <div className="App-form-input-container">
                     <label htmlFor="link" className={styles.form_change_step3}>Beluister het fragment hier:</label>
                     <a target="_blank" className={styles.form_pinkText_normal} href="https://www.youtube.com/watch?v=g_xcxu0TTvo">If I Ain't Got You - Alicia Keys</a>
                   </div>
-                </form>
              </>
            ) : store.uiStore.role === `group` ? (
-             <>
-               <h1 className="App-form-h1">Hi {store.uiStore.role}!</h1>
-               <p className="App-body">Registreer meerdere mensen!</p>
-             </>
+             <div className={styles.step3_container}>
+              <div className={styles.step3_containerLid}>
+                <h1 className="App-form-h1">Nodig supporters uit</h1>
+                <p className={styles.form_textWelcome}>De mensen die je opgeeft zullen allemaal een e-mail ontvangen met instructies over het inschrijvingsproces van je team. Vanaf 10 mensen betaal moet je groep €12 p.p betalen in plaats van €15 p.p, maar jij hoeft dus niet voor hen te betalen.</p>
+                <form>
+                  <div className="App-form-input-container">
+                    <label htmlFor="email" className={styles.label}>email</label>
+                    <input className={styles.input} type="text" name="email" placeholder="johndoe@gmail.com"/>
+                  </div>
+                  <button className="App-button_secundair">+ Voeg nog een lid toe</button>  
+                </form>    
+              </div> 
+              <div>
+              <h1 className="App-form-h1">Schrijf extra mensen in.</h1>
+              <p className={styles.form_textWelcome}>Hier betaal je ook voor de mensen die je extra inschrijft. Je vrienden, collega’s of  familieleden die je hier registreert hoeven dus geen account aan te maken.</p>
+              <div className={styles.name_container}>
+                      <div className="App-form-input-container">
+                        <label htmlFor="firstname" className={styles.label}>Voornaam</label>
+                        <input required name="firstname" id="firstname" className={styles.input} placeholder="John" type="text" />
+                      </div>
+        
+                      <div className="App-form-input-container">
+                          <label htmlFor="lastname" className={styles.label}>Familienaam</label>
+                          <input required name="lastname" id="lastname" className={styles.input} placeholder="Doe" type="text" />
+                      </div>
+                    </div>
+                  
+
+                    <div className="App-form-input-container">
+                      <label htmlFor="email" className={styles.label}>Email</label>
+                      <input required name="email" id="email" className={styles.input} placeholder="johndoe@gmail.com" type="email" />
+                    </div>
+
+                    <div className={styles.container_date}>
+                      <div className="App-form-input-container">
+                        <label htmlFor="day" className={styles.label}>day</label>
+                        <input required name="day" id="day" className={styles.input} placeholder="01" type="number" min="1" max="31" />
+                      </div>
+                      <div className="App-form-input-container">
+                        <label htmlFor="month" className={styles.label}>month</label>
+                        <input required name="month" id="month" className={styles.input} placeholder="02" type="number"  min="1" max="12" />
+                      </div>
+                      <div className="App-form-input-container">
+                        <label htmlFor="year" className={styles.label}>year</label>
+                        <input required name="year" id="year" className={styles.input} placeholder="*****" type="number" min="1900" max="2500" />
+                      </div>
+                    </div>
+
+                    <div className="App-form-input-container">
+                        <label htmlFor="year" className={styles.label}>T-shirt maat</label>
+                      <div>
+                        
+                        <input className={styles.radioInput} type="radio" name="size" id="xs" />
+                        <label className={styles.radioLabel} htmlFor="xs">xs</label>
+                        
+                        
+                        <input className={styles.radioInput} type="radio" name="size" id="s" />
+                        <label className={styles.radioLabel} htmlFor="s">s</label>
+                        
+                        
+                        <input className={styles.radioInput}  type="radio" name="size" id="m" />
+                        <label className={styles.radioLabel} htmlFor="m">m</label>
+                        
+                        
+                        <input className={styles.radioInput}  type="radio" name="size" id="l" />
+                        <label className={styles.radioLabel} htmlFor="l">l</label>
+
+                        
+                        <input className={styles.radioInput}  type="radio" name="size" id="xl" />
+                        <label className={styles.radioLabel} htmlFor="xl">xl</label>
+
+                        
+                        <input className={styles.radioInput}  type="radio" name="size" id="xxl" />
+                        <label className={styles.radioLabel} htmlFor="xxl">xxl</label>
+
+                        </div>
+                    </div>
+              </div>         
+
+             </div>
            ) : (
             <>
               <h1 className="App-form-h1">Ooops</h1>

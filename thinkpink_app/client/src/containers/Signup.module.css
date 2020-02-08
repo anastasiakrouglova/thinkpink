@@ -157,3 +157,18 @@
 .form_link__dropdown:focus {
     outline: none;
 }
+
+.step3_containerLid {
+    margin-right: 3rem;
+}
+
+.step3_container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .step3_container {
+        flex-direction: column;
+    }
+}
