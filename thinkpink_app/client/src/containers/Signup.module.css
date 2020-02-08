@@ -172,3 +172,8 @@
         flex-direction: column;
     }
 }
+
+.lidtoevoegen {
+    margin-top: 3rem;
+    composes: App-button_secundair from "../styles/App.css"
+}

@@ -130,8 +130,10 @@ export class StepThree extends React.Component {
                         <input className={styles.radioInput}  type="radio" name="size" id="xxl" />
                         <label className={styles.radioLabel} htmlFor="xxl">xxl</label>
 
+                          </div>
+                           
                         </div>
-                    </div>
+                        <button className={styles.lidtoevoegen}>+ Voeg nog een lid toe</button> 
               </div>         
 
              </div>
