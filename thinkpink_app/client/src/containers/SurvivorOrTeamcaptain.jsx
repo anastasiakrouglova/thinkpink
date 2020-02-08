@@ -15,7 +15,7 @@ const Join = () => {
         <div className={styles.container_cards}>
 
           <div className={styles.cardlotgenoot}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.signup}>
+            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik ben een <span className={styles.lotgenoot}>lotgenoot</span> en wil mijn eigen pagina
                 onderhouden
@@ -27,7 +27,7 @@ const Join = () => {
             </NavLink>
           </div>
           <div className={styles.cardteamcaptain}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.signup}>
+            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik ben een <span className={styles.teamcaptain}>Team Captain</span> en wil een pagina aanmaken
                 voor een lotgenoot die ik ken

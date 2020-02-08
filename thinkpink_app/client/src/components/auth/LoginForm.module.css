@@ -1,0 +1,67 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.label{
+    composes: App-form-label from "../../styles/App.css"
+}
+
+.inputfield{
+    height: 2rem;
+    margin-top: 0.3rem;
+    width: 15rem;
+}
+
+.inputfield:focus {
+    outline: 0.1rem solid #F7B500
+}
+
+.inputfieldError {
+    font-size: 1rem;
+    composes: inputfield;
+    border: 0.1rem solid #FA7573
+}
+
+.inputfieldError:focus {
+    outline: 0.1rem solid #FA7573
+}
+
+.loginButton {
+    composes: App-button_secundair from "../../styles/App.css";
+    margin-top: 1rem;
+    margin-left: 10rem;
+}
+
+.loginButtonEmpty {
+    composes: loginButton;
+    opacity: 0.5;
+}
+
+.loginButton:focus {
+    outline: none;
+}
+
+.loginButton:hover {
+    background-color: #D16F00;
+}
+
+.loginButtonEmpty:hover {
+    background-color: #F78300;
+}
+
+.signupContainer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+.signup{
+    color: var(--pink-primair)
+}
+
+.name_container {
+    display: flex;
+    flex-direction: row;
+}

@@ -12,8 +12,9 @@ const signatureCookie = {
 };
 
 exports.register = (req, res) => {
-  const { email, password, name } = req.body;
-  const user = new User({ email, password, name });
+
+  const { email, password, name, surname, birthday, phoneNumber, tShirtSize } = req.body;
+  const user = new User({ email, password, name, surname, birthday, phoneNumber, tShirtSize });
   user.save(err => {
     if (err) {
       res.status(500).send("Error registering new user. Please try again.");
@@ -35,8 +36,8 @@ exports.login = async (req, res) => {
     } else {
       const isPasswordCorrect = await user.validPassword(password);
       if (isPasswordCorrect) {
-        const { _id, name, roles } = user;
-        const token = jwt.sign({ _id, name, roles }, process.env.SECRET, {
+        const { _id, name, email } = user;
+        const token = jwt.sign({ _id, name, email }, process.env.SECRET, {
           expiresIn: "24h"
         });
         const parts = token.split(".");

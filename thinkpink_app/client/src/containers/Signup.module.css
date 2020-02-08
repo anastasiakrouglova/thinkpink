@@ -1,0 +1,97 @@
+.name_container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.label {
+    composes: App-form-label from "../styles/App.css"
+}
+
+
+.input {
+    composes: App-form-input from "../styles/App.css"
+}
+
+.radioInput:checked + .radioLabel {
+    color: white;
+    background-color: var(--pink-primair);
+    border: 1px solid var(--pink-primair);
+}
+
+
+.radioInput {
+    visibility: hidden;
+}
+
+.radioLabel {
+    margin-left: -0.9rem;
+    padding: 0.5rem 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #8F8F8F;
+    color: #8F8F8F;
+    font-size: 1rem;
+    transition: all .3s ease-out;
+    border-radius: 0.1rem;
+}
+
+.container_date {
+    display: flex;
+}
+
+
+.akkoord_container {
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+.underlined {
+    text-decoration: underline;
+}
+
+.container_signup {
+    display: flex;
+}
+
+
+.img_container {
+    composes: App-img_form from "../styles/App.css"
+
+}
+
+.formcontainer {
+    height: 100vh;
+    overflow: scroll;
+}
+
+
+.selectCountry {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #D6D6D6;
+    border-radius: 0rem;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    height: 2rem;
+}
+
+
+.secundair_button {
+    composes: App-button_secundair-outline from "../styles/App.css";
+    margin-right: 1rem;
+    padding: 0.6rem 1rem
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+   

@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./Races.module.css";
+import { inject, observer, PropTypes } from "mobx-react";
 import NavbarDark from "../components/NavbarDark.jsx";
 import Race from "../components/Race.jsx"
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 
-const Races = () => {
+const Races = ({ raceStore }) => {
+  // const raceDetail = raceStore.findById(id);
+
+  const { racelijst } = raceStore;
   return (
     <div>
       <div className="App-background-header">
@@ -16,9 +20,20 @@ const Races = () => {
           <button className="App-input_search__button"><img src="../assets/images/icons/search.svg" alt="search"/></button>
         </div>
       </div>
-      <NavLink className={styles.navlink} to={ROUTES.detail}><Race/></NavLink> 
+      
+      {
+        racelijst.map(race => (
+          <NavLink className={styles.navlink} to={"/detail/" + race.id}><Race key={race.id} race={race} /></NavLink> 
+          
+        ))
+      }
+      
     </div>
   );
 };
 
-export default Races;
+Races.propTypes = {
+  raceStore: PropTypes.observableObject.isRequired
+};
+
+export default inject(`raceStore`)(observer(Races));

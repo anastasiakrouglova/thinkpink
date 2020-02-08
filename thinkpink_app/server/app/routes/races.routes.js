@@ -1,5 +1,5 @@
 module.exports = app => {
-  const controller = require("../controllers/races.controller");
+  const controller = require("../controllers/races.controller.js");
 
   app.post("/api/races", controller.create);
   app.get("/api/races", controller.findAll);

@@ -1,4 +1,4 @@
-const Race = require("../models/race.model");
+const Race = require("../models/race.model.js");
 
 exports.create = (req, res) => {
   if (!req.body.name) {
@@ -6,8 +6,16 @@ exports.create = (req, res) => {
   }
 
   const race = new Race({
-    name: req.body.name,
-    desc: req.body.desc
+    city: req.body.city,
+    country: req.body.country,
+    month: req.body.month,
+    date: req.body.date,
+    year: req.body.year,
+    startLocation: req.body.startLocation,
+    startTime: req.body.startTime,
+    description: req.body.description,
+    sponsors: req.body.sponsors,
+    raceId: req.body.raceId
   });
 
   race
@@ -22,12 +30,10 @@ exports.create = (req, res) => {
 
 exports.findAll = async (req, res) => {
   try {
-    const race = await Race.findAll();
+    const race = await Race.find({ raceId: req.raceId });
     res.send(race);
   } catch (err) {
-    res.status(500).send({
-      err: err.race || "Error finding all races (from findAll function)"
-    });
+    res.status(500).send({ err: err.race || "Error" });
   }
 };
 
@@ -59,8 +65,15 @@ exports.update = async (req, res) => {
     const race = await Race.findOneAndUpdate(
       {
         _id: req.params.raceId,
-        name: req.body.name,
-        desc: req.body.desc
+        city: req.body.city,
+        country: req.body.country,
+        month: req.body.month,
+        date: req.body.date,
+        year: req.body.year,
+        startLocation: req.body.startLocation,
+        startTime: req.body.startTime,
+        description: req.body.description,
+        sponsors: req.body.sponsors
       },
       {
         new: true

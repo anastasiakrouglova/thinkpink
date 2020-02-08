@@ -12,6 +12,8 @@ import Signup from "./Signup";
 import Login from "./Login";
 import SupporterOrGroup from "./SupporterOrGroup";
 
+import FormWelcome from "./FormWelcome";
+
 class App extends Component {
   render() {
   return (
@@ -19,12 +21,19 @@ class App extends Component {
       <Switch>
         <Route path={ROUTES.home} exact strict component={Home} />
         <Route path={ROUTES.races} component={Races} />
+        
         <Route path={ROUTES.detail} component={Detail} />
+        {/* <Route
+          path={ROUTES.detail}
+          render={({ match }) => <Detail id={match.params.id} />}
+        /> */}
         <Route path={ROUTES.info} component={Info} />
         <Route path={ROUTES.survivororteamcaptain} component={SurvivorOrTeamcaptain} />
         <Route path={ROUTES.supporterorgroup} component={SupporterOrGroup} />
         <Route path={ROUTES.signup} component={Signup} />
         <Route path={ROUTES.login} component={Login} />
+        <Route path={ROUTES.formwelcome} component={FormWelcome} />
+        
       </Switch>
     </main>
   );
