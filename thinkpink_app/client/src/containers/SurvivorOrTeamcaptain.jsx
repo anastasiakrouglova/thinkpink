@@ -4,8 +4,21 @@ import NavbarWhite from "../components/NavbarWhite.jsx";
 import Race from "../components/Race.jsx";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
+import { inject } from "mobx-react";
 
-const Join = () => {
+const SurvivorOrTeamcaptain = ({uiStore}) => {
+
+
+  const handleClickLotgenoot = () => {
+    uiStore.role = `lotgenoot`;
+    console.log(uiStore.role)
+  }
+
+  const handleClickTeamCaptain = () => {
+    uiStore.role = `teamcaptain`;
+    console.log(uiStore.role)
+  }
+
   return (
     <div>
       <div>
@@ -15,7 +28,7 @@ const Join = () => {
         <div className={styles.container_cards}>
 
           <div className={styles.cardlotgenoot}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+            <NavLink onClick={handleClickLotgenoot} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik ben een <span className={styles.lotgenoot}>lotgenoot</span> en wil mijn eigen pagina
                 onderhouden
@@ -27,7 +40,7 @@ const Join = () => {
             </NavLink>
           </div>
           <div className={styles.cardteamcaptain}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+            <NavLink onClick={handleClickTeamCaptain} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik ben een <span className={styles.teamcaptain}>Team Captain</span> en wil een pagina aanmaken
                 voor een lotgenoot die ik ken
@@ -50,4 +63,4 @@ const Join = () => {
   );
 };
 
-export default Join;
+export default inject(`uiStore`)(SurvivorOrTeamcaptain);

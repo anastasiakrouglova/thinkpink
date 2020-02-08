@@ -7,5 +7,6 @@ export const ROUTES = {
     supporterorgroup: `/supporterorgroup`,
     signup: `/signup`,
     login: `/login`,
-    formwelcome: `/formwelcome`
+    formwelcome: `/formwelcome`,
+    forminfo: `/forminfo`
   };
