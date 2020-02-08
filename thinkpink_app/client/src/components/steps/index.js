@@ -85,7 +85,7 @@ export default function MultiStep(props) {
             style={buttonsState.showPreviousBtn ? {} : { display: 'none' }}
             onClick={previous}
           >
-            Vorige
+            &#8592; Vorige
           </button>
 
         <button
@@ -93,7 +93,7 @@ export default function MultiStep(props) {
             style={buttonsState.showNextBtn ? {} : { display: 'none' }}
             onClick={next}
           >
-            Volgende
+            Volgende &rarr;
           </button>
         </div>
       </div>

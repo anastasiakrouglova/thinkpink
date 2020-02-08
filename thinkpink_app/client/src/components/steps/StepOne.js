@@ -60,8 +60,8 @@ export class StepOne extends React.Component {
                </p>
                <p className={styles.form_change}>Wil je toch niet inschrijven als teamcaptain? Verander het hier!</p>
                <select className={styles.form_link__dropdown} onChange={handleChooseRole} ref={chooseRole} id="selectRole">
+                        <option value="teamcaptain">teamcaptain</option>
                          <option value="lotgenoot">lotgenoot</option>
-                         <option value="teamcaptain">teamcaptain</option>
                          <option value="supporter">supporter</option>
                          <option value="group">inschrijving met meerdere mensen</option>
                 </select> 
@@ -80,9 +80,9 @@ export class StepOne extends React.Component {
                </p>
                <p className={styles.form_change}>Wil je toch niet inschrijven als supporter? Verander het hier!</p>
                <select className={styles.form_link__dropdown} onChange={handleChooseRole} ref={chooseRole} id="selectRole">
+                        <option value="supporter">supporter</option>
                          <option value="lotgenoot">lotgenoot</option>
                          <option value="teamcaptain">teamcaptain</option>
-                         <option value="supporter">supporter</option>
                          <option value="group">inschrijving met meerdere mensen</option>
                 </select> 
                 <p className={styles.form_cursief}>Voor meer informatie over de 'rollen' in Race For The Cure, <NavLink to={ROUTES.home} target="_blank">klik hier</NavLink></p>
@@ -100,10 +100,11 @@ export class StepOne extends React.Component {
                </p>
                <p className={styles.form_change}>Wil je toch niet inschrijven als groep? Verander het hier!</p>
                <select className={styles.form_link__dropdown} onChange={handleChooseRole} ref={chooseRole} id="selectRole">
+                        <option value="group">inschrijving met meerdere mensen</option>
                          <option value="lotgenoot">lotgenoot</option>
                          <option value="teamcaptain">teamcaptain</option>
                          <option value="supporter">supporter</option>
-                         <option value="group">inschrijving met meerdere mensen</option>
+                         
                 </select> 
                 <p className={styles.form_cursief}>Voor meer informatie over de 'rollen' in Race For The Cure, <NavLink to={ROUTES.home} target="_blank">klik hier</NavLink></p>
              </>
@@ -116,6 +117,7 @@ export class StepOne extends React.Component {
                
                                             
                 <select className={styles.form_link__dropdown} onChange={handleChooseRole} ref={chooseRole} id="selectRole">
+                         <option value="lotgenoot">--selecteer een rol--</option>
                          <option value="lotgenoot">lotgenoot</option>
                          <option value="teamcaptain">teamcaptain</option>
                          <option value="supporter">supporter</option>

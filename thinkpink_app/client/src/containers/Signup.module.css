@@ -105,6 +105,12 @@
     composes: App-body from "../styles/App.css"
 }
 
+.form_change_step3 {
+    margin-top: 2rem;
+    font-family: 'poppinsbold';
+    composes: App-body from "../styles/App.css"
+}
+
 .form_container {
     margin: 4rem;
     display: flex;
@@ -121,6 +127,12 @@
 .form_pinkText {
     composes: App-body from "../styles/App.css";
     font-size: 0.8rem;
+    color: var(--pink-primair)
+}
+
+.form_pinkText_normal {
+    composes: App-body from "../styles/App.css";
+    font-size: 1rem;
     color: var(--pink-primair)
 }
 

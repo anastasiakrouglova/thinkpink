@@ -83,9 +83,10 @@
   color: white;
   font-size: 1rem;
   font-family: 'poppinsbold';
-  
 }
-
+.App-button_secundair-outline:focus {
+  outline: none;
+}
 
 .App-button_secundair {
   background-color: var(--pink-primair);
@@ -464,4 +465,5 @@ ol.progtrckr li.progtrckr-done:hover:before {
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 4rem;
+  margin-bottom: 4rem;
 }
