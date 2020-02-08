@@ -68,7 +68,7 @@
   background-color: transparent;
   border: 2px solid var(--pink-primair);
   color: var(--pink-primair);
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: 'poppinsbold';
   border-radius: .5rem;
@@ -91,7 +91,7 @@
   background-color: var(--pink-primair);
   border: 1px solid var(--pink-primair);
   color: white;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: 'poppinsbold';
   border-radius: .5rem;

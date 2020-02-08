@@ -13,6 +13,7 @@ import Login from "./Login";
 import SupporterOrGroup from "./SupporterOrGroup";
 
 import FormWelcome from "./FormWelcome";
+import FormInfo from "./FormInfo";
 
 class App extends Component {
   render() {
@@ -32,7 +33,9 @@ class App extends Component {
         <Route path={ROUTES.supporterorgroup} component={SupporterOrGroup} />
         <Route path={ROUTES.signup} component={Signup} />
         <Route path={ROUTES.login} component={Login} />
+
         <Route path={ROUTES.formwelcome} component={FormWelcome} />
+        <Route path={ROUTES.forminfo} component={FormInfo} />
         
       </Switch>
     </main>

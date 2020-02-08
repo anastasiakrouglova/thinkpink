@@ -5,7 +5,7 @@ import { getUserFromCookie } from "../utils/index.js";
 class UiStore {
   authUser = null;
 
-  role = `Teamcaptain`;
+  role = ``;
 
   constructor(rootStore) {
     this.rootStore = rootStore;

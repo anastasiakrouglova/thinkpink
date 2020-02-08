@@ -4,8 +4,20 @@ import NavbarWhite from "../components/NavbarWhite.jsx";
 import Race from "../components/Race.jsx"
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
+import { inject } from "mobx-react";
 
-const Join = () => {
+const SupporterOrGroup = ({uiStore}) => {
+
+  const handleClickSupporter = () => {
+    uiStore.role = `supporter`;
+    console.log(uiStore.role)
+  }
+
+  const handleClickGroup = () => {
+    uiStore.role = `group`;
+    console.log(uiStore.role)
+  }
+
   return (
     <div>
       <div>
@@ -15,7 +27,7 @@ const Join = () => {
         <div className={styles.container_cards}>
 
           <div className={styles.cardlotgenoot}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+            <NavLink onClick={handleClickSupporter} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik wil graag alleen deelnemen als <span className={styles.lotgenoot}>supporter</span> voor een lotgenoot
               </p>
@@ -26,7 +38,7 @@ const Join = () => {
             </NavLink>
           </div>
           <div className={styles.cardteamcaptain}>
-            <NavLink className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+            <NavLink onClick={handleClickGroup} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik wil graag <span className={styles.teamcaptain}>een groep</span> inschrijven voor een lotgenoot
               </p>
@@ -47,4 +59,4 @@ const Join = () => {
   );
 };
 
-export default Join;
+export default inject(`uiStore`)(SupporterOrGroup);
