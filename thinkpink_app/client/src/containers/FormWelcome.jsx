@@ -5,6 +5,9 @@ import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 import { inject, PropTypes, observer } from "mobx-react";
 
+import { steps } from '../components/steps/steps.js'
+import MultiStep from 'react-multistep'
+
 const FormWelcome = ({ uiStore }) => {
 
   const chooseRole = React.createRef();
@@ -28,6 +31,7 @@ const FormWelcome = ({ uiStore }) => {
   return (
     <div className="App-formcontainer">
       <NavbarWhite />
+      <MultiStep steps={steps} />
 
       <div className={styles.container_signup}>
         <div className="App-img_form"></div>

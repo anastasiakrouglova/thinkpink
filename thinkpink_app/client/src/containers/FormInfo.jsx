@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 import { inject, PropTypes, observer } from "mobx-react";
 
-const FormWelcome = ({ uiStore, history }) => {
+const FormInfo = ({ uiStore, history }) => {
 
   const chooseRole = React.createRef();
 
@@ -34,8 +34,9 @@ const FormWelcome = ({ uiStore, history }) => {
         <section>
           {uiStore.role === `lotgenoot` ? (
             <>
-              <h1 className="App-form-h1">Hi {uiStore.role}!</h1>
-              <p className="App-body">Creëer een pagina als een lotgenoot!</p>
+              {/* <h1 className="App-form-h1">Hi {uiStore.role}!</h1> */}
+              <h1 className="App-form-h1">Is dit juist? De foto zal gebruikt worden
+                als teamfoto</h1>
               <p className="App-body">
                 Aangezien je borstkanker hebt overleefd, word je extra in de
                 bloemetjes gezet op race for the cure. Je zult een heel team
@@ -99,4 +100,4 @@ const FormWelcome = ({ uiStore, history }) => {
   );
 };
 
-export default inject(`uiStore`)(observer(FormWelcome));
+export default inject(`uiStore`)(observer(FormInfo));
