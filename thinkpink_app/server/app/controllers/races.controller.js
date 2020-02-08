@@ -7,8 +7,7 @@ exports.create = (req, res) => {
 
   const race = new Race({
     name: req.body.name,
-    desc: req.body.desc,
-    raceId: req.body.raceId
+    desc: req.body.desc
   });
 
   race
