@@ -19,7 +19,6 @@ const formValid = ({ formErrors, ...rest}) => {
 
 
 
-
   return valid;
 }
 

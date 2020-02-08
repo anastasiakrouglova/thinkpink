@@ -6,7 +6,7 @@ import { ROUTES } from "../constants";
 import { inject, PropTypes, observer } from "mobx-react";
 
 import { steps } from '../components/steps/steps.js'
-import MultiStep from 'react-multistep'
+import MultiStep from '../components/steps/index'
 
 const FormWelcome = ({ uiStore }) => {
 
