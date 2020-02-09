@@ -2,19 +2,42 @@
     color: black;
 }
 
+.uppersubcontainer {
+    margin: 2rem 4rem;
+}
+
 .card_container {
     background-color: white;
     color: black;
     border-radius: 0.5rem;
     display: flex;
     text-decoration: none;
-    margin: 2rem 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     width: 90vw;
     padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profilepictureRita {
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
 
 
+.card_container_challenge {
+    background-color: white;
+    color: black;
+    border-radius: 0.5rem;
+    display: flex;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 30rem;
+    padding: 2rem;
+    height: 6rem;
+    margin: 2rem;
 }
 
 .tekst_person {
@@ -28,8 +51,13 @@
     opacity: 0.3;
 }
 
+.buttonInfo {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
 
-.container {
+
+.containerGlobal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,3 +82,96 @@
 .info_icon__teamcaptain {
     padding-right: 1.7rem;
 }
+
+
+.navlink_top {
+    margin-bottom: 2rem;
+    color: var(--pink-primair);
+    font-style: italic;
+    font-size: .9rem;
+    font-family: 'poppinsbold';
+}
+
+
+.section2 {
+    margin-top: 6rem;
+}
+
+
+.subtitle {
+    margin-top: -1.5rem;
+    composes: App-subtitle from "../styles/App.css"
+}
+
+.supporterContainer {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.supporterContainer_challenge {
+    display: flex;
+}
+
+.bold {
+    margin-top: 1.8rem;
+    font-family: 'poppinsbold';
+    font-size: 1.5rem;
+    composes: App-body from "../styles/App.css";
+    margin-bottom: 0.2rem;
+}
+
+.bold2 {
+    margin-top: 0.8rem;
+    font-family: 'poppinsbold';
+    font-size: 1.5rem;
+    composes: App-body from "../styles/App.css";
+    margin-bottom: 0.2rem;
+}
+
+.containertext {
+    margin-left: 1rem;
+}
+
+.cursief {
+    composes: App-body from "../styles/App.css";
+    opacity: 0.6;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.barcontainer {
+    display: flex;
+    margin-top: 1rem;
+}
+
+
+.containerChallenges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.progress_aantal {
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-top: 0.1rem;
+    opacity: 0.3;
+}
+
+
+.pinkcheckbox {
+    font-size: 1rem;
+    color: var(--pink-primair);
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+
+
+.imgChallenge {
+    margin-right: 1rem;
+    width: 3rem;
+    margin-top: -1rem;
+}
+
+
