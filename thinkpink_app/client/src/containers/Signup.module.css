@@ -310,3 +310,9 @@
     font-family: 'poppinsbold';
     margin-bottom: 0.2rem;
 }
+
+.foto_textuitleg {
+    margin-bottom: 1rem;
+    width: 30rem;
+    composes: App-body from "../styles/App.css";
+}

@@ -94,7 +94,7 @@ export class StepTwo extends React.Component {
                   </div>
                   <FormGroup row>
                     <FormControl component="fieldset">
-                      <FormLabel component="legend">Selecteer jouw soort race</FormLabel>
+                      <FormLabel component="legend">Selecteer de race waaraan je wilt meedoen</FormLabel>
                       <RadioGroup aria-label="race" name="race" >
                         <FormControlLabel value="run" control={<PinkRadio />} label="Lopen (6km)" />
                         <FormControlLabel value="walk" control={<PinkRadio />} label="Wandelen (3km)" />
@@ -105,41 +105,145 @@ export class StepTwo extends React.Component {
                 </div>
              </div>
            ) : store.uiStore.role === `teamcaptain` ? (
-             <>
-               <h1 className="App-form-h1">Hi {store.uiStore.role}!</h1>
-               <p className="App-body">Creëer een pagina voor een lotgenoot!</p>
-               <p className="App-body">
-                 We bieden je de mogelijkheid om een pagina aan te maken voor een
-                 lotgenoot of voor iemand die jammer genoeg de strijd heeft
-                 verloren. Wees op je hoede dat je de toestemming nodig hebt van
-                 de lotgenoot zelf om een pagina aan te maken. Zo niet, zal de
-                 pagina worden verwijderd.
-               </p>
-             </>
+            <div className={styles.step3_container}>
+            <div className={styles.step3_containerLid}>
+              <h1 className="App-form-h1">Wie is de lotgenoot?</h1>
+              
+              
+                <img className={styles.foto_cardRita} width="130" src="../assets/images/icons/fotobutton.svg" alt="foto button"></img>
+                <p className={styles.foto_textuitleg}>Upload een teamfoto of een foto
+                  van de lotgenoot <br/> (mits toestemming)</p>
+                <div className={styles.name_container}>
+                <div className="App-form-input-container">
+                  <label htmlFor="firstname" className={styles.label}>Voornaam</label>
+                  <input required name="firstname" id="firstname" className={styles.input} placeholder="John" type="text" />
+                </div>
+              
+                <div className="App-form-input-container">
+                    <label htmlFor="lastname" className={styles.label}>Familienaam</label>
+                    <input required name="lastname" id="lastname" className={styles.input} placeholder="Doe" type="text" />
+                      </div>
+                <div className={styles.inputTextfield}>
+               </div>
+              </div>
+                    
+              <TextField 
+                  id="outlined-multiline-static"
+                  label="Vertel over de lotgenoot"
+                  multiline
+                  rows="4"
+                  defaultValue=""
+                  variant="outlined"
+                  fullWidth
+                />               
+            </div>
+            <div>
+              <h1 className="App-form-h1">Vertel je team wie je bent</h1>
+
+              <FormGroup row>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Selecteer de race waaraan je wilt meedoen</FormLabel>
+                  <RadioGroup aria-label="race" name="race" >
+                    <FormControlLabel value="run" control={<PinkRadio />} label="Lopen (6km)" />
+                    <FormControlLabel value="walk" control={<PinkRadio />} label="Wandelen (3km)" />
+                    <FormControlLabel value="kids" control={<PinkRadio />} label="Kids Run (800m)" />
+                    <FormControlLabel value="empty" control={<PinkRadio />} label="Ik doe niet mee" />
+                  </RadioGroup>
+                </FormControl>
+              </FormGroup>
+            </div>
+         </div>
            ) : store.uiStore.role === `supporter` ? (
-             <>
-               <h1 className="App-form-h1">Hi {store.uiStore.role}!</h1>
-               <p className="App-body">
-                 Leuk dat je wilt meelopen in Race For The Cure!
-               </p>
-               <p className="App-body">
-                 Jij mag mee gaan lopen voor dit team, zo leuk! Haal je grootste
-                 spandoeken uit de kast en zet de lotgenoot waarvoor je loopt
-                 extra in de bloemetjes op Race For The Cure!
-               </p>
-             </>
+            <div className={styles.step3_container}>
+            <div className={styles.step3_containerLid}>
+              <h1 className="App-form-h1">Is dit juist?</h1>
+              <p className="App-body">Jouw profielfoto zal gebruikt worden als teamfoto op je pagina. 
+              Je kunt het achteraf nog wijzigen</p>
+              
+              <div className={styles.cardRita}>
+                <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
+                <h2 className={styles.rita_text}>Rita Verbeeck</h2>
+                <p className="App-subtitle">Lotgenoot</p>
+                <div className={styles.data_container}>
+                  <div className={styles.data_cardRita}>
+                    <h3 className={styles.data_cardRita_h3}>Geboortedatum</h3>
+                    <p className="App-body"> 19/02/1968</p>
+                  </div>
+                  <div className={styles.data_cardRita}>
+                    <h3 className={styles.data_cardRita_h3}>E-mailadres</h3>
+                    <p className="App-body">rita.verbeeck@telenet.be</p>
+                  </div>
+                  <div className={styles.data_cardRita}>
+                    <h3 className={styles.data_cardRita_h3}>T-shirt maat</h3>
+                    <p className="App-body">M</p>
+                  </div>
+                </div> 
+              </div>
+              <button className={styles.form_pinkLink}>Bewerk account</button>
+            </div>
+            <div>
+              <h1 className="App-form-h1">Extra informatie</h1>
+              <div className={styles.inputTextfield}>
+              </div>
+              <FormGroup row>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Selecteer de race waaraan je wilt meedoen</FormLabel>
+                  <RadioGroup aria-label="race" name="race" >
+                    <FormControlLabel value="run" control={<PinkRadio />} label="Lopen (6km)" />
+                    <FormControlLabel value="walk" control={<PinkRadio />} label="Wandelen (3km)" />
+                    <FormControlLabel value="kids" control={<PinkRadio />} label="Kids Run (800m)" />
+                  </RadioGroup>
+                </FormControl>
+              </FormGroup>
+            </div>
+         </div>
            ) : store.uiStore.role === `group` ? (
-             <>
-               <h1 className="App-form-h1">Hi {store.uiStore.role}!</h1>
-               <p className="App-body">Registreer meerdere mensen!</p>
-               <p className="App-body">
-                 We bieden je de mogelijkheid om een pagina aan te maken voor een
-                 lotgenoot of voor iemand die jammer genoeg de strijd heeft
-                 verloren. Wees op je hoede dat je de toestemming nodig hebt van
-                 de lotgenoot zelf om een pagina aan te maken. Zo niet, zal de
-                 pagina worden verwijderd.
-               </p>
-             </>
+              <div className={styles.step3_container}>
+              <div className={styles.step3_containerLid}>
+                <h1 className="App-form-h1">Is dit juist?</h1>
+                <p className="App-body">Jouw profielfoto zal gebruikt worden als teamfoto op je pagina. 
+                Je kunt het achteraf nog wijzigen</p>
+                
+                <div className={styles.cardRita}>
+                  <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
+                  <h2 className={styles.rita_text}>Rita Verbeeck</h2>
+                  <p className="App-subtitle">Lotgenoot</p>
+                  <div className={styles.data_container}>
+                    <div className={styles.data_cardRita}>
+                      <h3 className={styles.data_cardRita_h3}>Geboortedatum</h3>
+                      <p className="App-body"> 19/02/1968</p>
+                    </div>
+                    <div className={styles.data_cardRita}>
+                      <h3 className={styles.data_cardRita_h3}>E-mailadres</h3>
+                      <p className="App-body">rita.verbeeck@telenet.be</p>
+                    </div>
+                    <div className={styles.data_cardRita}>
+                      <h3 className={styles.data_cardRita_h3}>T-shirt maat</h3>
+                      <p className="App-body">M</p>
+                    </div>
+                  </div> 
+                </div>
+                <button className={styles.form_pinkLink}>Bewerk account</button>
+              </div>
+              <div>
+                <h1 className="App-form-h1">Extra informatie</h1>
+                <FormGroup row>
+                  <FormControl component="fieldset">
+                    <FormLabel component="legend">Selecteer de race waaraan je wilt meedoen</FormLabel>
+                    <RadioGroup aria-label="race" name="race" >
+                      <FormControlLabel value="run" control={<PinkRadio />} label="Lopen (6km)" />
+                      <FormControlLabel value="walk" control={<PinkRadio />} label="Wandelen (3km)" />
+                      <FormControlLabel value="kids" control={<PinkRadio />} label="Kids Run (800m)" />
+                      <FormControlLabel value="empty" control={<PinkRadio />} label="Ik doe niet mee" />
+                    </RadioGroup>
+                  </FormControl>
+                  </FormGroup>
+              <div className="App-form-input-container">
+                  <label htmlFor="bedrijf" className={styles.label}>Bedrijfsnaam (optioneel)</label>
+                  <input required name="bedrijf" id="bedrijf" className={styles.input} placeholder="Deloitte" type="text" />
+                </div>
+              </div>
+         </div>
            ) : (
              <>
                 <h1 className="App-form-h1">Ooops</h1>
