@@ -71,7 +71,7 @@ function Home() {
               loop op een prachtig natuurdomein omringd door vele supporters!
             </p>
           </div>
-          <div>
+          <div className={styles.homeSupporter_container}>
             <p className={styles.h2}>Supporter</p>
             <p className={styles.body}>
               Wil je solo lopen of je gewoon toevoegen aan een bestaande groep?

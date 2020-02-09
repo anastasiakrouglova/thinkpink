@@ -1,14 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import styles from './NavbarWhite.module.css';
 
 
 const NavbarWhite = () => {
     return (
         <div className={styles.nav_container}>
-                <NavLink to={ROUTES.home}><img src={logo} className="App-logo" alt="logo" /></NavLink> 
+                <NavLink to={ROUTES.home}><img src="../assets/images/logo.svg"className="App-logo" alt="logo" /></NavLink> 
                 <div className={styles.nav_link}>
                     <NavLink className={styles.nav_link__text} activeClassName={styles.nav_link__active} to={ROUTES.races}>Kies een race</NavLink>
                     <NavLink className={styles.nav_link__text} activeClassName={styles.nav_link__active} to={ROUTES.login}><img className={styles.personIcon} src="../assets/images/icons/peopleBlack.svg" alt="icon man"/>Log in</NavLink>

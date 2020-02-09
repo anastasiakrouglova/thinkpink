@@ -8,7 +8,6 @@ import { ROUTES } from "../constants";
 
 const Races = ({ raceStore }) => {
   // const raceDetail = raceStore.findById(id);
-
   const { racelijst } = raceStore;
   return (
     <div>
@@ -20,14 +19,15 @@ const Races = ({ raceStore }) => {
           <button className="App-input_search__button"><img src="../assets/images/icons/search.svg" alt="search"/></button>
         </div>
       </div>
-      
+      <div className={styles.race_container}>
       {
         racelijst.map(race => (
           <NavLink className={styles.navlink} to={"/detail/" + race.id}><Race key={race.id} race={race} /></NavLink> 
           
         ))
       }
-      
+
+      </div>
     </div>
   );
 };
