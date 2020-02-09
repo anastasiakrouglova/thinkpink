@@ -1,5 +1,12 @@
-import { decorate, observable, configure, action, runInAction, computed } from "mobx";
-import Api from "../api/index.js";
+import {
+  decorate,
+  observable,
+  configure,
+  action,
+  runInAction,
+  computed
+} from "mobx";
+import Api from "../api";
 import Race from "../models/Race";
 
 configure({ enforceActions: `observed` });
@@ -10,24 +17,28 @@ class RaceStore {
 
   constructor(rootStore) {
     this.rootStore = rootStore;
-    this.api = new Api(`race`);
-    this.api.getAll().then(d => d.forEach(this._addRace));
+    this.api = new Api(`races`);
+    this.getAll();
   }
 
+  getAll = () => {
+    // console.log(`get all races!`);
+    this.api.getAll().then(d => d.forEach(this._addRace));
+  };
+
   _addRace = values => {
+    console.log(values);
     const race = new Race();
     race.updateFromServer(values);
     runInAction(() => this.racelijst.push(race));
     console.log(this.racelijst);
   };
 
-
   getOne = id => {
     this.api.getById(id).then(d => this._addRace(d));
 
     console.log(id);
   };
-
 
   findById = id => {
     console.log(this.racelijst);
@@ -46,7 +57,7 @@ class RaceStore {
 
 decorate(RaceStore, {
   racelijst: observable,
-  _addRace: action,
+  _addRace: action
 });
 
 export default RaceStore;

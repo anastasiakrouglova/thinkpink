@@ -17,7 +17,7 @@ class UiStore {
   setUser = value => (this.authUser = value);
 
   login = (email, password) => {
-    console.log('email is eigenlijk email');
+    console.log("email is eigenlijk email");
     console.log(email);
     console.log(password);
     return this.authService
@@ -25,7 +25,7 @@ class UiStore {
       .then(() => {
         this.setUser(getUserFromCookie());
         Promise.resolve();
-        console.log(this.setUser(getUserFromCookie()))
+        console.log(this.setUser(getUserFromCookie()));
       })
       .catch(() => {
         this.setUser(null);
@@ -33,7 +33,16 @@ class UiStore {
       });
   };
 
-  register = (name, surname, email, pwd, birthday, phoneNumber, tShirtSize) => this.authService.register(name, surname, email, pwd, birthday, phoneNumber, tShirtSize);
+  register = (name, surname, email, pwd, birthday, phoneNumber, tShirtSize) =>
+    this.authService.register(
+      name,
+      surname,
+      email,
+      pwd,
+      birthday,
+      phoneNumber,
+      tShirtSize
+    );
 
   logout = () => {
     this.authService.logout().then(() => this.setUser(null));
