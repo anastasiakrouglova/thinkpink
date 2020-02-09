@@ -13,10 +13,9 @@ export class StepFour extends React.Component {
   render () {
     return (
       <div className={styles.form_container}>
-       <div>
           <section >
-            {store.uiStore.role === `lotgenoot` || `supporter` || `teamcaptain` || `group` ? (
-              <>
+            {store.uiStore.role === `lotgenoot` || store.uiStore.role === `supporter` || store.uiStore.role === `teamcaptain` || store.uiStore.role === `group` ? (
+              <div className={styles.form_container}>
                 <h1 className="App-form-h1">Betalingsinformatie</h1>
                 <div className={styles.step3_container}>
                 <div className={styles.step3_containerLid}>
@@ -25,22 +24,22 @@ export class StepFour extends React.Component {
                     <p className={styles.form_cursief}>Antwerpen, Belgie</p>
                     <p className={styles.form_textWelcome}>27/09/2020</p>
                   </div>
-                  <div>
-                      <p>Totaal</p>
-                      <p>€15</p>
+                  <div className={styles.totalStep4}>
+                      <p className={styles.totalp}>Totaal</p>
+                      <p className={styles.totalc}>€15</p>
                   </div>
                 </div>
                   <div>
                     <p className={styles.form_change_step3}>Kies een betalingsmethode</p>
-                    <div>
-                      <button><img src="../assets/images/form/MC.svg" alt="mastercard"/></button>
-                      <button><img src="../assets/images/form/bancontact.svg" alt="bancontact"/></button>
-                      <button><img src="../assets/images/form/PP.svg" alt="Paypal"/></button>
-                      <button><img src="../assets/images/form/VISA.svg" alt="VISA"/></button>
+                    <div className={styles.form_payment_container}>
+                      <a href=""><img className={styles.form_image_payment} src="../assets/images/form/MC.svg" alt="mastercard"/></a>
+                      <a href=""><img className={styles.form_image_payment} src="../assets/images/form/bancontact.svg" alt="bancontact"/></a>
+                      <a href=""><img className={styles.form_image_payment} src="../assets/images/form/PP.svg" alt="Paypal"/></a>
+                      <a href=""><img className={styles.form_image_payment} src="../assets/images/form/VISA.svg" alt="VISA"/></a>
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             ): (
               <>
               <h1 className="App-form-h1">Ooops</h1>
@@ -49,7 +48,6 @@ export class StepFour extends React.Component {
             )
           }
          </section> 
-       </div>
      </div>
     )
   }

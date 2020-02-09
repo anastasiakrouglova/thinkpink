@@ -159,7 +159,9 @@
 }
 
 .step3_containerLid {
-    margin-right: 3rem;
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid grey;
 }
 
 .step3_container {
@@ -171,9 +173,66 @@
     .step3_container {
         flex-direction: column;
     }
+
+    .step3_containerLid {
+        margin-right: 2rem;
+        padding-right: 1rem;
+        padding-bottom: 3rem;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid grey;
+        margin-bottom: 3rem;
+    }
 }
 
 .lidtoevoegen {
     margin-top: 3rem;
     composes: App-button_secundair from "../styles/App.css"
+}
+
+.form_sm_container {
+    margin-top: 3.5rem;
+}
+
+.form_sm {
+    margin-right: 0.8rem;
+}
+
+
+.form_image_payment {
+    size: 3rem;
+    border: 1px solid grey;
+    margin: 1rem 1rem 0rem 0rem;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+
+.form_image_payment:hover {
+    opacity: 1;
+    border: 1px solid black;
+    margin: 1rem 1rem 0rem 0rem;
+}
+
+
+.form_payment_container {
+    width: 17rem;
+}
+
+.totalStep4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+
+.totalp{
+    font-family: 'poppinsbold';
+    font-size: 2rem;
+    color: var(--pink-primair);
+}
+
+
+.totalc {
+    font-family: 'poppinsbold';
+    font-size: 2rem;
 }
