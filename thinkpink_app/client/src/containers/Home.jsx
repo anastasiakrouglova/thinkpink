@@ -45,7 +45,7 @@ function Home() {
           src="https://www.youtube.com/embed/oUm-b265nt8"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </section>
 
