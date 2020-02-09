@@ -1,21 +1,21 @@
 const Race = require("../models/race.model.js");
 
 exports.create = (req, res) => {
-  if (!req.body.name) {
-    return res.status(500).send({ err: "name can not be empty." });
+  if (!req.body.city) {
+    return res.status(500).send({ err: "city can not be empty." });
   }
 
   const race = new Race({
     city: req.body.city,
-    country: req.body.country,
-    month: req.body.month,
-    date: req.body.date,
-    year: req.body.year,
-    startLocation: req.body.startLocation,
-    startTime: req.body.startTime,
-    description: req.body.description,
-    sponsors: req.body.sponsors,
-    raceId: req.body.raceId
+    // country: req.body.country,
+    // month: req.body.month,
+    // date: req.body.date,
+    // year: req.body.year,
+    // startLocation: req.body.startLocation,
+    // startTime: req.body.startTime,
+    description: req.body.description
+    // sponsors: req.body.sponsors,
+    // raceId: req.body.raceId
   });
 
   race
@@ -30,7 +30,7 @@ exports.create = (req, res) => {
 
 exports.findAll = async (req, res) => {
   try {
-    const race = await Race.find({ raceId: req.raceId });
+    const race = await Race.find();
     res.send(race);
   } catch (err) {
     res.status(500).send({ err: err.race || "Error" });
@@ -57,8 +57,8 @@ exports.findOne = async (req, res) => {
 };
 
 exports.update = async (req, res) => {
-  if (!req.body.name) {
-    return res.status(400).send("Name can not be empty.");
+  if (!req.body.city) {
+    return res.status(400).send("city can not be empty.");
   }
 
   try {
