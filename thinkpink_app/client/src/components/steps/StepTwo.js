@@ -4,13 +4,35 @@ import styles from "../../containers/Signup.module.css";
 import store from '../../store/index'
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../../constants";
+import { withStyles } from '@material-ui/core/styles';
+import { pink } from '@material-ui/core/colors';
+
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+
+import TextField from '@material-ui/core/TextField';
+
+const PinkRadio = withStyles({
+  root: {
+    color: pink[300],
+    '&$checked': {
+      color: pink[300],
+    },
+  },
+  checked: {},
+})(props => <Radio color="default" {...props} />);
+
 
 export class StepTwo extends React.Component {
   constructor () {
     super()
   }
-
-
+  
     render() {
     console.log(store.uiStore.role);
 
@@ -19,9 +41,9 @@ export class StepTwo extends React.Component {
     const handleChooseRole = () => {
       let myRole = chooseRole.current.value;
       store.uiStore.role = myRole;
-  
       console.log(store.uiStore.role);
     }
+
 
     return (
     <div className={styles.form_container}>
@@ -30,12 +52,38 @@ export class StepTwo extends React.Component {
 
          <section>
            {store.uiStore.role === `lotgenoot` ? (
-             <>
-               <h1 className="App-form-h1">Is dit juist? De foto zal gebruikt worden
-                als teamfoto</h1>
-                <div></div>
-              <p>Vertel aan je team wie je bent</p>
-             </>
+              <div className={styles.step3_container}>
+                <div className={styles.step3_containerLid}>
+                  <h1 className="App-form-h1">Is dit juist?</h1>
+                  <p className="App-body">Jouw profielfoto zal gebruikt worden als teamfoto op je pagina. 
+                  Je kunt het achteraf nog wijzigen</p>
+                </div>
+
+                <div>
+                  <h1 className="App-form-h1">Vertel aan je team wie je bent</h1>
+                  <div className={styles.inputTextfield}>
+                  <TextField 
+                    id="outlined-multiline-static"
+                    label="Vertel over jezelf"
+                    multiline
+                    rows="4"
+                    defaultValue=""
+                    variant="outlined"
+                    fullWidth
+                    />
+                  </div>
+                  <FormGroup row>
+                    <FormControl component="fieldset">
+                      <FormLabel component="legend">Selecteer jouw soort race</FormLabel>
+                      <RadioGroup aria-label="race" name="race" >
+                        <FormControlLabel value="run" control={<PinkRadio />} label="Lopen (6km)" />
+                        <FormControlLabel value="walk" control={<PinkRadio />} label="Wandelen (3km)" />
+                        <FormControlLabel value="kids" control={<PinkRadio />} label="Kids Run (800m)" />
+                      </RadioGroup>
+                    </FormControl>
+                  </FormGroup>
+                </div>
+             </div>
            ) : store.uiStore.role === `teamcaptain` ? (
              <>
                <h1 className="App-form-h1">Hi {store.uiStore.role}!</h1>

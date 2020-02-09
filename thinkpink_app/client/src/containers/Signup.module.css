@@ -236,3 +236,15 @@
     font-family: 'poppinsbold';
     font-size: 2rem;
 }
+
+.bigtext {
+    height: 8rem;
+    width: 30vw;
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+
+.inputTextfield {
+    margin-bottom: 2rem;
+}

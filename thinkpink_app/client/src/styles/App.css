@@ -147,9 +147,27 @@
   border: 0 solid transparent;
   font-family: 'poppinsbold';
   margin-top: 1rem;
+  transform: all 0.2s;
+}
+
+
+.App-backbutton_back {
+  color: var(--pink-primair);
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  font-family: 'poppinsbold';
+  margin-top: 1rem;
+  opacity: 0.5;
+  transform: all 0.2s;
 }
 
 .App-backbutton:hover {
+  color: var(--pink-primair-focus);
+}
+
+.App-backbutton_back:hover {
   color: var(--pink-primair-focus);
 }
 
@@ -230,9 +248,9 @@ outline: none;
 }
 
 .App-h1-primaircolor {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--pink-primair);
-  font-family: 'poppinsbold';
+  font-family: 'poppinsextrabold_italic';
   margin-top: -3rem;
   margin-bottom: 2rem;
 }
@@ -264,7 +282,7 @@ outline: none;
 
 .App-card {
   background-color: white;
-  width: 50vw;
+  width: 40vw;
   color: black;
   border-radius: 0.5rem;
   display: flex;
@@ -322,7 +340,7 @@ outline: none;
 
 .App-form-h1 {
   margin-top: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'poppinsbold';
   color: var(--brown-title);
   margin-bottom: 2rem;

@@ -4,12 +4,17 @@
 
 .navlink {
     text-decoration: none;
-    margin: 2rem;
-    width: 30rem;
 }
 
 .h1 {
     margin-top: 2rem;
     text-align: center;
     composes: App-h1 from "../styles/App.css"
+}
+
+
+.race_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }

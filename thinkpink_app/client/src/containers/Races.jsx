@@ -8,7 +8,6 @@ import { ROUTES } from "../constants";
 
 const Races = ({ raceStore }) => {
   // const raceDetail = raceStore.findById(id);
-
   const { racelijst } = raceStore;
   console.log(racelijst);
 
@@ -28,12 +27,14 @@ const Races = ({ raceStore }) => {
           </button>
         </div>
       </div>
-
-      {racelijst.map(race => (
-        <NavLink className={styles.navlink} to={"/detail/" + race.id}>
-          <Race key={race.id} race={race} />
-        </NavLink>
-      ))}
+      <div className={styles.race_container}>
+      {
+        racelijst.map(race => (
+          <NavLink className={styles.navlink} to={"/detail/" + race.id}><Race key={race.id} race={race}/></NavLink> 
+          
+        ))
+      }
+      </div>
     </div>
   );
 };
