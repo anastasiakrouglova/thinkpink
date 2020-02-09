@@ -7,15 +7,16 @@ exports.create = (req, res) => {
 
   const race = new Race({
     city: req.body.city,
-    // country: req.body.country,
-    // month: req.body.month,
-    // date: req.body.date,
-    // year: req.body.year,
-    // startLocation: req.body.startLocation,
-    // startTime: req.body.startTime,
-    description: req.body.description
-    // sponsors: req.body.sponsors,
-    // raceId: req.body.raceId
+    country: req.body.country,
+    month: req.body.month,
+    date: req.body.date,
+    year: req.body.year,
+    startLocation: req.body.startLocation,
+    startTime: req.body.startTime,
+    description: req.body.description,
+    sponsors: req.body.sponsors,
+    raceId: req.body.raceId,
+    image: req.body.image
   });
 
   race
@@ -73,7 +74,8 @@ exports.update = async (req, res) => {
         startLocation: req.body.startLocation,
         startTime: req.body.startTime,
         description: req.body.description,
-        sponsors: req.body.sponsors
+        sponsors: req.body.sponsors,
+        image: req.body.image
       },
       {
         new: true

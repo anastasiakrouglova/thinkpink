@@ -13,7 +13,7 @@ class Race extends Component {
     const { race } = this.props;
     return (
         <div className="App-card">
-            <img src={"../assets/images/cities/" + race.city  + ".png"} alt="photo city" width="160" />
+            <img src={"../assets/images/cities/" + race.image  + ".png"} alt={race.image} width="160" />
             <div className={styles.race_textcontainer}>
                 <p className={styles.race_city}>{race.city}</p>
                 <p className={styles.race_country}>{race.country}</p>

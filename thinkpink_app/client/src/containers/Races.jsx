@@ -30,11 +30,10 @@ const Races = ({ raceStore }) => {
       <div className={styles.race_container}>
       {
         racelijst.map(race => (
-          <NavLink className={styles.navlink} to={"/detail/" + race.id}><Race key={race.id} race={race} /></NavLink> 
+          <NavLink className={styles.navlink} to={"/detail/" + race.id}><Race key={race.id} race={race}/></NavLink> 
           
         ))
       }
-
       </div>
     </div>
   );
