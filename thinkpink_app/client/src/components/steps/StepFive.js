@@ -25,9 +25,10 @@ export class StepFive extends React.Component {
     <div className={styles.form_container}>
        <div className={styles.container_signup}>
           <section>
-          <h1 className="App-form-h1">Succes!</h1>
+          
            {store.uiStore.role === `lotgenoot` || store.uiStore.role === `teamcaptain` ? (
-             <>
+              <>
+                <h1 className="App-form-h1">Succes!</h1>
                 <p className={styles.form_textWelcome}>Je pagina is aangemaakt, deel onderstaande link met mensen die je in je team wilt hebben!!</p>
                 <NavLink className={styles.form_pinkText_normal}  to={ROUTES.home}>raceforthecure.com/teams/78ghYlx4</NavLink>
                 
@@ -41,6 +42,7 @@ export class StepFive extends React.Component {
              </>
            ) : store.uiStore.role === `supporter` || store.uiStore.role === `group` ? (
              <>
+                  <h1 className="App-form-h1">Succes!</h1>
                   <p className={styles.form_textWelcome}>Dit is de pagina van #TEAMRITA, bekijk andere supporters via deze link!</p>
                   <NavLink className={styles.form_pinkText_normal} to={ROUTES.home}>raceforthecure.com/teams/78ghYlx4</NavLink>
              
