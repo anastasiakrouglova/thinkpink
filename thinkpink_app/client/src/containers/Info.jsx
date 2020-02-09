@@ -50,9 +50,7 @@ const Info = () => {
                 <button className="App-button_secundair-outline">
                   Doneer aan dit team
                 </button>
-                <button className="App-button_secundair">
-                  Schrijf je in voor deze race
-                </button>
+                <NavLink className="App-button_secundair" to={ROUTES.supporterorgroup}>Schrijf je in voor deze race</NavLink>
               </div>
             </div>
 

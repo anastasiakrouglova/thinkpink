@@ -57,10 +57,30 @@ export class StepTwo extends React.Component {
                   <h1 className="App-form-h1">Is dit juist?</h1>
                   <p className="App-body">Jouw profielfoto zal gebruikt worden als teamfoto op je pagina. 
                   Je kunt het achteraf nog wijzigen</p>
+                  
+                  <div className={styles.cardRita}>
+                    <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
+                    <h2 className={styles.rita_text}>Rita Verbeeck</h2>
+                    <p className="App-subtitle">Lotgenoot</p>
+                    <div className={styles.data_container}>
+                      <div className={styles.data_cardRita}>
+                        <h3 className={styles.data_cardRita_h3}>Geboortedatum</h3>
+                        <p className="App-body"> 19/02/1968</p>
+                      </div>
+                      <div className={styles.data_cardRita}>
+                        <h3 className={styles.data_cardRita_h3}>E-mailadres</h3>
+                        <p className="App-body">rita.verbeeck@telenet.be</p>
+                      </div>
+                      <div className={styles.data_cardRita}>
+                        <h3 className={styles.data_cardRita_h3}>T-shirt maat</h3>
+                        <p className="App-body">M</p>
+                      </div>
+                    </div> 
+                  </div>
+                  <button className={styles.form_pinkLink}>Bewerk account</button>
                 </div>
-
                 <div>
-                  <h1 className="App-form-h1">Vertel aan je team wie je bent</h1>
+                  <h1 className="App-form-h1">Vertel je team wie je bent</h1>
                   <div className={styles.inputTextfield}>
                   <TextField 
                     id="outlined-multiline-static"
