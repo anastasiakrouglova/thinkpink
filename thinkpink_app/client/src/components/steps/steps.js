@@ -7,10 +7,10 @@ import { StepFive } from './StepFive'
 
 const steps = 
     [
-      {name: 'Welcome', component: <StepOne/>},
-      {name: 'Description', component: <StepTwo/>},
-      {name: 'Music', component: <StepThree/>},
-      { name: 'Payment', component: <StepFour /> },
+      {name: 'Welkom', component: <StepOne/>},
+      {name: 'Beschrijving', component: <StepTwo/>},
+      {name: 'Muziek', component: <StepThree/>},
+      {name: 'Betaling', component: <StepFour /> },
       {name: 'Succes', component: <StepFive/>}
     ]
 

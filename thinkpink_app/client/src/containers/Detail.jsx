@@ -27,7 +27,7 @@ const Detail = ({ raceStore, id }) => {
             <div>
               <div className={styles.uppertitle_container}>
                 <img src="../assets/images/icons/locationPink.svg" alt="search"/>
-                <p className={styles.uppertitle}>Startlocatie</p>
+                <p className={styles.uppertitle}>startlocatie</p>
               </div>
               <p className={styles.info}>Graanmarkt</p>
             </div>
@@ -35,7 +35,7 @@ const Detail = ({ raceStore, id }) => {
             <div>
               <div className={styles.uppertitle_container}>
                 <img src="../assets/images/icons/clockPink.svg" alt="search"/>
-                <p className={styles.uppertitle}>Starttijd</p>
+                <p className={styles.uppertitle}>starttijd</p>
               </div>
               <p className={styles.info}>11:00 uur</p>
             </div>
@@ -43,13 +43,15 @@ const Detail = ({ raceStore, id }) => {
             <div>
               <div className={styles.uppertitle_container}>
                <img src="../assets/images/icons/personPink.svg" alt="search"/>
-               <p className={styles.uppertitle}>Deelnemers</p>
+               <p className={styles.uppertitle}>deelnemers</p>
               </div>
               <p className={styles.info}>1.174</p>
             </div>
               
           </div>
-          <p className={styles.detail_body}>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
+          <p className={styles.detail_body}>Dit jaar start Race for the Cure in Antwerpen op de mooie Graanmarkt. 
+            Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen sommige van de bekende monumenten 
+            tegenkomen, zoals het stadhuis en Sint-Andrieskerk. 
             Geniet van dit onvergetelijk moment dat draait rond liefde met je eigen groep.</p>
             <div className={styles.primair_button}>
               <a className={styles.button_inschrijven} href="#inschrijven">Schrijf je in voor deze race</a>
@@ -77,7 +79,7 @@ const Detail = ({ raceStore, id }) => {
         <section className={styles.container_program}>
           <div className={styles.container_map}>
             <img className={styles.map} src="../assets/images/maps/map.png" alt="map" />
-            <button className="App-backbutton"> Send to maps</button>
+            <button className="App-backbutton">Open in Google Maps</button>
           </div>
           <div className={styles.program_section}>
             <p className="App-h1-number-primaircolor">01</p>
@@ -86,11 +88,11 @@ const Detail = ({ raceStore, id }) => {
             <div>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>9u</td>
-                  <td className={styles.program_activity}>Daginschrijvingen + Ophalen t-shirts</td>
+                  <td className={styles.program_activity}>daginschrijvingen + ophalen t-shirts</td>
                 </tr>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>10u15</td>
-                  <td className={styles.program_activity}>Zumba</td>
+                  <td className={styles.program_activity}>zumba</td>
                 </tr>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>10u30</td>
@@ -98,18 +100,18 @@ const Detail = ({ raceStore, id }) => {
                 </tr>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>11</td>
-                  <td className={styles.program_activity}>Start RUN 6km</td>
+                  <td className={styles.program_activity}>start RUN 6km</td>
                 </tr>
               </div>
             
               <div>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>11u30</td>
-                  <td className={styles.program_activity}>Start Walk 3km</td>
+                  <td className={styles.program_activity}>start Walk 3km</td>
                 </tr>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>12u</td>
-                  <td className={styles.program_activity}>Tapas-en aperitiefmoment</td>
+                  <td className={styles.program_activity}>tapas-en aperitiefmoment</td>
                 </tr>
                 <tr className={styles.program_tr}>
                   <td className={styles.program_time}>9-14u</td>
@@ -129,7 +131,9 @@ const Detail = ({ raceStore, id }) => {
             <div className={styles.section2_container_title}>
               <p className="App-h1-number-primaircolor">02</p>
               <h2 className="App-h1-primaircolor">Loop voor...</h2>
-              <p className={styles.info_lotgenoot}>Om je in te schrijven dien je een lotgenoot te kiezen om te steunen. Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is uit solidariteit voor de mensen die kanker overleefd hebben.</p>
+              <p className={styles.info_lotgenoot}>Om je in te schrijven, dien je een lotgenoot te kiezen om te steunen. 
+                Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is 
+                uit solidariteit voor de mensen die kanker overleefd hebben.</p>
             </div>
             <div className="App-input_container">
             <input className="App-input_search" type="text" placeholder="Search..." />
@@ -148,7 +152,7 @@ const Detail = ({ raceStore, id }) => {
 
             <div className={styles.cardSurvivor}>
               <p className={styles.card_text2}>Nieuwe lotgenoot of Team Captain inschrijven?</p>
-              <NavLink className={styles.button_white} to={ROUTES.survivororteamcaptain}>Create a team</NavLink>
+              <NavLink className={styles.button_white} to={ROUTES.survivororteamcaptain}>Maak een team</NavLink>
             </div>
           </div>
         </section>

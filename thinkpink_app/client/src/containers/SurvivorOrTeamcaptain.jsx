@@ -49,7 +49,7 @@ const SurvivorOrTeamcaptain = ({uiStore}) => {
               <p className={styles.price}>€15</p>
               <span className={styles.exclusief}>(excl. ticket lotgenoot)</span>
               <div className={styles.container_button}>
-                <button className={styles.card_button}>registreer een teamcaptain</button>
+                <button className={styles.card_button}>registreer een Team Captain</button>
               </div>
             </NavLink>
           </div>

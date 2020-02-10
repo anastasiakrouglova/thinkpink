@@ -20,8 +20,8 @@ export class StepThree extends React.Component {
              <>
                <h1 className="App-form-h1">Laten we het vieren!</h1>
                <p className={styles.form_textWelcome}>Wanneer je groep over de finishlijn gaat, zal een lied worden afgespeeld om jullie prestatie te vieren.
-                  vul een geldige Youtube-link in als je victory-lied dat gehoord zal worden door alle supporters!</p>
-                
+                  Vul een geldige Youtube-link in als je overwinningslied dat gehoord zal worden door alle supporters!
+              </p>
                 <form>
                   <div className="App-form-input-container">
                     <label htmlFor="link" className={styles.label}>Youtube-link</label>
@@ -34,7 +34,7 @@ export class StepThree extends React.Component {
              <>
                <h1 className="App-form-h1">Laten we het vieren!</h1>
                <p className={styles.form_textWelcome}>Wanneer de groep van je lotgenoot over de finishlijn gaat, zal een lied worden afgespeeld om jullie prestatie te vieren.
-                  vul een geldige Youtube-link in als jullie victory-lied dat gehoord zal worden door alle supporters!</p>
+                  Vul een geldige Youtube-link in als jullie overwinningslied dat gehoord zal worden door alle supporters!</p>
                 
                 <form>
                   <div className="App-form-input-container">
@@ -47,7 +47,7 @@ export class StepThree extends React.Component {
            ) : store.uiStore.role === `supporter` ? (
              <>
                <h1 className="App-form-h1">Laten we het vieren!</h1>
-               <p className={styles.form_textWelcome}>Je teamcaptain Rita heeft ervoor gekozen om <span className={styles.form_pinkText_normal}>“If I Ain’t Got You - Alicia Keys”</span> als groepsnummer te gebruiken.</p>
+               <p className={styles.form_textWelcome}>Je Team Captain Rita heeft ervoor gekozen om <span className={styles.form_pinkText_normal}>“If I Ain’t Got You - Alicia Keys”</span> als groepsnummer te gebruiken.</p>
                 
                   <div className="App-form-input-container">
                     <label htmlFor="link" className={styles.form_change_step3}>Beluister het fragment hier:</label>
@@ -58,10 +58,10 @@ export class StepThree extends React.Component {
              <div className={styles.step3_container}>
               <div className={styles.step3_containerLid}>
                 <h1 className="App-form-h1">Nodig supporters uit</h1>
-                <p className={styles.form_textWelcome}>De mensen die je opgeeft zullen allemaal een e-mail ontvangen met instructies over het inschrijvingsproces van je team. Vanaf 10 mensen betaal moet je groep €12 p.p betalen in plaats van €15 p.p, maar jij hoeft dus niet voor hen te betalen.</p>
+                <p className={styles.form_textWelcome}>De mensen die je opgeeft zullen allemaal een e-mail ontvangen met instructies over het inschrijvingsproces van je team. Vanaf 10 mensen betaal moet je groep €12/persoon betalen in plaats van €15/persoon, maar jij hoeft dus niet voor hen te betalen.</p>
                 <form>
                   <div className="App-form-input-container">
-                    <label htmlFor="email" className={styles.label}>email</label>
+                    <label htmlFor="email" className={styles.label}>e-mailadres</label>
                     <input className={styles.input} type="text" name="email" placeholder="johndoe@gmail.com"/>
                   </div>
                   <button className="App-button_secundair">+ Voeg nog een lid toe</button>  
@@ -84,21 +84,21 @@ export class StepThree extends React.Component {
                   
 
                     <div className="App-form-input-container">
-                      <label htmlFor="email" className={styles.label}>Email</label>
+                      <label htmlFor="email" className={styles.label}>E-mailadres</label>
                       <input required name="email" id="email" className={styles.input} placeholder="johndoe@gmail.com" type="email" />
                     </div>
 
                     <div className={styles.container_date}>
                       <div className="App-form-input-container">
-                        <label htmlFor="day" className={styles.label}>day</label>
+                        <label htmlFor="day" className={styles.label}>Dag</label>
                         <input required name="day" id="day" className={styles.input} placeholder="01" type="number" min="1" max="31" />
                       </div>
                       <div className="App-form-input-container">
-                        <label htmlFor="month" className={styles.label}>month</label>
+                        <label htmlFor="month" className={styles.label}>maand</label>
                         <input required name="month" id="month" className={styles.input} placeholder="02" type="number"  min="1" max="12" />
                       </div>
                       <div className="App-form-input-container">
-                        <label htmlFor="year" className={styles.label}>year</label>
+                        <label htmlFor="year" className={styles.label}>jaar</label>
                         <input required name="year" id="year" className={styles.input} placeholder="*****" type="number" min="1900" max="2500" />
                       </div>
                     </div>
@@ -140,7 +140,7 @@ export class StepThree extends React.Component {
            ) : (
             <>
               <h1 className="App-form-h1">Ooops</h1>
-              <p className={styles.form_textWelcome}>Hmm, je bent vergeten aan te duiden of je als lotgenoot/teamcaptain/supporter of groep wilt gaan. Ga terug naar de eerste pagina en selecteer een categorie.</p>
+              <p className={styles.form_textWelcome}>Hmm, je bent vergeten aan te duiden of je als lotgenoot/Team Captain/supporter of groep wilt gaan. Ga terug naar de eerste pagina en selecteer een categorie.</p>
             </>
            )}
          </section> 

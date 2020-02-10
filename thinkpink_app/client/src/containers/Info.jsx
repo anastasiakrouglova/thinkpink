@@ -38,7 +38,7 @@ const Info = () => {
                 <p className={styles.tekst_person}>
                   Rita een leuke dame uit Brugge die vorig jaar overleden is aan
                   borstkanker. Om haar herinnering in leve te houden, hebben we
-                  besloten om deel te nemen met Race for The Cure.
+                  besloten om deel te nemen met Race for the Cure.
                 </p>
                 <br />
                 <p className={styles.tekst_person}>
@@ -140,7 +140,7 @@ const Info = () => {
 
         <section className={styles.section2}>
           <p className="App-h1-number-primaircolor">03</p>
-          <h2 className="App-h1-primaircolor">Challenges</h2>
+          <h2 className="App-h1-primaircolor">Uitdagingen</h2>
           <p className={styles.subtitle}>
             Hieronder vind je de groepschallenges. Ontgrendel hierdoor leuke
             extraatjes tijdens Race For The Cure.
@@ -158,8 +158,8 @@ const Info = () => {
                 />
                 <div className={styles.containertext}>
                   <p className="App-body">
-                    Bij 100km beweging opgeteld met je supporters , zal jullie
-                    groepummer afgespeeld worden bij de finish.
+                    Bij 100km beweging samen met je supporters , zal jullie
+                    groepslied afgespeeld worden bij de finish.
                   </p>
                   <div className={styles.barcontainer}>
                     <ProgressBar
