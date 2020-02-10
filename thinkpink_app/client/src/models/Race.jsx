@@ -13,9 +13,11 @@ class Race {
     description,
     sponsors,
     image,
+    //raceId,
     id = uuid.v4()
   ) {
     this.id = id;
+    //this.raceId = raceId;
     this.city = city;
     this.country = country;
     this.month = month;
@@ -29,6 +31,7 @@ class Race {
   }
 
   setId = value => (this.id = value);
+  //setRaceId = value => (this.raceId = value);
   setCity = value => (this.city = value);
   setCountry = value => (this.country = value);
   setMonth = value => (this.month = value);
@@ -44,7 +47,7 @@ class Race {
     if (values._id) {
       this.setId(values._id);
     }
-
+    //this.raceId(values.raceId);
     this.setCity(values.city);
     this.setCountry (values.country);
     this.setMonth (values.month);
@@ -68,6 +71,7 @@ class Race {
 
 decorate(Race, {
   id: observable,
+  //raceId: observable,
   city: observable,
   country: observable,
   month: observable,
@@ -80,6 +84,7 @@ decorate(Race, {
   image: observable,
 
   setId: action,
+  //setRaceId: action,
   setCity:action,
   setCountry :action,
   setMonth :action,

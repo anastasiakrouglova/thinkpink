@@ -1,7 +1,7 @@
 export const ROUTES = {
     home: `/`,
     races: `/races`,
-    detail: `/detail/:raceId`,
+    detail: `/detail/:id`,
     info: `/info`,
     survivororteamcaptain: `/survivororteamcaptain`,
     supporterorgroup: `/supporterorgroup`,

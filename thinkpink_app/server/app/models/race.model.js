@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const RaceSchema = mongoose.Schema({
+  raceId: String,
   city: String,
   country: String,
   month: String,

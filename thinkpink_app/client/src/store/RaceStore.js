@@ -27,29 +27,28 @@ class RaceStore {
   };
 
   _addRace = values => {
-    console.log(values);
+    //console.log(values);
     const race = new Race();
     race.updateFromServer(values);
     runInAction(() => this.racelijst.push(race));
-    console.log(this.racelijst);
+    //console.log(this.racelijst);
   };
 
-  getOne = id => {
-    this.api.getById(id).then(d => this._addRace(d));
+  // getOne = id => {
+  //   this.api.getById(id).then(d => this._addRace(d));
 
-    console.log(id);
-  };
+  //   console.log(this.api.getById(id));
+  // };
 
   findById = id => {
-    console.log(this.racelijst);
-    //const racelijst = this.racelijst;
-    const race = this.racelijst.find(test => test._id === id);
-    console.log(race);
-
+    //console.log(this.racelijst);
+    //console.log(id);
+    const race = this.racelijst.find(check => check.id === id);
+    //console.log(race);
     if (!race) {
-      this.api.getById(id).then(this._addrace);
+      this.api.getById(id).then(this._addRace);
     }
-    console.log(this.api.getById(id).then(this._addrace));
+    //console.log(this.api.getById(id).then(this._addRace));
 
     return race;
   };
@@ -57,7 +56,9 @@ class RaceStore {
 
 decorate(RaceStore, {
   racelijst: observable,
-  _addRace: action
+  getAll: action,
+  _addRace: action,
+  findById: action
 });
 
 export default RaceStore;

@@ -3,7 +3,7 @@ module.exports = app => {
 
   app.post("/api/races", controller.create);
   app.get("/api/races", controller.findAll);
-  app.get("/api/races/:raceId", controller.findOne);
-  app.put("/api/races/:raceId", controller.update);
-  app.delete("/api/races/:raceId", controller.delete);
+  app.get("/api/races/:id", controller.findOne);
+  app.put("/api/races/:id", controller.update);
+  app.delete("/api/races/:id", controller.delete);
 };

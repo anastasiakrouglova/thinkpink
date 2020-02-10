@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import styles from "./Detail.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
 import { inject, observer, PropTypes } from "mobx-react";
@@ -15,13 +15,28 @@ import {
   NavLin
 } from "react-router-dom";
 
-const Detail = ({ raceStore, race }) => {
-  console.log(race);
+class Detail extends Component  {
+  constructor(props) {
+    super(props);
+  }
+  //const { race } = this.props;
+  //let { id } = useParams();
+  //console.log(id);
   //const race = raceStore.findById(id);
-  const { racelijst } = raceStore;
+  //const { racelijst } = raceStore;
+
+
   //console.log(raceStore.api.getById);
   //console.log(racelijst);
   // this.$store.state.workouts[$route.params.id - 1].level
+  render() {
+
+    const myRace = this.props.raceStore.findById(this.props.id);
+    //console.log(`RACE ID: ${myRace.city}`);
+
+    if (!myRace) {
+      return <p>loading...</p>
+    }
 
   return (
     <div>
@@ -31,8 +46,8 @@ const Detail = ({ raceStore, race }) => {
       <section className={styles.detail_container_info}>
         <div className={styles.info_container_text}>
           <h1 className={styles.city_container}>
-              <span className={styles.city}>{race}</span>  
-            <span className={styles.country}>&nbsp; (België)</span>
+              <span className={styles.city}>{myRace.city}</span>  
+            <span className={styles.country}>&nbsp; {myRace.country}</span>
           </h1>
           <div className={styles.info_container}>
               
@@ -41,7 +56,7 @@ const Detail = ({ raceStore, race }) => {
                 <img src="../assets/images/icons/locationPink.svg" alt="search"/>
                 <p className={styles.uppertitle}>Startlocatie</p>
               </div>
-              <p className={styles.info}>Graanmarkt</p>
+              <p className={styles.info}>{myRace.startLocation}</p>
             </div>
               
             <div>
@@ -49,7 +64,7 @@ const Detail = ({ raceStore, race }) => {
                 <img src="../assets/images/icons/clockPink.svg" alt="search"/>
                 <p className={styles.uppertitle}>Starttijd</p>
               </div>
-              <p className={styles.info}>11:00 uur</p>
+                <p className={styles.info}>{myRace.startTime}</p>
             </div>
               
             <div>
@@ -61,8 +76,7 @@ const Detail = ({ raceStore, race }) => {
             </div>
               
           </div>
-          <p className={styles.detail_body}>Dit jaar start Race For The Cure in Antwerpen op de mooie Graanmarkt. Het parcours is langs de mooiste plekjes van de Belgische havenstad. We zullen rond  sommige van de bekende momenumenten tegenkomen zoals het stadhuis en Sint-Andrieskerk. 
-            Geniet van dit onvergetelijk moment dat draait rond liefde met je eigen groep.</p>
+          <p className={styles.detail_body}>{myRace.description}</p>
             <div className={styles.primair_button}>
               <a className={styles.button_inschrijven} href="#inschrijven">Schrijf je in voor deze race</a>
           </div>
@@ -89,7 +103,7 @@ const Detail = ({ raceStore, race }) => {
         <section className={styles.container_program}>
           <div className={styles.container_map}>
             <img className={styles.map} src="../assets/images/maps/map.png" alt="map" />
-            <button className="App-backbutton"> Send to maps</button>
+            <button className="App-backbutton">Send to maps</button>
           </div>
           <div className={styles.program_section}>
             <p className="App-h1-number-primaircolor">01</p>
@@ -188,6 +202,7 @@ const Detail = ({ raceStore, race }) => {
         </div>
     </div>
   );
+}
 };
 
 

@@ -41,7 +41,7 @@ exports.findAll = async (req, res) => {
 exports.findOne = async (req, res) => {
   try {
     const race = await Race.findOne({
-      _id: req.params.raceId
+      _id: req.params.id
     });
 
     if (race) {
@@ -66,6 +66,7 @@ exports.update = async (req, res) => {
     const race = await Race.findOneAndUpdate(
       {
         _id: req.params.raceId,
+        raceId: req.params.raceId,
         city: req.body.city,
         country: req.body.country,
         month: req.body.month,
