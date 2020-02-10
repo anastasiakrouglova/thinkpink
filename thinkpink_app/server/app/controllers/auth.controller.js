@@ -12,9 +12,25 @@ const signatureCookie = {
 };
 
 exports.register = (req, res) => {
+  const {
+    email,
+    password,
+    name,
+    surname,
+    birthday,
+    phoneNumber,
+    tShirtSize
+  } = req.body;
+  const user = new User({
+    email,
+    password,
+    name,
+    surname,
+    birthday,
+    phoneNumber,
+    tShirtSize
+  });
 
-  const { email, password, name, surname, birthday, phoneNumber, tShirtSize } = req.body;
-  const user = new User({ email, password, name, surname, birthday, phoneNumber, tShirtSize });
   user.save(err => {
     if (err) {
       res.status(500).send("Error registering new user. Please try again.");
