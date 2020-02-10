@@ -33,10 +33,10 @@ const Info = () => {
                 height="150"
                 alt="profile picture"
               />
-              <p>#TeamRita</p>
             </div>
             <div>
               <div>
+              <p className={styles.hashtag}>#TeamRitaVerbeek</p>
                 <p className={styles.tekst_person}>
                   Rita een leuke dame uit Brugge die vorig jaar overleden is aan
                   borstkanker. Om haar herinnering in leve te houden, hebben we

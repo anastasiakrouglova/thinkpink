@@ -28,30 +28,71 @@ const SurvivorOrTeamcaptain = ({uiStore}) => {
         <div className={styles.container_cards}>
 
           <div className={styles.cardlotgenoot}>
-            <NavLink onClick={handleClickLotgenoot} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
-              <p className={styles.infotext}>
-                Ik ben een <span className={styles.lotgenoot}>lotgenoot</span> en wil mijn eigen pagina
-                onderhouden
-              </p>
-              <p className={styles.price}>€15</p>
-              <div className={styles.container_button}>
-                <button className={styles.card_button}>registreer lotgenoot</button>
-              </div>
-            </NavLink>
+          {!uiStore.authUser ? (
+              <>
+                <NavLink onClick={handleClickLotgenoot} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+                  <p className={styles.infotext}>
+                    Ik ben een <span className={styles.lotgenoot}>lotgenoot</span> en wil mijn eigen pagina
+                    onderhouden
+                  </p>
+                  <p className={styles.price}>€15</p>
+                  <div className={styles.container_button}>
+                    <button className={styles.card_button}>registreer lotgenoot</button>
+                  </div>
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink onClick={handleClickLotgenoot} className={styles.cardlotgenoot_navlink} to={ROUTES.formwelcome}>
+                  <p className={styles.infotext}>
+                    Ik ben een <span className={styles.lotgenoot}>lotgenoot</span> en wil mijn eigen pagina
+                    onderhouden
+                  </p>
+                  <p className={styles.price}>€15</p>
+                  <div className={styles.container_button}>
+                    <button className={styles.card_button}>registreer lotgenoot</button>
+                  </div>
+                </NavLink> 
+              </> 
+            )
+            }
+
           </div>
           <div className={styles.cardteamcaptain}>
-            <NavLink onClick={handleClickTeamCaptain} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
-              <p className={styles.infotext}>
-                Ik ben een <span className={styles.teamcaptain}>Team Captain</span> en wil een pagina aanmaken
-                voor een lotgenoot die ik ken
-              </p>
-              
-              <p className={styles.price}>€15</p>
-              <span className={styles.exclusief}>(excl. ticket lotgenoot)</span>
-              <div className={styles.container_button}>
-                <button className={styles.card_button}>registreer een Team Captain</button>
-              </div>
-            </NavLink>
+          {!uiStore.authUser ? (
+              <>
+                <NavLink onClick={handleClickTeamCaptain} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+                  <p className={styles.infotext}>
+                    Ik ben een <span className={styles.teamcaptain}>Team Captain</span> en wil een pagina aanmaken
+                    voor een lotgenoot die ik ken
+                  </p>
+                  
+                  <p className={styles.price}>€15</p>
+                  <span className={styles.exclusief}>(excl. ticket lotgenoot)</span>
+                  <div className={styles.container_button}>
+                    <button className={styles.card_button}>registreer een Team Captain</button>
+                  </div>
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink onClick={handleClickTeamCaptain} className={styles.cardlotgenoot_navlink} to={ROUTES.formwelcome}>
+                  <p className={styles.infotext}>
+                    Ik ben een <span className={styles.teamcaptain}>Team Captain</span> en wil een pagina aanmaken
+                    voor een lotgenoot die ik ken
+                  </p>
+                  
+                  <p className={styles.price}>€15</p>
+                  <span className={styles.exclusief}>(excl. ticket lotgenoot)</span>
+                  <div className={styles.container_button}>
+                    <button className={styles.card_button}>registreer een Team Captain</button>
+                  </div>
+                </NavLink>                 
+              </> 
+            )
+            }
+            
+
           </div>
 
         </div>

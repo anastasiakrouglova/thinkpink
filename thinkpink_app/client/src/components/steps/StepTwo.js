@@ -47,7 +47,7 @@ export class StepTwo extends React.Component {
                   
                   <div className={styles.cardRita}>
                     <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
-                    <h2 className={styles.rita_text}>Rita Verbeeck</h2>
+                    <h2 className={styles.rita_text}>{store.uiStore.authUser.name} {store.uiStore.authUser.surname}</h2>
                     <p className="App-subtitle">lotgenoot</p>
                     <div className={styles.data_container}>
                       <div className={styles.data_cardRita}>
@@ -56,7 +56,7 @@ export class StepTwo extends React.Component {
                       </div>
                       <div className={styles.data_cardRita}>
                         <h3 className={styles.data_cardRita_h3}>E-mailadres</h3>
-                        <p className="App-body">rita.verbeeck@telenet.be</p>
+                        <p className="App-body">{store.uiStore.authUser.email}</p>
                       </div>
                       <div className={styles.data_cardRita}>
                         <h3 className={styles.data_cardRita_h3}>T-shirt maat</h3>
@@ -149,7 +149,7 @@ export class StepTwo extends React.Component {
               
               <div className={styles.cardRita}>
                 <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
-                <h2 className={styles.rita_text}>Rita Verbeeck</h2>
+                <h2 className={styles.rita_text}>{store.uiStore.authUser.name} {store.uiStore.authUser.surname}</h2>
                 <p className="App-subtitle">lotgenoot</p>
                 <div className={styles.data_container}>
                   <div className={styles.data_cardRita}>
@@ -158,7 +158,7 @@ export class StepTwo extends React.Component {
                   </div>
                   <div className={styles.data_cardRita}>
                     <h3 className={styles.data_cardRita_h3}>E-mailadres</h3>
-                    <p className="App-body">rita.verbeeck@telenet.be</p>
+                    <p className="App-body">{store.uiStore.authUser.email}</p>
                   </div>
                   <div className={styles.data_cardRita}>
                     <h3 className={styles.data_cardRita_h3}>T-shirt maat</h3>
@@ -193,7 +193,7 @@ export class StepTwo extends React.Component {
                 
                 <div className={styles.cardRita}>
                   <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
-                  <h2 className={styles.rita_text}>Rita Verbeeck</h2>
+                  <h2 className={styles.rita_text}>{store.uiStore.authUser.name} {store.uiStore.authUser.surname}</h2>
                   <p className="App-subtitle">lotgenoot</p>
                   <div className={styles.data_container}>
                     <div className={styles.data_cardRita}>
@@ -202,7 +202,8 @@ export class StepTwo extends React.Component {
                     </div>
                     <div className={styles.data_cardRita}>
                       <h3 className={styles.data_cardRita_h3}>E-mailadres</h3>
-                      <p className="App-body">rita.verbeeck@telenet.be</p>
+                      <p className="App-body">{store.uiStore.authUser.email}
+                      </p>
                     </div>
                     <div className={styles.data_cardRita}>
                       <h3 className={styles.data_cardRita_h3}>T-shirt maat</h3>

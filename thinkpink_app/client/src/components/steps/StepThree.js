@@ -58,7 +58,7 @@ export class StepThree extends React.Component {
                 <p className={styles.form_textWelcome}>De mensen die je opgeeft zullen allemaal een e-mail ontvangen met instructies over het inschrijvingsproces van je team. Vanaf 10 mensen betaal moet je groep €12/persoon betalen in plaats van €15/persoon, maar jij hoeft dus niet voor hen te betalen.</p>
                 <form>
                   <div className="App-form-input-container">
-                    <label htmlFor="email" className={styles.label}>e-mailadres</label>
+                    <label htmlFor="email" className={styles.label}>E-mailadres</label>
                     <input className={styles.input} type="text" name="email" placeholder="johndoe@gmail.com"/>
                   </div>
                   <button className="App-button_secundair">+ Voeg nog een lid toe</button>  

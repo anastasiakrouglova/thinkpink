@@ -16,6 +16,10 @@ export class StepOne extends React.Component {
       let myRole = chooseRole.current.value;
       store.uiStore.role = myRole;
     }
+      
+      console.log(store.uiStore.authUser.name); 
+      
+    
 
     return (
     <div className={styles.form_container}>
@@ -23,7 +27,7 @@ export class StepOne extends React.Component {
          <section>
            {store.uiStore.role === `lotgenoot` ? (
              <>
-               <h1 className="App-form-h1">Hallo {store.uiStore.role}!</h1>
+               <h1 className="App-form-h1">Hallo {store.uiStore.authUser.name}!</h1>
                <p className="App-body">Creëer een pagina als een lotgenoot!</p>
                <p className={styles.form_textWelcome}>
                  Aangezien je borstkanker hebt overleefd, word je extra in de
@@ -42,7 +46,7 @@ export class StepOne extends React.Component {
               </>
            ) : store.uiStore.role === `teamcaptain` ? (
              <>
-               <h1 className="App-form-h1">Hallo {store.uiStore.role}!</h1>
+               <h1 className="App-form-h1">Hallo {store.uiStore.authUser.name}!</h1>
                <p className="App-body">Creëer een pagina voor een lotgenoot!</p>
                <p className={styles.form_textWelcome}>
                  De mogelijkheid bestaat om een pagina aan te maken voor een
@@ -62,7 +66,7 @@ export class StepOne extends React.Component {
                </>
            ) : store.uiStore.role === `supporter` ? (
              <>
-               <h1 className="App-form-h1">Hallo {store.uiStore.role}!</h1>
+               <h1 className="App-form-h1">Hallo {store.uiStore.authUser.name}!</h1>
                <p className="App-body">
                  Leuk dat je wilt meelopen in Race for the Cure!
                </p>
@@ -82,7 +86,7 @@ export class StepOne extends React.Component {
              </>
            ) : store.uiStore.role === `group` ? (
              <>
-               <h1 className="App-form-h1">Hallo {store.uiStore.role}!</h1>
+               <h1 className="App-form-h1">Hallo {store.uiStore.authUser.name}!</h1>
                <p className="App-body">Registreer meerdere mensen!</p>
                <p className={styles.form_textWelcome}>
                  De mogelijkheid bestaat om een pagina aan te maken voor een
@@ -103,7 +107,7 @@ export class StepOne extends React.Component {
              </>
            ) : (
              <>
-               <h1 className="App-form-h1">Hallo {store.uiStore.role}!</h1>
+               <h1 className="App-form-h1">Hallo {store.uiStore.authUser.name}!</h1>
                <p className="App-body">Duid je rol aan in het hele gebeuren van Race for the Cure. Dit belangrijk is voor het invulformulier.<br/> </p>
                
                <p className={styles.form_pinkText}>(Deze informatie zal niet publiekelijk weergeven of verkocht worden aan derden)</p>

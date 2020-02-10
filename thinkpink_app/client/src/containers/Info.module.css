@@ -182,3 +182,10 @@
     margin-right: 2rem;
     margin-left: 2rem;
 }
+
+.hashtag {
+    font-family: 'poppinsextrabold_italic';
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: var(--brown-title)
+}

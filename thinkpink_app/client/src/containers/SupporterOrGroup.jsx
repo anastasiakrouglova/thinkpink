@@ -26,6 +26,8 @@ const SupporterOrGroup = ({uiStore}) => {
         <div className={styles.container_cards}>
 
           <div className={styles.cardlotgenoot}>
+            {!uiStore.authUser ? (
+              <>
             <NavLink onClick={handleClickSupporter} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
               <p className={styles.infotext}>
                 Ik wil graag alleen deelnemen als <span className={styles.lotgenoot}>supporter</span> voor een lotgenoot
@@ -35,9 +37,40 @@ const SupporterOrGroup = ({uiStore}) => {
                 <button className={styles.card_button}>registreer supporter</button>
               </div>
             </NavLink>
+              </>
+            ) : (
+              <>
+              <NavLink onClick={handleClickSupporter} className={styles.cardlotgenoot_navlink} to={ROUTES.formwelcome}>
+              <p className={styles.infotext}>
+                Ik wil graag alleen deelnemen als <span className={styles.lotgenoot}>supporter</span> voor een lotgenoot
+              </p>
+              <p className={styles.price}>€15</p>
+              <div className={styles.container_button}>
+                <button className={styles.card_button}>registreer supporter</button>
+              </div>
+            </NavLink>
+              </> 
+            )
+            }
+
           </div>
           <div className={styles.cardteamcaptain}>
-            <NavLink onClick={handleClickGroup} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+          {!uiStore.authUser ? (
+              <>
+              <NavLink onClick={handleClickGroup} className={styles.cardlotgenoot_navlink} to={ROUTES.login}>
+                <p className={styles.infotext}>
+                  Ik wil graag <span className={styles.teamcaptain}>een groep</span> inschrijven voor een lotgenoot
+                </p>
+        
+                <p className={styles.price}>vanaf €12 p.p</p>
+                <div className={styles.container_button}>
+                  <button className={styles.card_button}>registreer een groep</button>
+                </div>
+              </NavLink>
+              </>
+            ) : (
+              <>
+            <NavLink onClick={handleClickGroup} className={styles.cardlotgenoot_navlink} to={ROUTES.formwelcome}>
               <p className={styles.infotext}>
                 Ik wil graag <span className={styles.teamcaptain}>een groep</span> inschrijven voor een lotgenoot
               </p>
@@ -47,6 +80,12 @@ const SupporterOrGroup = ({uiStore}) => {
                 <button className={styles.card_button}>registreer een groep</button>
               </div>
             </NavLink>
+              </> 
+            )
+            }
+
+
+
           </div>
 
         </div>
