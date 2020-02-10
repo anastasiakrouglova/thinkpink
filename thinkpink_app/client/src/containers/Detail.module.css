@@ -90,6 +90,7 @@
 .info_image {
     z-index: -2;
     border-radius: 1rem;
+    width: 27rem;
 }
 
 .days {

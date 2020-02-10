@@ -82,7 +82,7 @@ class Detail extends Component  {
           </div>
         </div>
         <div>
-        <img className={styles.info_image} src="../assets/images/cities/antwerpen_condensed.png" alt="image city"/>
+        <img className={styles.info_image} src={`../assets/images/cities/` + myRace.image + `_condensed.png`} alt="image city"/>
           <div className={styles.counter_container}>
             <div className={styles.days_container}>
               <div className={styles.days_number}>04</div>

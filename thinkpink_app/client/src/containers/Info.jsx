@@ -5,8 +5,10 @@ import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
+import { inject, observer, PropTypes } from "mobx-react";
 
-const Info = () => {
+const Info = ({ uiStore }) => {
+  console.log(uiStore);
   return (
     <div className={styles.uppercontainer}>
       <NavbarWhite />
@@ -14,11 +16,11 @@ const Info = () => {
         <div className={styles.navlink_top}>
           <NavLink className="App-backbutton_back" to={ROUTES.races}>
             Races
-          </NavLink>{" "}
+          </NavLink>
           &nbsp;/&nbsp;
           <NavLink className="App-backbutton_back" to={ROUTES.detail}>
             Antwerpen (België)
-          </NavLink>{" "}
+          </NavLink>
           &nbsp;/&nbsp;
           <NavLink className="App-backbutton" to={ROUTES.info}>
             TeamRitaVerbeek
@@ -45,7 +47,7 @@ const Info = () => {
                 <br />
                 <p className={styles.tekst_person}>
                   Supporter voor Rita!
-                  <br /> Dankuwel!
+                  <br/> Dankuwel!
                 </p>
               </div>
               <div className={styles.buttonInfo}>
@@ -104,6 +106,12 @@ const Info = () => {
           </h2>
           <p className={styles.subtitle}>(38 supporters, 124 km samen)</p>
           <div className={styles.supporterContainer}>
+
+          {/* {
+            uiStore.map(race => (
+              <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
+            ))
+          } */}
             <img
               src="../assets/images/people/dirk.png"
               alt="dirk"
@@ -269,4 +277,9 @@ const Info = () => {
   );
 };
 
-export default Info;
+
+Info.propTypes = {
+  uiStore: PropTypes.observableObject.isRequired
+};
+
+export default inject(`uiStore`)(observer(Info));

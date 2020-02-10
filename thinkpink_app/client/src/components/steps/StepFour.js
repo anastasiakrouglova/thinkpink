@@ -12,6 +12,7 @@ export class StepFour extends React.Component {
       <div className={styles.form_container}>
           <section >
             {store.uiStore.role === `lotgenoot` || store.uiStore.role === `supporter` || store.uiStore.role === `teamcaptain` || store.uiStore.role === `group` ? (
+              
               <div className={styles.form_container}>
                 <h1 className="App-form-h1">Betalingsinformatie</h1>
                 <div className={styles.step3_container}>
