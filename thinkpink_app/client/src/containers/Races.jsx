@@ -14,7 +14,7 @@ const Races = ({ raceStore }) => {
     <div>
       <div className="App-background-header">
         <NavbarDark />
-        <p className={styles.h1}>Samen staan we sterk.</p>
+        <p className={styles.h1}>Samen staan we sterk!</p>
         <div className="App-input_container">
           <input
             className="App-input_search"

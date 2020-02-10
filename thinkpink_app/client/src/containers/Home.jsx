@@ -17,7 +17,7 @@ function Home() {
       <div className={styles.background_image}></div>
       <section className={styles.title}>
         <span className={styles.h0_outlined}>Race</span> <br />
-        <span className={styles.h0_subtitle}>For The Cure</span> <br />
+        <span className={styles.h0_subtitle}>for the Cure</span> <br />
         <NavLink to={ROUTES.races}>
           <button className={styles.primair_button}>
             Schrijf je in voor een race
@@ -28,12 +28,12 @@ function Home() {
       <section className={styles.section2}>
         <div>
           <p className={styles.number}>01</p>
-          <p className={styles.h1}>Wat is race for the cure?</p>
+          <p className={styles.h1}>Wat is Race for the Cure?</p>
           <p className={styles.body}>
-            Race For The Cure is een sportief evenement waarin solidariteit een
+            Race for the Cure is een sportief evenement waarin solidariteit een
             belangrijke rol speelt in het gevecht tegen borstkanker. De race is
-            origineel onstaat vanuit een initiatief van ‘Think Pink’’. Deze race
-            heeft zich ondertussen uitgebreid over meer dan 20 landen in het
+            origineel onstaat vanuit een initiatief van ‘Think Pink’. Dit evenement
+            heeft zich ondertussen uitgebreid over meer dan twintig landen in het
             Europees continent. De hele dag is gevuld met animatie en intense
             emoties.
           </p>
@@ -74,8 +74,8 @@ function Home() {
           <div className={styles.homeSupporter_container}>
             <p className={styles.h2}>Supporter</p>
             <p className={styles.body}>
-              Wil je solo lopen of je gewoon toevoegen aan een bestaande groep?
-              Dan staat supporteer op je lijf geschreven.
+              Wil je alleen lopen of je gewoon toevoegen aan een bestaande groep?
+              Dan staat supporter je op het lijf geschreven.
             </p>
           </div>
         </div>
@@ -84,9 +84,9 @@ function Home() {
       <section className={styles.section4}>
         <div className={styles.challenges__title}>
           <p className={styles.number}>03</p>
-          <p className={styles.h1}>Challenges</p>
+          <p className={styles.h1}>Uitdagingen</p>
           <p className="App-body">
-            Probeer met je team zoveel mogelijk challenges te volbrengen en word
+            Probeer met je team zoveel mogelijk uitdagingen te volbrengen en word
             beloond!
           </p>
         </div>
@@ -98,8 +98,8 @@ function Home() {
               alt="icon radio"
             />
             <p className="App-body">
-              Bij 150km beweging opgeteld met je supporters , zal jullie
-              groepummer afgespeeld worden bij de finish.
+              Bij 150km beweging, zal jullie
+              groepslied afgespeeld worden bij de finish.
             </p>
           </div>
           <div className={styles.container_challenge}>
@@ -119,7 +119,7 @@ function Home() {
               alt="icon massage"
             />
             <p className="App-body">
-              Bak met je team koekjes en verkoop ze op je stand! Je team krijgt
+              Bak met je team koekjes en verkoop ze op je stand! Jullie krijgen
               dan een gratis massage na de finish.
             </p>
           </div>
@@ -130,8 +130,8 @@ function Home() {
               alt="icon photograph"
             />
             <p className="App-body">
-              Vanaf 10 donaties voor je team krijgt elk lid een professionele
-              groepsfoto cadeau getrokken op de race.
+              Vanaf 10 donaties krijgt elk lid een professionele
+              groepsfoto cadeau gedaan. Deze wordt genomen tijdens de race.
             </p>
           </div>
         </div>
@@ -139,11 +139,11 @@ function Home() {
         <div className={styles.challenges__title}>
           <p className={styles.number}>04</p>
           <p className={styles.h1}>Waarom lopen?</p>
-          <p className={styles.waaromlopen}>
-            Borstkanker nests zich heel graag in vetcellen. Door een gezonde
-            levensstijl en sportieve kijk op de wereld te hebben verminder je de
-            kans op borstkanker. Het is dus een soort van preventie tegen
-            kanker, maar natuurlijk is het niet de enigste reden waarom kanker
+          <p className="App-body">
+            Borstkanker nestelt zich heel graag in vetcellen. Door een gezonde
+            levensstijl en sportieve kijk op de wereld te hebben, verminder je de
+            kans op borstkanker. Het evenement is dus een soort preventie van
+            kanker. Natuurlijk is het niet de enige reden waarom kanker
             kan opduiken.
           </p>
         </div>

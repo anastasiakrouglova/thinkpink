@@ -56,7 +56,7 @@ export class StepFive extends React.Component {
            ) : (
              <>
                 <h1 className="App-form-h1">Ooops</h1>
-                <p className={styles.form_textWelcome}>Hmm, je bent vergeten aan te duiden of je als lotgenoot/teamcaptain/supporter of groep wilt gaan. Ga terug naar de eerste pagina en selecteer een categorie.</p>
+                <p className={styles.form_textWelcome}>Hmm, je bent vergeten aan te duiden of je als lotgenoot/Team Captain/supporter of groep wilt gaan. Ga terug naar de eerste pagina en selecteer een categorie.</p>
               </>
            )}
          </section> 
