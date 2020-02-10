@@ -17,9 +17,9 @@ class UiStore {
   setUser = value => (this.authUser = value);
 
   login = (email, password) => {
-    console.log("email is eigenlijk email");
-    console.log(email);
-    console.log(password);
+    // console.log("email is eigenlijk email");
+    // console.log(email);
+    // console.log(password);
     return this.authService
       .login(email, password)
       .then(() => {

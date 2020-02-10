@@ -4,6 +4,7 @@ import { inject, observer } from "mobx-react";
 
 import { steps } from '../components/steps/steps.js'
 import MultiStep from '../components/steps/index'
+import withAuthentication from "../components/auth/WithAuthentication.jsx";
 
 const FormWelcome = ({ uiStore }) => {
 
@@ -33,4 +34,4 @@ const FormWelcome = ({ uiStore }) => {
   );
 };
 
-export default inject(`uiStore`)(observer(FormWelcome));
+export default inject(`uiStore`) (withAuthentication(observer(FormWelcome)));
