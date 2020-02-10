@@ -1,318 +1,327 @@
-.name_container {
-    display: flex;
-    flex-direction: row;
+/* GATSBY IMG TEST */
+/* .gFormPage_container {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 20% 100%;
+  grid-template-areas:
+    "form_img form_title"
+    "form_img form_container";
 }
 
+.gImg_container {
+  composes: gContainer from "../styles/App.css";
+  grid-area: form_img;
+}
+
+.gImg_img {
+  composes: gImg from "../styles/App.css";
+}
+
+.gForm_container {
+  grid-area: form_container;
+}
+
+.gApp_form_h1 {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+
+  grid-area: form_title;
+} */
+
+/* VORIGE CSS */
+
+.name_container {
+  display: flex;
+  flex-direction: row;
+}
 
 .label {
-    composes: App-form-label from "../styles/App.css"
+  composes: App-form-label from "../styles/App.css";
 }
 
-
 .input {
-    composes: App-form-input from "../styles/App.css"
+  composes: App-form-input from "../styles/App.css";
 }
 
 .radioInput:checked + .radioLabel {
-    color: white;
-    background-color: var(--pink-primair);
-    border: 1px solid var(--pink-primair);
+  color: white;
+  background-color: var(--pink-primair);
+  border: 1px solid var(--pink-primair);
 }
 
-
 .radioInput {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .radioLabel {
-    margin-left: -0.9rem;
-    padding: 0.5rem 1rem;
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid #8F8F8F;
-    color: #8F8F8F;
-    font-size: 1rem;
-    transition: all .3s ease-out;
-    border-radius: 0.1rem;
+  margin-left: -0.9rem;
+  padding: 0.5rem 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #8f8f8f;
+  color: #8f8f8f;
+  font-size: 1rem;
+  transition: all 0.3s ease-out;
+  border-radius: 0.1rem;
 }
 
 .container_date {
-    display: flex;
+  display: flex;
 }
-
 
 .akkoord_container {
-    font-size: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
-
 .underlined {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .container_signup {
-    display: flex;
+  display: flex;
 }
 
-
 .img_container {
-    composes: App-img_form from "../styles/App.css"
-
+  composes: App-img_form from "../styles/App.css";
 }
 
 .formcontainer {
-    height: 100vh;
-    overflow: scroll;
+  height: 100vh;
+  overflow: scroll;
 }
-
 
 .selectCountry {
-    background-color: transparent;
-    color: black;
-    border: 1px solid #D6D6D6;
-    border-radius: 0rem;
-    font-size: 0.7rem;
-    margin-right: 1rem;
-    height: 2rem;
+  background-color: transparent;
+  color: black;
+  border: 1px solid #d6d6d6;
+  border-radius: 0rem;
+  font-size: 0.7rem;
+  margin-right: 1rem;
+  height: 2rem;
 }
-
 
 .secundair_button {
-    composes: App-button_secundair-outline from "../styles/App.css";
-    margin-right: 1rem;
-    padding: 0.6rem 1rem
+  composes: App-button_secundair-outline from "../styles/App.css";
+  margin-right: 1rem;
+  padding: 0.6rem 1rem;
 }
-
 
 .buttonContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 4rem;
-    margin-right: 2rem;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 4rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
 }
-   
 
 /* FORM */
 
 .form_change {
-    margin-top: 2rem;
-    margin-bottom: -3rem;
-    font-family: 'poppinsbold';
-    composes: App-body from "../styles/App.css"
+  margin-top: 2rem;
+  margin-bottom: -3rem;
+  font-family: "poppinsbold";
+  composes: App-body from "../styles/App.css";
 }
 
 .form_change_step3 {
-    margin-top: 2rem;
-    font-family: 'poppinsbold';
-    composes: App-body from "../styles/App.css"
+  margin-top: 2rem;
+  font-family: "poppinsbold";
+  composes: App-body from "../styles/App.css";
 }
 
 .form_container {
-    margin: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 4rem;
+  display: flex;
+  grid-template-areas: "img ";
+  flex-direction: column;
+  align-items: center;
 }
 
 .form_textWelcome {
-    max-width: 40rem;
-    composes: App-body from "../styles/App.css"
+  max-width: 40rem;
+  composes: App-body from "../styles/App.css";
 }
-
 
 .form_pinkText {
-    composes: App-body from "../styles/App.css";
-    font-size: 0.8rem;
-    color: var(--pink-primair);
-    background-color: transparent;
-    border: none;
+  composes: App-body from "../styles/App.css";
+  font-size: 0.8rem;
+  color: var(--pink-primair);
+  background-color: transparent;
+  border: none;
 }
-
 
 .form_pinkLink {
-    composes: App-body from "../styles/App.css";
-    font-size: 1rem;
-    color: var(--pink-primair);
-    background-color: transparent;
-    border: none;
-    font-family: 'poppinsbold';
-    margin-left: 2rem;
-    margin-top: -2rem;
+  composes: App-body from "../styles/App.css";
+  font-size: 1rem;
+  color: var(--pink-primair);
+  background-color: transparent;
+  border: none;
+  font-family: "poppinsbold";
+  margin-left: 2rem;
+  margin-top: -2rem;
 }
-
 
 .form_pinkLink:hover {
-    color: var(--pink-primair-focus);
+  color: var(--pink-primair-focus);
 }
 
-
 .form_pinkLink:focus {
-    outline: none;
+  outline: none;
 }
 
 .form_pinkText_normal {
-    composes: App-body from "../styles/App.css";
-    font-size: 1rem;
-    color: var(--pink-primair)
+  composes: App-body from "../styles/App.css";
+  font-size: 1rem;
+  color: var(--pink-primair);
 }
 
 .form_cursief {
-    composes: App-body from "../styles/App.css";
-    opacity: 0.6;
-    font-size: 0.8rem;
-    font-style: italic;
+  composes: App-body from "../styles/App.css";
+  opacity: 0.6;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
-
-.form_link__dropdown{
-    background-color: transparent;
-    color: black;
-    border: 1px solid var(--pink-primair);
-    font-size: 1rem;
-    height: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
+.form_link__dropdown {
+  background-color: transparent;
+  color: black;
+  border: 1px solid var(--pink-primair);
+  font-size: 1rem;
+  height: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .form_link__dropdown:focus {
-    outline: none;
+  outline: none;
 }
 
 .step3_containerLid {
-    margin-right: 2rem;
-    padding-right: 2rem;
-    border-right: 1px solid grey;
+  margin-right: 2rem;
+  padding-right: 2rem;
+  border-right: 1px solid grey;
 }
 
 .step3_container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1280px) {
-    .step3_container {
-        flex-direction: column;
-    }
+  .step3_container {
+    flex-direction: column;
+  }
 
-    .step3_containerLid {
-        margin-right: 2rem;
-        padding-right: 1rem;
-        padding-bottom: 3rem;
-        border-right: 1px solid transparent;
-        border-bottom: 1px solid grey;
-        margin-bottom: 3rem;
-    }
+  .step3_containerLid {
+    margin-right: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid grey;
+    margin-bottom: 3rem;
+  }
 }
 
 .lidtoevoegen {
-    margin-top: 3rem;
-    composes: App-button_secundair from "../styles/App.css"
+  margin-top: 3rem;
+  composes: App-button_secundair from "../styles/App.css";
 }
 
 .form_sm_container {
-    margin-top: 3.5rem;
+  margin-top: 3.5rem;
 }
 
 .form_sm {
-    margin-right: 0.8rem;
+  margin-right: 0.8rem;
 }
 
-
 .form_image_payment {
-    size: 3rem;
-    border: 1px solid grey;
-    margin: 1rem 1rem 0rem 0rem;
-    opacity: 0.6;
-    transition: all 0.2s;
+  size: 3rem;
+  border: 1px solid grey;
+  margin: 1rem 1rem 0rem 0rem;
+  opacity: 0.6;
+  transition: all 0.2s;
 }
 
 .form_image_payment:hover {
-    opacity: 1;
-    border: 1px solid black;
-    margin: 1rem 1rem 0rem 0rem;
+  opacity: 1;
+  border: 1px solid black;
+  margin: 1rem 1rem 0rem 0rem;
 }
 
-
 .form_payment_container {
-    width: 17rem;
+  width: 17rem;
 }
 
 .totalStep4 {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
-    padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
 }
 
-
-.totalp{
-    font-family: 'poppinsbold';
-    font-size: 2rem;
-    color: var(--pink-primair);
+.totalp {
+  font-family: "poppinsbold";
+  font-size: 2rem;
+  color: var(--pink-primair);
 }
-
 
 .totalc {
-    font-family: 'poppinsbold';
-    font-size: 2rem;
+  font-family: "poppinsbold";
+  font-size: 2rem;
 }
 
 .bigtext {
-    height: 8rem;
-    width: 30vw;
-    font-size: 1.2rem;
-    text-align: start;
+  height: 8rem;
+  width: 30vw;
+  font-size: 1.2rem;
+  text-align: start;
 }
-
 
 .inputTextfield {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-
-
-.cardRita{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    composes: App-card_static from "../styles/App.css";
-    margin-bottom: 1rem;
+.cardRita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  composes: App-card_static from "../styles/App.css";
+  margin-bottom: 1rem;
 }
-
 
 .data_cardRita {
-    display: flex;
-    margin-bottom: 0.3rem;
+  display: flex;
+  margin-bottom: 0.3rem;
 }
 
 .data_cardRita_h3 {
-    margin-right: 1rem;
-    composes: App-body from "../styles/App.css";
-    font-family: 'poppinsbold'
+  margin-right: 1rem;
+  composes: App-body from "../styles/App.css";
+  font-family: "poppinsbold";
 }
 
 .data_container {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .foto_cardRita {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-
 .rita_text {
-    font-family: 'poppinsbold';
-    margin-bottom: 0.2rem;
+  font-family: "poppinsbold";
+  margin-bottom: 0.2rem;
 }
 
 .foto_textuitleg {
-    margin-bottom: 1rem;
-    width: 30rem;
-    composes: App-body from "../styles/App.css";
+  margin-bottom: 1rem;
+  width: 30rem;
+  composes: App-body from "../styles/App.css";
 }
