@@ -26,12 +26,15 @@ const Info = () => {
         </div>
         <div className={styles.containerGlobal}>
           <section className={styles.card_container}>
-            <img className={styles.profilepictureRita}
-              src="../assets/images/people/rita.png"
-              width="150"
-              height="150"
-              alt="profile picture"
-            />
+            <div className={styles.fotocontainer}>
+              <img className={styles.profilepictureRita}
+                src="../assets/images/people/rita.png"
+                width="150"
+                height="150"
+                alt="profile picture"
+              />
+              <p>#TeamRita</p>
+            </div>
             <div>
               <div>
                 <p className={styles.tekst_person}>

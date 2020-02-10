@@ -44,3 +44,11 @@
     margin-bottom: -0.1rem;
     margin-right: 0.5rem;
 }
+
+
+.personFoto {
+    margin-bottom: -0.6rem;
+    margin-right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
