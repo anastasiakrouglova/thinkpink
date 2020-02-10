@@ -127,7 +127,31 @@
 .form_pinkText {
     composes: App-body from "../styles/App.css";
     font-size: 0.8rem;
-    color: var(--pink-primair)
+    color: var(--pink-primair);
+    background-color: transparent;
+    border: none;
+}
+
+
+.form_pinkLink {
+    composes: App-body from "../styles/App.css";
+    font-size: 1rem;
+    color: var(--pink-primair);
+    background-color: transparent;
+    border: none;
+    font-family: 'poppinsbold';
+    margin-left: 2rem;
+    margin-top: -2rem;
+}
+
+
+.form_pinkLink:hover {
+    color: var(--pink-primair-focus);
+}
+
+
+.form_pinkLink:focus {
+    outline: none;
 }
 
 .form_pinkText_normal {
@@ -247,4 +271,48 @@
 
 .inputTextfield {
     margin-bottom: 2rem;
+}
+
+
+
+.cardRita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    composes: App-card_static from "../styles/App.css";
+    margin-bottom: 1rem;
+}
+
+
+.data_cardRita {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+.data_cardRita_h3 {
+    margin-right: 1rem;
+    composes: App-body from "../styles/App.css";
+    font-family: 'poppinsbold'
+}
+
+.data_container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.foto_cardRita {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.rita_text {
+    font-family: 'poppinsbold';
+    margin-bottom: 0.2rem;
+}
+
+.foto_textuitleg {
+    margin-bottom: 1rem;
+    width: 30rem;
+    composes: App-body from "../styles/App.css";
 }
