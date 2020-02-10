@@ -46,6 +46,7 @@ function Home() {
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          title="Lotgenoten"
         ></iframe>
       </section>
 
@@ -58,10 +59,9 @@ function Home() {
           <div className={styles.role_subcontainer}>
             <p className={styles.h2}>Team Captain</p>
             <p className={styles.body}>
-              Een groep kan zowel groot als klein zijn, jij bent de
-              verantwoordelijke in je subgroep dat minstens 10 deelnemers telt.
+              Jij bent de verantwoordelijke van een groepsinschrijving.
               Ben je dus bijvoorbeeld een directeur van een vereniging? Dan is
-              deze taak voor jou!{" "}
+              deze taak voor jou!
             </p>
           </div>
           <div className={styles.role_subcontainer}>
@@ -79,16 +79,7 @@ function Home() {
             </p>
           </div>
         </div>
-        {/* <p className={styles.body}>Op dit evenement draait het allemaal rond de lotgenoten en hun sociaal vangnet. Je kan ze makkelijk spotten met hun roze T-shirt. Loop met hen mee in een witte T-shirt zo vormen we een grote beweging tegen borstkanker. Zo ben je zelf ook in beweging en heb je minder kans op kanker. </p> */}
-        {/* <img className={styles.img_lotgenoot} width="520" height="430" src="../assets/images/home/lotgenoten.png" alt="lotgenoten"/> */}
       </section>
-
-      {/* <div>
-          <p className={styles.number}>02</p>
-          <p className={styles.h1}>Lotgenoten staan centraal</p>
-          <p className={styles.body}>Op dit evenement draait het allemaal rond de lotgenoten en hun sociaal vangnet. Je kan ze makkelijk spotten met hun roze T-shirt. Loop met hen mee in een witte T-shirt zo vormen we een grote beweging tegen borstkanker. Zo ben je zelf ook in beweging en heb je minder kans op kanker. </p>
-        </div>
-        <img className={styles.img_lotgenoot} width="520" height="430" src="../assets/images/home/lotgenoten.png" alt="lotgenoten"/> */}
 
       <section className={styles.section4}>
         <div className={styles.challenges__title}>
@@ -144,9 +135,7 @@ function Home() {
             </p>
           </div>
         </div>
-      </section>
-
-      <section className={styles.section5}>
+        <div className={styles.section5}>
         <div className={styles.challenges__title}>
           <p className={styles.number}>04</p>
           <p className={styles.h1}>Waarom lopen?</p>
@@ -158,7 +147,13 @@ function Home() {
             kan opduiken.
           </p>
         </div>
+        <div>
+            <img className={styles.imgWaarom} src="../assets/images/home/waarom.png" alt="waarom"/>
+        </div>
+      </div>
       </section>
+
+
 
       <Controller>
         <Scene duration="200%" triggerHook="onLeave" pin>

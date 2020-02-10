@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import styles from "../../containers/Signup.module.css";
 import store from '../../store/index'

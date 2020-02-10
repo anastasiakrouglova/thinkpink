@@ -15,7 +15,7 @@
 }
 
 .inputfield:focus {
-    outline: 0.1rem solid #F7B500
+    outline: 0.1rem solid black;
 }
 
 .inputfieldError {
@@ -41,14 +41,6 @@
 
 .loginButton:focus {
     outline: none;
-}
-
-.loginButton:hover {
-    background-color: #D16F00;
-}
-
-.loginButtonEmpty:hover {
-    background-color: #F78300;
 }
 
 .signupContainer {

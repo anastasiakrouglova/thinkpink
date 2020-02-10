@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./SupporterOrGroup.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
-import Race from "../components/Race.jsx"
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 import { inject } from "mobx-react";

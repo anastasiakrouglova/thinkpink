@@ -1,5 +1,5 @@
 import uuid from "uuid";
-import { decorate, action, observable, computed } from "mobx";
+import { decorate, action, observable } from "mobx";
 
 class Race {
   constructor(

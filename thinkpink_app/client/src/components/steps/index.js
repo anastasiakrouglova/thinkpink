@@ -1,5 +1,3 @@
-"use strict";
-
 import React, {useState} from 'react'
 
 const getNavStyles = (indx, length) => {

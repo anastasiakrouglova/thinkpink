@@ -10,10 +10,10 @@ class Api {
     return await r.json();
   };
 
-  getById = async id => {
-    // const r = await fetch(`http://localhost:4000/api/races/${id}`);
+  getById = async raceId => {
+    const r = await fetch(`http://localhost:4000/api/races/${raceId}`);
     // console.log(r);
-    // return await r.json();
+    return await r.json();
   };
 
   create = async entity => {

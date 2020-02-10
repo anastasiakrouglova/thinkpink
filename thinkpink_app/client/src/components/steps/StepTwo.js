@@ -1,9 +1,7 @@
-'use strict'
+
 import React from 'react'
 import styles from "../../containers/Signup.module.css";
 import store from '../../store/index'
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../../constants";
 import { withStyles } from '@material-ui/core/styles';
 import { pink } from '@material-ui/core/colors';
 
@@ -34,17 +32,6 @@ export class StepTwo extends React.Component {
   }
   
     render() {
-    console.log(store.uiStore.role);
-
-    const chooseRole = React.createRef();
-
-    const handleChooseRole = () => {
-      let myRole = chooseRole.current.value;
-      store.uiStore.role = myRole;
-      console.log(store.uiStore.role);
-    }
-
-
     return (
     <div className={styles.form_container}>
        <div className={styles.container_signup}>

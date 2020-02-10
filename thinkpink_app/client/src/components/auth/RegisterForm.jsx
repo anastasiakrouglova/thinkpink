@@ -106,7 +106,7 @@ class RegisterForm extends Component {
               className={formErrors.email.length > 0 ? styles.inputfieldError : styles.inputfield}
               type="email"
               name="email"
-              id="email"
+              id="emailRegister"
               value={email}
               onChange={this.handleChange}
             />
@@ -124,7 +124,7 @@ class RegisterForm extends Component {
               className={formErrors.pwd2.length > 0 ? styles.inputfieldError : styles.inputfield}
               type="password"
               name="pwd"
-              id="pwd"
+              id="pwdRegister"
               value={pwd}
               onChange={this.handleChange}
             />
