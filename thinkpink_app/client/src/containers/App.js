@@ -22,8 +22,8 @@ class App extends Component {
       <Switch>
         <Route path={ROUTES.home} exact strict component={Home} />
         <Route path={ROUTES.races} component={Races} />
-        
-        <Route path={ROUTES.detail} component={Detail} />
+
+        <Route path={ROUTES.detail} exact component={Detail} />
         {/* <Route
           path={ROUTES.detail}
           render={({ match }) => <Detail id={match.params.id} />}

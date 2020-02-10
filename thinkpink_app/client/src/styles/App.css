@@ -365,6 +365,7 @@ outline: none;
 .App-form-input-container {
   display: flex;
   flex-direction: column;
+  margin-right: 2rem;
 }
 
 .App-form-label {
@@ -386,7 +387,7 @@ outline: none;
 
 .App-img_form {
   background-image: url("../assets/images/form/signup.png");
-  min-width: 30rem;
+  min-width: 40rem;
   height: 100vh;
   background-position: center;
   background-size: cover;

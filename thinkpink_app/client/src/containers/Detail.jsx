@@ -3,12 +3,24 @@ import styles from "./Detail.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
 import { inject, observer, PropTypes } from "mobx-react";
 
-import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,NavLink,
+  useHistory,
+  useLocation,
+  useParams,
+  NavLin
+} from "react-router-dom";
 
-const Detail = ({ raceStore, id }) => {
-  const race = raceStore.findById(id);
-  //const { racelijst } = raceStore;
+const Detail = ({ raceStore, race }) => {
+  console.log(race);
+  //const race = raceStore.findById(id);
+  const { racelijst } = raceStore;
+  //console.log(raceStore.api.getById);
+  //console.log(racelijst);
   // this.$store.state.workouts[$route.params.id - 1].level
 
   return (
@@ -19,7 +31,7 @@ const Detail = ({ raceStore, id }) => {
       <section className={styles.detail_container_info}>
         <div className={styles.info_container_text}>
           <h1 className={styles.city_container}>
-            <span className={styles.city}>Antwerpen</span>  
+              <span className={styles.city}>{race}</span>  
             <span className={styles.country}>&nbsp; (België)</span>
           </h1>
           <div className={styles.info_container}>

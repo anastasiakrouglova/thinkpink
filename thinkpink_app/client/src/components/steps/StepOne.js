@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import styles from "../../containers/Signup.module.css";
 import store from '../../store/index'
@@ -11,21 +10,17 @@ export class StepOne extends React.Component {
   }
 
     render() {
-    console.log(store.uiStore.role);
-
     const chooseRole = React.createRef();
 
     const handleChooseRole = () => {
       let myRole = chooseRole.current.value;
       store.uiStore.role = myRole;
-  
-      console.log(store.uiStore.role);
     }
 
     return (
     <div className={styles.form_container}>
        <div>
-         <section >
+         <section>
            {store.uiStore.role === `lotgenoot` ? (
              <>
                <h1 className="App-form-h1">Hi {store.uiStore.role}!</h1>

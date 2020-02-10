@@ -25,7 +25,7 @@ const Signup = ({ uiStore }) => {
       <div className={styles.img_container}></div>
       
       <div>
-      <h1 className="App-form-h1">Sign Up - {uiStore.role}</h1>
+      <h1 className="App-form-h1">Sign Up</h1>
         <p className="App-form-text">We gebruiken deze informatie om het inschrijvingsproces zo vlot mogelijk te laten verlopen en voor de veiligheid tijdens het evenement. Uw informatie wordt niet gedeeld met andere partijen.</p>
 
         <RegisterForm />  

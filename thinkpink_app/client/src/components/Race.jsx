@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../constants";
 import {observer} from "mobx-react";
 import styles from "./Race.module.css"
 

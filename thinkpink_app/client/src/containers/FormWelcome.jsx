@@ -1,9 +1,6 @@
 import React from "react";
-import styles from "./Signup.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../constants";
-import { inject, PropTypes, observer } from "mobx-react";
+import { inject, observer } from "mobx-react";
 
 import { steps } from '../components/steps/steps.js'
 import MultiStep from '../components/steps/index'

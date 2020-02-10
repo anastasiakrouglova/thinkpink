@@ -1,9 +1,6 @@
-'use strict'
 import React from 'react'
 import store from '../../store/index'
 import styles from "../../containers/Signup.module.css";
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../../constants";
 
 export class StepThree extends React.Component {
   constructor () {
