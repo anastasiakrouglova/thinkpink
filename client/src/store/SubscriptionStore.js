@@ -14,7 +14,6 @@ import {
   
   class SubscriptionStore {
     subscriptionlijst = [];
-    //role = `Teamcaptain [hardcoded]`;
   
     constructor(rootStore) {
       this.rootStore = rootStore;
@@ -24,7 +23,6 @@ import {
     }
   
     getAll = () => {
-      // console.log(`get all races!`);
       this.subscriptionsApi.getAll().then(d => d.forEach(this._addSubscription));
     };
   
@@ -33,36 +31,26 @@ import {
       const subscription = new Subscription();
       subscription.updateFromServer(values);
       runInAction(() => this.subscriptionlijst.push(subscription));
-      //console.log(this.racelijst);
     };
       
-      
   
-    // getOne = id => {
-    //   this.api.getById(id).then(d => this._addRace(d));
+    findById = id => {
+      const subscription = this.subscriptionlijst.find(check => check.id === id);
+      if (!subscription) {
+        this.subscriptionsApi.getById(id).then(this._addSubscription);
+      }
   
-    //   console.log(this.api.getById(id));
-    // };
-  
-    // findById = id => {
-    //   //console.log(this.racelijst);
-    //   //console.log(id);
-    //   const race = this.racelijst.find(check => check.id === id);
-    //   //console.log(race);
-    //   if (!race) {
-    //     this.api.getById(id).then(this._addRace);
-    //   }
-    //   //console.log(this.api.getById(id).then(this._addRace));
-  
-    //   return race;
-    // };
+      return subscription;
+    };
   }
+
   
-//   decorate(RaceStore, {
-//     racelijst: observable,
-//     getAll: action,
-//     _addRace: action,
-//     findById: action
-//   });
+  
+  decorate(SubscriptionStore, {
+    subscriptionlijst: observable,
+    getAll: action,
+    _addSubscription: action
+  });
+
   
   export default SubscriptionStore;

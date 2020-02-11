@@ -7,7 +7,8 @@ exports.create = (req, res) => {
 }
 
 const subscription = new Subscription({
-      role: req.body.role,
+  role: req.body.role,
+  teamName: req.body.teamName
     // city: req.body.city,
     // country: req.body.country,
     // month: req.body.month,
@@ -68,7 +69,8 @@ exports.update = async (req, res) => {
     const subscription = await Subscription.findOneAndUpdate(
       {
         _id: req.params.subscriptionId,
-        role: req.params.role
+        role: req.params.role, 
+        teamName: req.params.teamName, 
         // subscriptionId: req.params.subscriptionId,
         // city: req.body.city,
         // country: req.body.country,

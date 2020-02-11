@@ -18,22 +18,6 @@ const Login = () => {
       </div>
     </div>
   );
-
-  // return (
-  //   <div>
-  //     <NavbarWhite />
-  //     <div className={styles.gFormPage_container}>
-  //       <div className={styles.gImg_container}>
-  //         <div className={styles.gImg_img}></div>
-  //       </div>
-
-  //       <h1 className={styles.gApp_form_h1}>Log in</h1>
-  //       <div className={styles.gForm_container}>
-  //         <LoginForm />
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default Login;

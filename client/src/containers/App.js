@@ -29,11 +29,12 @@ class App extends Component {
             path={ROUTES.detail}
             render={({ match }) => <Detail id={match.params.id} />}
           />
-        {/* <Route
-          path={ROUTES.detail}
-          render={({ match }) => <Detail id={match.params.id} />}
-        /> */}
-        <Route path={ROUTES.info} component={Info} />
+        <Route
+            path={ROUTES.info}
+            render={({ match }) => <Info id={match.params.id} />}
+          />
+        {/* <Route path={ROUTES.info} component={Info} /> */}
+        
         <Route path={ROUTES.survivororteamcaptain} component={SurvivorOrTeamcaptain} />
         <Route path={ROUTES.supporterorgroup} component={SupporterOrGroup} />
         <Route path={ROUTES.signup} component={Signup} />

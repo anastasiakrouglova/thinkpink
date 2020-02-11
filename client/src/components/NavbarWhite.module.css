@@ -48,3 +48,26 @@
     width: 2rem;
     height: 2rem;
 }
+
+/* DARK */
+
+.nav_link__textDark {
+    color: white;
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+}
+
+
+.nav_link__dropdownDark{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-left: 0.7rem;
+    margin-right: 1rem;
+    height: 2rem;
+}
+
+
+
