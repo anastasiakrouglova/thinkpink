@@ -1,291 +1,296 @@
 @import "../styles/colors.module.css";
 
 .detail_container {
-    color: black;
-    margin: 4rem;
+  color: black;
+  margin: 4rem;
+}
 
+@media (max-width: 500px) {
+  .detail_container {
+    margin: 4rem 0;
+  }
 }
 
 .container_map {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
 }
 
-
-
 .detail_body {
-    width: 30rem;
-    composes: App-body from "../styles/App.css";
-    margin-bottom: 4rem;
+  width: 30rem;
+  composes: App-body from "../styles/App.css";
+  margin-bottom: 4rem;
+}
+
+.race_video {
+  width: auto;
+  height: auto;
 }
 
 .country {
-    font-family: 'poppinsextrabold_italic';
-    opacity: 0.3;
-    font-size: 0.9rem;
+  font-family: "poppinsextrabold_italic";
+  opacity: 0.3;
+  font-size: 0.9rem;
 }
 
 .city {
-    font-family: 'poppinsextrabold_italic';
-    font-size: 3.5rem;
+  font-family: "poppinsextrabold_italic";
+  font-size: 3.5rem;
 }
 
 .city_container {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .uppertitle {
-    font-family: 'poppinssemibold';
-    composes: App-subtitle from "../styles/App.css";
-    padding-left: 0.5rem;
-    padding-top: 0.2rem;
+  font-family: "poppinssemibold";
+  composes: App-subtitle from "../styles/App.css";
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
 }
 
 .uppertitle_container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .info_container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 40rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .info {
-    font-family: 'poppinssemibold';
-    font-size: 1.5rem;
-    padding-top: 0.4rem;
+  font-family: "poppinssemibold";
+  font-size: 1.5rem;
+  padding-top: 0.4rem;
 }
 
 .detail_container_info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 80rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 80rem;
 }
 
 .counter_container {
-    background-color: white;
-    width: 18rem;
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    z-index: 2;
-    height: 4rem;
-    border-radius: 1rem;
-    padding: 2rem 3rem;
-    margin-top: -3rem;
-    margin-left: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    margin-bottom: 2rem;
+  background-color: white;
+  width: 18rem;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  z-index: 2;
+  height: 4rem;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  margin-top: -3rem;
+  margin-left: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 2rem;
 }
 
-
 .info_image {
-    z-index: -2;
-    border-radius: 1rem;
-    width: 27rem;
+  z-index: -2;
+  border-radius: 1rem;
+  width: 27rem;
 }
 
 .days {
-    color: var(--pink-primair);
-    font-size: 0.9rem;
-    font-family: 'poppinsbold';
+  color: var(--pink-primair);
+  font-size: 0.9rem;
+  font-family: "poppinsbold";
 }
 
 .days_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .days_number {
-    font-family: 'poppinsbold';
-    font-size: 4rem;
+  font-family: "poppinsbold";
+  font-size: 4rem;
 }
 
 .map {
-
 }
 
-
 .container_program {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10rem;
-    justify-content: space-between;
-    max-width: 70rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rem;
+  justify-content: space-between;
+  max-width: 70rem;
 }
 
 @media screen and (max-width: 1080px) {
-    .container_program {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .map {
-        width: 30rem;
-    }
-
-    .program_section {
-        margin-top: 3rem;
-    }
-
-
-    .detail_container_info {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .primair_button {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-    }
-
-    .info_container_text {
-        margin-top: 5rem;
-        margin-bottom: -3rem;
-    }
-
-    .info_image {
-       height: 20rem;
-       width: 30rem;
-       margin-top: 3rem;
-    }
-    
-}
-
-.primair_button {
-
-}
-
-.section2 {
-    margin-top: 4rem;
-}
-
-.section2_container_title {
-    display: flex;
+  .container_program {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .map {
+    width: 30rem;
+  }
+
+  .program_section {
+    margin-top: 3rem;
+  }
+
+  .detail_container_info {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .primair_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .info_container_text {
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+  }
+
+  .info_image {
+    height: 20rem;
+    width: 30rem;
+    margin-top: 3rem;
+  }
+}
+
+.primair_button {
+}
+
+.section2 {
+  margin-top: 4rem;
+}
+
+.section2_container_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    background-image: url('../assets/images/cards/cardDetail.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 15rem;
-    height: 20rem;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 1rem;
-    margin: 6rem 1rem 1rem 1rem;
+  background-image: url("../assets/images/cards/cardDetail.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 6rem 1rem 1rem 1rem;
 }
 
 .cardSurvivor {
-    background-image: url('../assets/images/cards/cardSurvivor.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 15rem;
-    height: 20rem;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 1rem;
-    margin: 6rem 1rem 1rem 1rem;
+  background-image: url("../assets/images/cards/cardSurvivor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 6rem 1rem 1rem 1rem;
 }
 
 .profile_detail {
-    margin-top: -3rem;
+  margin-top: -3rem;
 }
 
 .card_text {
-    color: white;
-    font-family: 'poppinsextrabold_italic';
-    text-align: center;
-    margin-top: 1rem;
-    padding: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    margin-bottom: 4.5rem;
+  color: white;
+  font-family: "poppinsextrabold_italic";
+  text-align: center;
+  margin-top: 1rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .card_text2 {
-    color: white;
-    font-family: 'poppinsextrabold_italic';
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+  color: white;
+  font-family: "poppinsextrabold_italic";
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .info_lotgenoot {
-    composes: App-body from "../styles/App.css";
-    max-width: 60rem;
-    text-align: center;
+  composes: App-body from "../styles/App.css";
+  max-width: 60rem;
+  text-align: center;
 }
 
-
 .program_time {
-    color: var(--pink-primair);
-    font-family: 'poppinssemibold';
-    font-size: 1.2rem;
+  color: var(--pink-primair);
+  font-family: "poppinssemibold";
+  font-size: 1.2rem;
 }
 
 .program_tr {
-    height: 2rem;
+  height: 2rem;
 }
 
 .program_activity {
-    font-size: 1.2rem;
-    padding-left: 2rem;
+  font-size: 1.2rem;
+  padding-left: 2rem;
 }
-
 
 .sponsorlogo {
-    width: 10rem;
-    padding: 2rem;
+  width: 10rem;
+  padding: 2rem;
 }
-
 
 .section3_container_title {
-    margin: 2rem;
+  margin: 2rem;
 }
-
 
 .section34container {
-    display: flex;
+  display: flex;
 }
 
+@media (max-width: 900px) {
+  .section34container {
+    flex-flow: column;
+  }
+}
 
 .section2_container {
-    display: flex;
+  display: flex;
+}
+
+.section4 {
+  width: auto;
+  height: auto;
 }
 
 .button_white {
-   composes: App-button_secundair-white from "../styles/App.css";
-   margin-top: 6rem;
+  composes: App-button_secundair-white from "../styles/App.css";
+  margin-top: 6rem;
 }
-
 
 .button_secundair_outlined {
-    margin-right: 0.7rem;
-    composes: App-button_secundair-outline from "../styles/App.css"
+  margin-right: 0.7rem;
+  composes: App-button_secundair-outline from "../styles/App.css";
 }
 
-
 .button_inschrijven {
-    composes: App-button_primair from "../styles/App.css";
+  composes: App-button_primair from "../styles/App.css";
 }

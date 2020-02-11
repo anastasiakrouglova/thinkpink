@@ -1,72 +1,89 @@
-.race_textcontainer{
-    margin: 0rem 0.9rem 0rem 0.5rem;
-    display: grid;
-    align-items: end;
-    grid-template-columns: 40px 1fr 4fr 80px;
-    grid-template-rows: 45% 25px 45px;
-    grid-template-areas: ". city . date"
+.race_card {
+  composes: App-card from "../styles/App.css";
+
+  min-width: 22rem;
+  max-width: 32rem;
+}
+
+@media (max-width: 500px) {
+  .race_card {
+    margin: 2rem 0;
+    width: 100%;
+    flex-flow: column;
+  }
+
+  .race_img {
+    width: 100%;
+  }
+}
+
+.race_textcontainer {
+  margin: 0rem 0.9rem 0rem 0.9rem;
+  display: grid;
+  align-items: end;
+  grid-template-columns: 40px 1fr 4fr 80px;
+  grid-template-rows: 45% 25px 45px;
+  grid-template-areas:
+    ". city . date"
     ". country . ."
-    " . teams teams teams"
+    " . teams teams teams";
 }
 
-
-.race_city{
-    grid-area: city;
-    color: #83344E;
-    text-decoration: none;
-    font-family: 'poppinsextrabold_italic';
-    font-size: 1.5rem;
+.race_city {
+  grid-area: city;
+  color: #83344e;
+  text-decoration: none;
+  font-family: "poppinsextrabold_italic";
+  font-size: 1.5rem;
 }
-
 
 .race_country {
-    grid-area: country;
-    color: #83344E;
-    opacity: 0.5;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: 'poppinsbold';
+  grid-area: country;
+  color: #83344e;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "poppinsbold";
 }
 
 .race_quantity {
-    grid-area: teams;
-    composes: App-subtitle from "../styles/App.css";
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  grid-area: teams;
+  composes: App-subtitle from "../styles/App.css";
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .race_quantity__teams {
-    display: flex;
-    margin-right: 0.4rem;
-    margin-top: -0.3rem;
+  display: flex;
+  margin-right: 0.4rem;
+  margin-top: -0.3rem;
 }
 
 .race_quantity__people {
-    margin-left: 2rem;
-    margin-top: -0.3rem;
-    margin-right: 0.4rem;
+  margin-left: 2rem;
+  margin-top: -0.3rem;
+  margin-right: 0.4rem;
 }
 
 .race_date {
-    grid-area: date;
-    background-color: #E6618F;
-    display: flex;
-    color: white;
-    padding: 0.2rem 0.9rem 0.6rem 0.9rem;
-    width:3rem;
-    height: 4rem;
-    flex-direction: column;
-    align-items: center;
+  grid-area: date;
+  background-color: #e6618f;
+  display: flex;
+  color: white;
+  padding: 0.2rem 0.9rem 0.6rem 0.9rem;
+  width: 3rem;
+  height: 4rem;
+  flex-direction: column;
+  align-items: center;
 }
 
-
 .month {
-    font-size: 1rem;
-    opacity: 0.6;
-    padding: 0.3rem;
+  font-size: 1rem;
+  opacity: 0.6;
+  padding: 0.3rem;
 }
 
 .date {
-    font-family: 'poppinsbold';
+  font-family: "poppinsbold";
 }

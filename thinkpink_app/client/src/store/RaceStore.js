@@ -44,7 +44,7 @@ class RaceStore {
     //console.log(this.racelijst);
     //console.log(id);
     const race = this.racelijst.find(check => check.id === id);
-    //console.log(race);
+    console.log(race);
     if (!race) {
       this.api.getById(id).then(this._addRace);
     }
@@ -57,8 +57,7 @@ class RaceStore {
 decorate(RaceStore, {
   racelijst: observable,
   getAll: action,
-  _addRace: action,
-  findById: action
+  _addRace: action
 });
 
 export default RaceStore;
