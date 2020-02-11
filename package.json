@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "@material-ui/core": "^4.9.2"
-  }
+  "name": "raceForTheCure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:/anastasiakrouglova/thinkpink.git",
+  "author": "Robbe Buyle <robbe.buyle@student.howest.be>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd server/ && yarn && yarn start",
+    "build": "cd client/ && yarn && yarn build"
+  },
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ]
 }
