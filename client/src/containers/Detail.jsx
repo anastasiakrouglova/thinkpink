@@ -192,8 +192,8 @@ class Detail extends Component {
 
             <div className={styles.section2_container}>
               
-              {mysubscriptionLijst.map(sLotgenoot => (
-                <TeamCard key={sLotgenoot.id} sLotgenoot={sLotgenoot}/>
+              {mysubscriptionLijst.map((sLotgenoot, index) => (
+                <TeamCard key={index} sLotgenoot={sLotgenoot}/>
               ))
               }
 

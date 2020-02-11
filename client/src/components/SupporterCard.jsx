@@ -19,17 +19,47 @@ class SupporterCard extends Component {
     return (
       <div>
         {
-          sSupporter.role === 'supporter' && sSupporter.teamName === 'Hyena' || sSupporter.role === 'group' ? (
+          sSupporter.role === 'supporter' || sSupporter.role === 'group' ? (
             <>
-              <img
-                src="../assets/images/people/dirk.png"
-                alt="dirk"
-                width="100"
-                height="100"
-              />
+             {
+                !sSupporter.photo ? (
+                    <>
+                    <img
+                    src={"../assets/images/people/placeholder.png" } 
+                    alt={sSupporter.placeholder}
+                    width="100"
+                    height="100"
+                  /> 
+                    </>
+                ) : (
+                    <img
+                    src={"../assets/images/people/" + sSupporter.photo + ".png" } 
+                    alt={sSupporter.photo}
+                    width="100"
+                    height="100"
+                  /> 
+                )          
+              }          
+
               <div className={styles.containertext}>
-                <h3 className={styles.bold}>Dirk Vanpraet</h3>
-                <p className="App-body">Loper (6km) {sSupporter.teamName}</p>
+            <h3 className={styles.bold}>{sSupporter.supporter}</h3>
+             {sSupporter.typeRace === "run" ? (
+              <>
+                  <p className="App-body">Loper (6km)</p>
+                </>
+                ) : sSupporter.typeRace === "walk" ? (
+                <>
+                 <p className="App-body">Wandelaar (3km)</p>
+                </>
+                 ) : sSupporter.typeRace === "kids" ? (
+                    <>
+                    <p className="App-body">Kids Run (800m)</p>
+                    </>            
+                 ) : (
+                    <>
+                    </>
+                  )}     
+                                        
               </div>
             </>
           ) : (

@@ -6,7 +6,11 @@ const SubscriptionSchema = mongoose.Schema({
   description: String,
   teamCaptain: String,
   teamSong: String,
-  dessert: String
+  dessert: String,
+  supporter: String,
+  country: String,
+  typeRace: String,
+  photo: String
 });
 
 module.exports = mongoose.model("Subscription", SubscriptionSchema);

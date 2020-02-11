@@ -28,8 +28,8 @@ const Races = ({ raceStore }) => {
       </div>
       <div className={styles.race_container}>
       {
-        racelijst.map(race => (
-          <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
+        racelijst.map((race, index) => (
+          <NavLink key={index} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
         ))
       }
       </div>

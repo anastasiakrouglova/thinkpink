@@ -12,7 +12,11 @@ const subscription = new Subscription({
   description: req.body.description,
   teamCaptain: req.body.teamCaptain,
   teamSong: req.body.teamSong,
-  dessert: req.body.dessert
+  dessert: req.body.dessert,
+  supporter: req.body.supporter,
+  country: req.body.country,
+  typeRace: req.body.typeRace,
+  photo: req.body.photo
   });
 
   subscription
@@ -67,7 +71,11 @@ exports.update = async (req, res) => {
         description: req.body.description,
         teamCaptain: req.body.teamCaptain,
         teamSong: req.body.teamSong,
-        dessert: req.body.dessert
+        dessert: req.body.dessert,
+        supporter: req.body.supporter,
+        country: req.body.country,
+        typeRace: req.body.typeRace,
+        photo: req.body.photo
       },
       {
         new: true

@@ -122,9 +122,9 @@ class Info extends Component {
             <div className={styles.supporterContainer}>
 
             
-            {mysubscriptionLijst.map(sSupporter => (
+            {mysubscriptionLijst.map((sSupporter, index) => (
               (myLotgenoot.teamName === sSupporter.teamName) ? (
-                <SupporterCard key={sSupporter.id} sSupporter={sSupporter}/>
+                <SupporterCard key={index} sSupporter={sSupporter}/>
               ) : (
                   <>
                     </>
