@@ -50,6 +50,18 @@ class Info extends Component {
                 />
               </div>
               <div>
+<<<<<<< HEAD
+              <p className={styles.hashtag}>#TeamRitaVerbeek</p>
+                <p className={styles.text_person}>
+                  Rita een leuke dame uit Brugge die vorig jaar overleden is aan
+                  borstkanker. Om haar herinnering in leve te houden, hebben we
+                  besloten om deel te nemen met Race for the Cure.
+                </p>
+                <br />
+                <p className={styles.text_person}>
+                  Supporter voor Rita!
+                  <br/> Dankuwel!
+=======
                 <div>
                   <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p>
                   <p className={styles.tekst_person}>
@@ -61,6 +73,7 @@ class Info extends Component {
                   <p className={styles.tekst_person}>
                     Supporter voor Rita!
                   <br /> Dankuwel!
+>>>>>>> 25f4c289f057f6af586e3bbc9f64a7983e77f91d
                 </p>
                 </div>
                 <div className={styles.buttonInfo}>

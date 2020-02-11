@@ -1,0 +1,50 @@
+.nav_link__text {
+    color: white;
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+}
+
+.nav_link__active {
+    font-family: 'poppinsbold';
+    color: #EE77A0;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+.nav_link__dropdown{
+    background-color: transparent; 
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-left: 0.7rem;
+    margin-right: 1rem;
+    height: 2rem;
+}
+
+.nav_link__dropdown:focus {
+    outline: none;
+}
+
+.language_flag {
+    width: 1.2rem;
+    margin-left: 3rem;
+    margin-bottom: -0.3rem;
+}
+
+.personIcon {
+    margin-bottom: -0.1rem;
+    margin-right: 0.5rem;
+}
+
+.personFoto {
+    margin-bottom: -0.6rem;
+    margin-right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}

@@ -23,7 +23,7 @@ function Home() {
             Schrijf je in voor een race
           </button>
         </NavLink>
-      </section>
+      </section> 
 
       <section className={styles.section2}>
         <div>
