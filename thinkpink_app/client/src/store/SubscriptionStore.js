@@ -8,32 +8,35 @@ import {
 } from "mobx";
   
   import SubscriptionsApi from "../api/subscriptions";
-  //import Subscription from "../models/Subscription";
+  import Subscription from "../models/Subscription";
   
   configure({ enforceActions: `observed` });
   
   class SubscriptionStore {
-    //racelijst = [];
+    subscriptionlijst = [];
     //role = `Teamcaptain [hardcoded]`;
   
     constructor(rootStore) {
       this.rootStore = rootStore;
       this.subscriptionsApi = new SubscriptionsApi(`subscriptions`);
-      //this.getAll();
+        this.getAll();
+        console.log(this.subscriptionlijst);
     }
   
-    // getAll = () => {
-    //   // console.log(`get all races!`);
-    //   this.api.getAll().then(d => d.forEach(this._addRace));
-    // };
+    getAll = () => {
+      // console.log(`get all races!`);
+      this.subscriptionsApi.getAll().then(d => d.forEach(this._addSubscription));
+    };
   
-    // _addRace = values => {
-    //   //console.log(values);
-    //   const race = new Race();
-    //   race.updateFromServer(values);
-    //   runInAction(() => this.racelijst.push(race));
-    //   //console.log(this.racelijst);
-    // };
+    _addSubscription = values => {
+      //console.log(values);
+      const subscription = new Subscription();
+      subscription.updateFromServer(values);
+      runInAction(() => this.subscriptionlijst.push(subscription));
+      //console.log(this.racelijst);
+    };
+      
+      
   
     // getOne = id => {
     //   this.api.getById(id).then(d => this._addRace(d));
