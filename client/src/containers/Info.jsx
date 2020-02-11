@@ -7,6 +7,8 @@ import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import { inject, observer, PropTypes } from "mobx-react";
 
+import SupporterCard from "../components/SupporterCard.jsx";
+
 class Info extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +16,7 @@ class Info extends Component {
   
   render() {
     const myLotgenoot = this.props.subscriptionStore.findById(this.props.id);
+    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst
     //console.log(this.props.subscriptionStore)
     console.log(myLotgenoot);
 
@@ -117,21 +120,20 @@ class Info extends Component {
             </h2>
             <p className={styles.subtitle}>(38 supporters, 124 km samen)</p>
             <div className={styles.supporterContainer}>
-              {/* {
-            uiStore.map(race => (
-              <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
-            ))
-          } */}
-              <img
-                src="../assets/images/people/dirk.png"
-                alt="dirk"
-                width="100"
-                height="100"
-              />
-              <div className={styles.containertext}>
-                <h3 className={styles.bold}>Dirk Vanpraet</h3>
-                <p className="App-body">Loper (6km)</p>
-              </div>
+
+            
+            {mysubscriptionLijst.map(sSupporter => (
+              (myLotgenoot.teamName === sSupporter.teamName) ? (
+                <SupporterCard key={sSupporter.id} sSupporter={sSupporter}/>
+              ) : (
+                  <>
+                    </>
+              )
+                
+              ))
+              }
+
+
             </div>
           </section>
 
