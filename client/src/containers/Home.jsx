@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styles from "./Home.module.css";
-import NavbarDark from "../components/NavbarDark.jsx";
+import NavbarWhite from "../components/NavbarWhite.jsx";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 
@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
-        <NavbarDark className={styles.navbar} />
+        <NavbarWhite className={styles.navbar} />
       </div>
       <div className={styles.background_image}></div>
       <section className={styles.title}>

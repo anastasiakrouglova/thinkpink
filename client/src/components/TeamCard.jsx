@@ -29,7 +29,7 @@ class TeamCard extends Component {
                 <div>
                   <NavLink
                     className={styles.button_secundair_outlined}
-                    to={ROUTES.info}
+                    to={`/info/${sLotgenoot.id}`}
                   >
                     info
                   </NavLink>
@@ -42,7 +42,6 @@ class TeamCard extends Component {
                 </div>
               </div>
             </>
-      
           ) : (
           <>
           </>

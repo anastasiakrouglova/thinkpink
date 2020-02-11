@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Races.module.css";
 import { inject, observer, PropTypes } from "mobx-react";
-import NavbarDark from "../components/NavbarDark.jsx";
+import NavbarWhite from "../components/NavbarWhite.jsx";
 import Race from "../components/Race.jsx";
 import { NavLink } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Races = ({ raceStore }) => {
   return (
     <div>
       <div className="App-background-header">
-        <NavbarDark />
+        <NavbarWhite />
         <p className={styles.h1}>Samen staan we sterk!</p>
         <div className="App-input_container">
           <input

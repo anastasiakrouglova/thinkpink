@@ -18,7 +18,7 @@ class Detail extends Component {
     const myRace = this.props.raceStore.findById(this.props.id);
     const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst
 
-    console.log(mysubscriptionLijst);
+    //console.log(mysubscriptionLijst);
     //console.log(`RACE ID: ${myRace.city}`);
 
     if (!myRace) {
