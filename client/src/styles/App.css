@@ -37,6 +37,23 @@
   color: #61dafb;
 }
 
+.App-bewerkAccount {
+  font-size: 1rem;
+  color: var(--pink-primair);
+  background-color: transparent;
+  border: none;
+  font-family: "poppinsbold";
+  margin-left: 2rem;
+}
+
+.App-bewerkAccount:hover {
+  color: var(--pink-primair-focus);
+}
+
+.App-bewerkAccount:focus {
+  outline: none;
+}
+
 .App-button_primair {
   font-family: "poppinsextrabold_italic";
   font-size: 1rem;

@@ -43,7 +43,17 @@ import {
   
       return subscription;
     };
+
+
+    
+    updateSubscription = subscription => {
+      this.subscriptionsApi.update(subscription).then(subscriptionValues => subscription.updateFromServer(subscriptionValues))
+    }
+
+
   }
+
+
 
   
   

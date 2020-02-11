@@ -20,6 +20,7 @@ class Detail extends Component {
 
     //console.log(mysubscriptionLijst);
     //console.log(`RACE ID: ${myRace.city}`);
+    console.log(this.props.subscriptionStore.updateSubscription);
 
     if (!myRace) {
       return <p>loading...</p>;
@@ -194,7 +195,7 @@ class Detail extends Component {
               
               {mysubscriptionLijst.map((sLotgenoot, index) => (
                 (myRace.country === sLotgenoot.country) ? (
-                    <TeamCard key={index} sLotgenoot={sLotgenoot}/>
+                    <TeamCard key={index} sLotgenoot={sLotgenoot} onUpdate={this.props.subscriptionStore.updateSubscription} />
                 ) : (
                     <>
                     </>

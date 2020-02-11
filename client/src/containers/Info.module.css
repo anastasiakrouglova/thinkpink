@@ -198,3 +198,20 @@
     margin-left: 2rem;
     margin-bottom: 1rem;
 }
+
+.hashtag_textfield {
+    margin-left: 2rem;
+    width: 20rem;
+}
+
+
+.textfieldBig_container {
+    margin-top: 2rem;
+}
+
+
+.buttonContainer_bewerken {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}

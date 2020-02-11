@@ -13,8 +13,10 @@ import SupporterCard from "../components/SupporterCard.jsx";
 class Info extends Component {
   constructor(props) {
     super(props);
-    this.state = { edit: false };
+    this.state = {edit: true}
   }
+
+  setEditMode = value => this.setState({ edit: value })
   
   render() {
     const myLotgenoot = this.props.subscriptionStore.findById(this.props.id);
@@ -23,8 +25,11 @@ class Info extends Component {
     if (!myLotgenoot) {
       return <p>loading...</p>;
     }
-
+    
+    
     const { edit } = this.state;
+    const { sLotgenoot, onUpdate } = this.props;
+    
     return (
       <div className={styles.uppercontainer}>
         <NavbarWhite />
@@ -113,7 +118,9 @@ class Info extends Component {
                   </div>
                 </div>
               </section>
-              <button onClick={() => this.setState({ edit: false })}>Edit</button>
+              <div className={styles.buttonContainer_bewerken}>
+              <button className="App-bewerkAccount" onClick={() => this.setState({ edit: false })}>Bewerk account</button>
+              </div>
             </div>
             ) : (
               <div className={styles.containerGlobal}>
@@ -126,23 +133,21 @@ class Info extends Component {
                   />
                 </div>
                 <div>
-                  <div>
-                    <TextField className={styles.hashtag} id="outlined-basic" label="teamName" variant="outlined" />  
+                  <div className={styles.hashtag_textfield}>
+                    <TextField fullWidth value={myLotgenoot.teamName}  id="outlined-basic" label="teamName" variant="outlined" onChange={e => myLotgenoot.setTeamName(e.target.value)} />  
                     {/* <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p> */}
-                    <p className={styles.text_person}>
-                      {myLotgenoot.description}
-                    </p>
-                  </div>
-                  <div className={styles.buttonInfo}>
-                    <button className="App-button_secundair-outline">
-                      Doneer aan dit team
-                    </button>
-                    <NavLink
-                      className="App-button_secundair"
-                      to={ROUTES.supporterorgroup}
-                    >
-                      Schrijf je in voor deze race
-                    </NavLink>
+                   <div className={styles.textfieldBig_container}>
+                    <TextField 
+                    id="outlined-multiline-static"
+                    label="Vertel over jezelf"
+                    multiline
+                    rows="4"
+                    defaultValue={myLotgenoot.description}
+                    variant="outlined"
+                    fullWidth
+                    onChange={e => myLotgenoot.setDescription(e.target.value)}
+                    />
+                   </div>
                   </div>
                 </div>
   
@@ -154,8 +159,7 @@ class Info extends Component {
                       alt="crown icon"
                     />
                     <div>
-                      <p className="App-body-bold">Teamcaptain/lotgenoot</p>
-                      <p className={styles.info_musicname}>{myLotgenoot.teamCaptain}</p>
+                        <TextField fullWidth value={myLotgenoot.teamCaptain}  id="outlined-basic" label="teamCaptain/lotgenoot" variant="outlined" onChange={e => myLotgenoot.setTeamCamptain(e.target.value)} /> 
                     </div>
                   </div>
                   <div className={styles.info_person_container}>
@@ -165,10 +169,7 @@ class Info extends Component {
                       alt="song"
                     />
                     <div>
-                      <p className="App-body-bold">Groepslied</p>
-                      <p className={styles.info_musicname}>
-                      {myLotgenoot.teamSong}
-                    </p>
+                    <TextField fullWidth value={myLotgenoot.teamSong}  id="outlined-basic" label="teamCaptain/lotgenoot" variant="outlined" onChange={e => myLotgenoot.setTeamSong(e.target.value)} /> 
                     </div>
                   </div>
                   <div className={styles.info_person_container}>
@@ -178,16 +179,16 @@ class Info extends Component {
                       alt="dessert"
                     />
                     <div>
-                      <p className="App-body-bold">Bakken / Dessert</p>
-                      <p className={styles.info_musicname}>
-                      {myLotgenoot.dessert}
-                    </p>
+                    <TextField fullWidth value={myLotgenoot.dessert}  id="outlined-basic" label="teamCaptain/lotgenoot" variant="outlined" onChange={e => myLotgenoot.setDessert(e.target.value)} /> 
                     </div>
                   </div>
                 </div>
-              </section>
-              <button onClick={() => this.setState({ edit: true })}>Save</button>
-            </div>
+                </section>
+                <div className={styles.buttonContainer_bewerken}>
+                <button className="App-bewerkAccount" onClick={() => this.setState({ edit: true })}>Opslaan</button>
+                </div>
+              {/* <button className={styles.save} onClick={() => { onUpdate(sLotgenoot); this.setEditMode(false); }}>save</button>           */}
+               </div> 
             )
           }
 
