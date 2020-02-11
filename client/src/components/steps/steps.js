@@ -9,7 +9,7 @@ const steps =
     [
       {name: 'Welkom', component: <StepOne/>},
       {name: 'Beschrijving', component: <StepTwo/>},
-      {name: 'Muziek', component: <StepThree/>},
+      {name: 'Add', component: <StepThree/>},
       {name: 'Betaling', component: <StepFour /> },
       {name: 'Succes', component: <StepFive/>}
     ]

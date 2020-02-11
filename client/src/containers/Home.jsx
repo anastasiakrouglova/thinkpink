@@ -119,7 +119,7 @@ function Home() {
               alt="icon massage"
             />
             <p className="App-body">
-              Bak met je team koekjes en verkoop ze op je stand! Jullie krijgen
+              Bak met je team lekkernijen en verkoop ze op je stand voor 2€! Jullie krijgen
               dan een gratis massage na de finish.
             </p>
           </div>
