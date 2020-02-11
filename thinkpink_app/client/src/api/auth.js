@@ -27,7 +27,7 @@ class Auth {
     });
   };
 
-  register = (name, email, password) => {
+  register = (name, surname, phoneNumber, tShirtSize, country, email, password) => {
     return fetch(`/auth/register`, {
       method: `POST`,
       headers: {
@@ -35,8 +35,12 @@ class Auth {
       },
       body: JSON.stringify({
         name,
+        surname,
+        phoneNumber,
+        tShirtSize,
         email,
-        password
+        password, 
+        country
       })
     }).then(res => {
       if (res.status === 200) {

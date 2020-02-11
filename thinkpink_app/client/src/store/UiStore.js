@@ -33,16 +33,18 @@ class UiStore {
       });
   };
 
-  register = (name, surname, email, pwd, birthday, phoneNumber, tShirtSize) =>
-    this.authService.register(
-      name,
-      surname,
-      email,
-      pwd,
-      birthday,
-      phoneNumber,
-      tShirtSize
-    );
+  // register = (name, surname, email, pwd, birthday, phoneNumber, tShirtSize) =>
+  //   this.authService.register(
+  //     name,
+  //     // surname,
+  //     email,
+  //     pwd,
+  //     // birthday,
+  //     // phoneNumber,
+  //     // tShirtSize
+  //   );
+  
+    register = (name, surname,phoneNumber, tShirtSize, email, country, pwd) => this.authService.register(name, surname, phoneNumber, tShirtSize, country, email, pwd);
 
   logout = () => {
     this.authService.logout().then(() => this.setUser(null));

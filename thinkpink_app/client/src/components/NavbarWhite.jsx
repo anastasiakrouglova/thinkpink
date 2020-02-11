@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 // import logo from '../logo.svg';
-import { inject } from "mobx-react";
 import styles from "./NavbarWhite.module.css";
+import { inject, PropTypes, observer } from "mobx-react";
 
-const NavbarWhite = ({ uiStore, history }) => {
+const NavbarWhite = ({ uiStore }) => {
   const handleLogOut = e => {
     e.preventDefault();
-    uiStore.logout();
+    uiStore.logout()
   };
 
   return (
@@ -53,13 +53,14 @@ const NavbarWhite = ({ uiStore, history }) => {
               />
               {uiStore.authUser.name}
             </NavLink>
-            <a
+            <NavLink
               className={styles.nav_link__text}
               activeClassName={styles.nav_link__active}
-              onClick={handleLogOut}
+                onClick={handleLogOut}
+              to={ROUTES.login}
             >
               Log out
-            </a>
+            </NavLink>
           </>
         )}
         <select className={styles.nav_link__dropdown}>
@@ -74,4 +75,4 @@ const NavbarWhite = ({ uiStore, history }) => {
   );
 };
 
-export default inject(`uiStore`)(NavbarWhite);
+export default inject(`uiStore`)(observer(NavbarWhite));

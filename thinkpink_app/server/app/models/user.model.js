@@ -6,9 +6,10 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true },
   name: { type: String, required: true },
   surname: { type: String, required: true },
-  birthday: { type: Object, required: true },
+  // birthday: { type: Object, required: true },
   phoneNumber: { type: String },
-  tShirtSize: { type: String, required: true }
+  tShirtSize: { type: String, required: true },
+  country: {type: String, required: true}
 });
 
 UserSchema.methods.validPassword = function(password) {

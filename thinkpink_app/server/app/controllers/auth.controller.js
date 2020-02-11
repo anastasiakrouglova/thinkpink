@@ -17,18 +17,20 @@ exports.register = (req, res) => {
     password,
     name,
     surname,
-    birthday,
+    // birthday,
     phoneNumber,
-    tShirtSize
+    tShirtSize,
+    country
   } = req.body;
   const user = new User({
     email,
     password,
     name,
     surname,
-    birthday,
+    // birthday,
     phoneNumber,
-    tShirtSize
+    tShirtSize,
+    country
   });
 
   user.save(err => {

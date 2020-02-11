@@ -2,11 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../constants";
 import logo from '../logo.svg';
-import { inject } from "mobx-react";
 import styles from './NavbarDark.module.css';
+import { inject, PropTypes, observer } from "mobx-react";
 
 
-const NavbarDark = ({uiStore}) => {
+const NavbarDark = ({ uiStore }) => {
+    const handleLogOut = e => {
+        e.preventDefault();
+        uiStore.logout();
+      };
     return (
         <div className={styles.nav_container}>
                 <NavLink to={ROUTES.home}><img src="../assets/images/logoWhite.svg" className="App-logo" alt="logo" /></NavLink> 
@@ -20,7 +24,16 @@ const NavbarDark = ({uiStore}) => {
                 ): (
                     <>
                         <NavLink className={styles.nav_link__text} activeClassName={styles.nav_link__active} to='#'><img className={styles.personFoto} src="../assets/images/people/rita.png" alt="icon man"/>{uiStore.authUser.name}</NavLink>
-                    </>
+                        <NavLink
+                            className={styles.nav_link__text}
+                            activeClassName={styles.nav_link__active}
+                                onClick={handleLogOut}
+                                to={ROUTES.login}
+                            >
+                            Log out
+                        </NavLink>
+                        
+                        </>
                 )
                 }
                 <select className={styles.nav_link__dropdown}>
@@ -35,4 +48,4 @@ const NavbarDark = ({uiStore}) => {
     )
 }
 
-export default inject(`uiStore`)(NavbarDark)
+export default inject(`uiStore`)(observer(NavbarDark));

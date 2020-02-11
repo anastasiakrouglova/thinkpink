@@ -5,7 +5,9 @@
 }
 
 .label{
-    composes: App-form-label from "../../styles/App.css"
+    composes: App-form-label from "../../styles/App.css";
+    display: flex;
+    flex-direction: column;
 }
 
 .inputfield{
@@ -17,6 +19,52 @@
 .inputfield:focus {
     outline: 0.1rem solid black;
 }
+
+
+.selectCountry {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #d6d6d6;
+    border-radius: 0rem;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+  }
+
+.input {
+    composes: App-form-input from "../../styles/App.css";
+  }
+
+  .radioInput:checked + .radioLabel {
+    color: white;
+    background-color: var(--pink-primair);
+    border: 1px solid var(--pink-primair);
+  }
+  
+  .radioInput {
+    visibility: hidden;
+  }
+
+
+  .submit {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      composes: App-button_secundair from "../../styles/App.css"
+  }
+  
+  .radioLabel {
+    margin-left: -0.9rem;
+    padding: 0.5rem 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #8f8f8f;
+    color: #8f8f8f;
+    font-size: 1rem;
+    transition: all 0.3s ease-out;
+    border-radius: 0.1rem;
+  }
+
 
 .inputfieldError {
     font-size: 1rem;
