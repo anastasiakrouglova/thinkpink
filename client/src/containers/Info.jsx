@@ -12,7 +12,6 @@ class Info extends Component {
     super(props);
   }
   
-  
   render() {
     const myLotgenoot = this.props.subscriptionStore.findById(this.props.id);
     //console.log(this.props.subscriptionStore)
@@ -52,16 +51,9 @@ class Info extends Component {
               <div>
                 <div>
                   <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p>
-                  <p className={styles.tekst_person}>
-                    Rita een leuke dame uit Brugge die vorig jaar overleden is aan
-                    borstkanker. Om haar herinnering in leve te houden, hebben we
-                    besloten om deel te nemen met Race for the Cure.
-                </p>
-                  <br />
-                  <p className={styles.tekst_person}>
-                    Supporter voor Rita!
-                  <br /> Dankuwel!
-                </p>
+                  <p className={styles.text_person}>
+                    {myLotgenoot.description}
+                  </p>
                 </div>
                 <div className={styles.buttonInfo}>
                   <button className="App-button_secundair-outline">
@@ -80,7 +72,7 @@ class Info extends Component {
                   />
                   <div>
                     <p className="App-body-bold">Teamcaptain/lotgenoot</p>
-                    <p className={styles.info_musicname}>John Doe</p>
+                    <p className={styles.info_musicname}>{myLotgenoot.teamCaptain}</p>
                   </div>
                 </div>
                 <div className={styles.info_person_container}>
@@ -92,7 +84,7 @@ class Info extends Component {
                   <div>
                     <p className="App-body-bold">Groepslied</p>
                     <p className={styles.info_musicname}>
-                      SHAED ft. Zayn -Trampoline
+                    {myLotgenoot.teamSong}
                   </p>
                   </div>
                 </div>
@@ -105,7 +97,7 @@ class Info extends Component {
                   <div>
                     <p className="App-body-bold">Bakken / Dessert</p>
                     <p className={styles.info_musicname}>
-                      Brownies met witte chocolade
+                    {myLotgenoot.dessert}
                   </p>
                   </div>
                 </div>

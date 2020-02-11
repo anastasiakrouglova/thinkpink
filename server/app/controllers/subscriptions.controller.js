@@ -8,18 +8,11 @@ exports.create = (req, res) => {
 
 const subscription = new Subscription({
   role: req.body.role,
-  teamName: req.body.teamName
-    // city: req.body.city,
-    // country: req.body.country,
-    // month: req.body.month,
-    // date: req.body.date,
-    // year: req.body.year,
-    // startLocation: req.body.startLocation,
-    // startTime: req.body.startTime,
-    // description: req.body.description,
-    // sponsors: req.body.sponsors,
-    // subscriptionId: req.body.subscriptionId,
-    // image: req.body.image
+  teamName: req.body.teamName,
+  description: req.body.description,
+  teamCaptain: req.body.teamCaptain,
+  teamSong: req.body.teamSong,
+  dessert: req.body.dessert
   });
 
   subscription
@@ -71,17 +64,10 @@ exports.update = async (req, res) => {
         _id: req.params.subscriptionId,
         role: req.params.role, 
         teamName: req.params.teamName, 
-        // subscriptionId: req.params.subscriptionId,
-        // city: req.body.city,
-        // country: req.body.country,
-        // month: req.body.month,
-        // date: req.body.date,
-        // year: req.body.year,
-        // startLocation: req.body.startLocation,
-        // startTime: req.body.startTime,
-        // description: req.body.description,
-        // sponsors: req.body.sponsors,
-        // image: req.body.image
+        description: req.body.description,
+        teamCaptain: req.body.teamCaptain,
+        teamSong: req.body.teamSong,
+        dessert: req.body.dessert
       },
       {
         new: true
