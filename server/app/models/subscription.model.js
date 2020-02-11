@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const SubscriptionSchema = mongoose.Schema({
   role: String,
-  // name: String,
+  teamName: String,
   // surname: String,
   // month: String,
   // date: Number,

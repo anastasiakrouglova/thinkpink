@@ -4,33 +4,21 @@ import NavbarWhite from "../components/NavbarWhite.jsx";
 import { inject, observer, PropTypes } from "mobx-react";
 
 import { ROUTES } from "../constants";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-  useHistory,
-  useLocation,
-  useParams,
-  NavLin
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+
+import TeamCard from "../components/TeamCard.jsx";
 
 class Detail extends Component {
   constructor(props) {
     super(props);
   }
-  //const { race } = this.props;
-  //let { id } = useParams();
-  //console.log(id);
-  //const race = raceStore.findById(id);
-  //const { racelijst } = raceStore;
 
-  //console.log(raceStore.api.getById);
-  //console.log(racelijst);
-  // this.$store.state.workouts[$route.params.id - 1].level
   render() {
     const myRace = this.props.raceStore.findById(this.props.id);
+    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst
+
+    console.log(mysubscriptionLijst);
     //console.log(`RACE ID: ${myRace.city}`);
 
     if (!myRace) {
@@ -203,40 +191,11 @@ class Detail extends Component {
             </div>
 
             <div className={styles.section2_container}>
-            {/* {
-        racelijst.map(race => (
-          <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
-        ))
-              } */}
               
-              {/* {subscriptionlijst.map(subscriptionLotgenoot => (
-
+              {mysubscriptionLijst.map(sLotgenoot => (
+                <TeamCard key={sLotgenoot.id} sLotgenoot={sLotgenoot}/>
               ))
-              } */}
-
-              <div className={styles.card}>
-                <img
-                  className={styles.profile_detail}
-                  src="../assets/images/people/rita.png"
-                  width="100"
-                  alt="profile picture"
-                />
-                <p className={styles.card_text}>#TeamRita Verbeeck</p>
-                <div>
-                  <NavLink
-                    className={styles.button_secundair_outlined}
-                    to={ROUTES.info}
-                  >
-                    info
-                  </NavLink>
-                  <NavLink
-                    className={"App-button_secundair"}
-                    to={ROUTES.supporterorgroup}
-                  >
-                    Join Team
-                  </NavLink>
-                </div>
-              </div>
+              }
 
               <div className={styles.cardSurvivor}>
                 <p className={styles.card_text2}>
@@ -296,7 +255,8 @@ class Detail extends Component {
 }
 
 Detail.propTypes = {
-  raceStore: PropTypes.observableObject.isRequired
+  raceStore: PropTypes.observableObject.isRequired,
+  subscriptionStore: PropTypes.observableObject.isRequired
 };
 
-export default inject(`raceStore`)(observer(Detail));
+export default inject(`raceStore`, `subscriptionStore`)(observer(Detail));
