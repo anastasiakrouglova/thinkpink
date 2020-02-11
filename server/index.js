@@ -23,8 +23,8 @@ mongoose
 const app = express();
 
 // BUILD PAS GEBRUIKEN WNR DEPLOYEN ON HEROKU
-app.use(express.static(path.resolve(__dirname, "../client/src")));
-// app.use(express.static(path.resolve(__dirname, "../client/build/")));
+// app.use(express.static(path.resolve(__dirname, "../client/src")));
+app.use(express.static(path.resolve(__dirname, "../client/build/")));
 
 app.use(cors());
 app.use(cookieParser());

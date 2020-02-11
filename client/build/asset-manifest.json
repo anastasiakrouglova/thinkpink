@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5efa159.chunk.css",
-    "main.js": "/static/js/main.adf172bf.chunk.js",
-    "main.js.map": "/static/js/main.adf172bf.chunk.js.map",
+    "main.css": "/static/css/main.1db7e891.chunk.css",
+    "main.js": "/static/js/main.96fc2968.chunk.js",
+    "main.js.map": "/static/js/main.96fc2968.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.098b6d3f.js",
     "runtime-main.js.map": "/static/js/runtime-main.098b6d3f.js.map",
-    "static/js/2.c55a787c.chunk.js": "/static/js/2.c55a787c.chunk.js",
-    "static/js/2.c55a787c.chunk.js.map": "/static/js/2.c55a787c.chunk.js.map",
+    "static/css/2.0bedc3d3.chunk.css": "/static/css/2.0bedc3d3.chunk.css",
+    "static/js/2.a0d2c2f5.chunk.js": "/static/js/2.a0d2c2f5.chunk.js",
+    "static/js/2.a0d2c2f5.chunk.js.map": "/static/js/2.a0d2c2f5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e59b405cb815819f2240147ae0858e20.js": "/precache-manifest.e59b405cb815819f2240147ae0858e20.js",
+    "precache-manifest.10acb1b52da2cc4d1dbadc38ecb6f9f9.js": "/precache-manifest.10acb1b52da2cc4d1dbadc38ecb6f9f9.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b5efa159.chunk.css.map": "/static/css/main.b5efa159.chunk.css.map",
-    "static/js/2.c55a787c.chunk.js.LICENSE": "/static/js/2.c55a787c.chunk.js.LICENSE",
+    "static/css/2.0bedc3d3.chunk.css.map": "/static/css/2.0bedc3d3.chunk.css.map",
+    "static/css/main.1db7e891.chunk.css.map": "/static/css/main.1db7e891.chunk.css.map",
+    "static/js/2.a0d2c2f5.chunk.js.LICENSE": "/static/js/2.a0d2c2f5.chunk.js.LICENSE",
     "static/media/0000.jpg": "/static/media/0000.17dfa236.jpg",
     "static/media/0001.jpg": "/static/media/0001.e7c45895.jpg",
     "static/media/0002.jpg": "/static/media/0002.7cbe475c.jpg",
@@ -174,7 +176,7 @@
     "static/media/0159.jpg": "/static/media/0159.3acc23d5.jpg",
     "static/media/0160.jpg": "/static/media/0160.4bc1cd59.jpg",
     "static/media/Detail.module.css": "/static/media/cardSurvivor.20739f0f.png",
-    "static/media/Home.module.css": "/static/media/run.9701bab9.png",
+    "static/media/Home.module.css": "/static/media/headerHome.17dfa236.jpg",
     "static/media/SupporterOrGroup.module.css": "/static/media/supporter.e0e19a1b.jpg",
     "static/media/App.css": "/static/media/signup.f3050d6e.png",
     "static/media/logo.svg": "/static/media/logo.66acc52d.svg",
@@ -182,8 +184,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.098b6d3f.js",
-    "static/js/2.c55a787c.chunk.js",
-    "static/css/main.b5efa159.chunk.css",
-    "static/js/main.adf172bf.chunk.js"
+    "static/css/2.0bedc3d3.chunk.css",
+    "static/js/2.a0d2c2f5.chunk.js",
+    "static/css/main.1db7e891.chunk.css",
+    "static/js/main.96fc2968.chunk.js"
   ]
 }
