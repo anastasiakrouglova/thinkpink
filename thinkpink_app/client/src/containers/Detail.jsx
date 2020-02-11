@@ -203,6 +203,17 @@ class Detail extends Component {
             </div>
 
             <div className={styles.section2_container}>
+            {/* {
+        racelijst.map(race => (
+          <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
+        ))
+              } */}
+              
+              {/* {subscriptionlijst.map(subscriptionLotgenoot => (
+
+              ))
+              } */}
+
               <div className={styles.card}>
                 <img
                   className={styles.profile_detail}
