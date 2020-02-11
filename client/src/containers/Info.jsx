@@ -36,7 +36,7 @@ class Info extends Component {
           </NavLink>
             &nbsp;/&nbsp;
           <NavLink className="App-backbutton" to={ROUTES.info}>
-              TeamRitaVerbeek
+          #team{myLotgenoot.teamName}
           </NavLink>
           </div>
           <div className={styles.containerGlobal}>
@@ -79,7 +79,7 @@ class Info extends Component {
                     alt="crown icon"
                   />
                   <div>
-                    <p className="App-body-bold">Teamcaptain</p>
+                    <p className="App-body-bold">Teamcaptain/lotgenoot</p>
                     <p className={styles.info_musicname}>John Doe</p>
                   </div>
                 </div>

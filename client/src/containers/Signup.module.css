@@ -177,6 +177,7 @@
   composes: App-body from "../styles/App.css";
   font-size: 1rem;
   color: var(--pink-primair);
+  font-family: 'poppinsbold';
 }
 
 .form_cursief {
