@@ -18,11 +18,6 @@ const FormInfo = ({ uiStore, history }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // authStore
-    //   .login(emailInput.current.value, pwdInput.current.value)
-    //   .then(() => {
-    //     history.push(ROUTES.login)
-    //   })
   };
   return (
     <div className="App-formcontainer">

@@ -46,17 +46,12 @@ const NavbarWhite = ({ uiStore }) => {
               activeClassName={styles.nav_link__active}
               to="#"
             >
-              <img
-                className={styles.personFoto}
-                src="../assets/images/people/rita.png"
-                alt="icon man"
-              />
-              {uiStore.authUser.name}
+            {uiStore.authUser.name}
             </NavLink>
             <NavLink
               className={styles.nav_link__text}
               activeClassName={styles.nav_link__active}
-                onClick={handleLogOut}
+              onClick={handleLogOut}
               to={ROUTES.login}
             >
               Log out

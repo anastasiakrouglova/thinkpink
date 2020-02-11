@@ -155,7 +155,7 @@ class Detail extends Component  {
             <div className={styles.section2_container_title}>
               <p className="App-h1-number-primaircolor">02</p>
               <h2 className="App-h1-primaircolor">Loop voor...</h2>
-              <p className={styles.info_lotgenoot}>Om je in te schrijven, dien je een lotgenoot te kiezen om te steunen. 
+              <p className={styles.info_lotgenoot}>Om je in te schrijven, dien je een team te kiezen om te steunen. 
                 Tijdens het evenement kan je op je eigen tempo lopen. Dit inschrijvingsprincipe is 
                 uit solidariteit voor de mensen die kanker overleefd hebben.</p>
             </div>

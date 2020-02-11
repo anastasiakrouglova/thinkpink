@@ -11,6 +11,8 @@ class RegisterForm extends Component {
     this.state = { email: ``, pwd: ``, pwd2: ``, name: ``, surname:``, phoneNumber: ``, tShirtSize:``, country: ``};
   }
 
+  
+
   handleChange = e => {
     const input = e.currentTarget;
     const state = { ...this.state };
@@ -22,13 +24,14 @@ class RegisterForm extends Component {
     e.preventDefault();
     const { uiStore, history } = this.props;
     const { email, surname, phoneNumber, tShirtSize, pwd, name, country } = this.state;
-    uiStore.register(name, surname, phoneNumber, tShirtSize, email, pwd, country).then(() => {
+    uiStore.register(name, surname, phoneNumber, tShirtSize, email,  country, pwd).then(() => {
       history.push(ROUTES.login);
     });
   };
 
   render() {
     const { email, pwd, pwd2, name, surname, phoneNumber, tShirtSize, country } = this.state;
+    const submitfield = React.createRef();
     return (
       <>
         <form onSubmit={this.handleSubmit}>
@@ -215,8 +218,30 @@ class RegisterForm extends Component {
             </div>
           </div>
 
+          {
+            submitfield.disabled ? (
+              <input
+              //className={styles.submit}
+              ref={submitfield}
+              type="submit"
+              value="Register"
+              disabled={pwd && pwd !== pwd2}
+              className={ styles.submit}
+            />
+            ): (
+              <input
+              //className={styles.submit}
+              ref={submitfield}
+              type="submit"
+              value="Register"
+              disabled={pwd && pwd !== pwd2}
+              className={ styles.submit }
+            />
+            )
+          }
           <input
-            className={styles.submit}
+            //className={styles.submit}
+            ref={submitfield}
             type="submit"
             value="Register"
             disabled={pwd && pwd !== pwd2}
