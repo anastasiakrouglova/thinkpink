@@ -6,24 +6,25 @@ import { ROUTES } from "../constants";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import { inject, observer, PropTypes } from "mobx-react";
+import TextField from '@material-ui/core/TextField';
 
 import SupporterCard from "../components/SupporterCard.jsx";
 
 class Info extends Component {
   constructor(props) {
     super(props);
+    this.state = { edit: false };
   }
   
   render() {
     const myLotgenoot = this.props.subscriptionStore.findById(this.props.id);
-    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst
-    //console.log(this.props.subscriptionStore)
-    console.log(myLotgenoot);
+    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst;
 
     if (!myLotgenoot) {
       return <p>loading...</p>;
     }
 
+    const { edit } = this.state;
     return (
       <div className={styles.uppercontainer}>
         <NavbarWhite />
@@ -41,78 +42,158 @@ class Info extends Component {
               #team{myLotgenoot.teamName}
             </NavLink>
           </div>
-          <div className={styles.containerGlobal}>
-            <section className={styles.card_container}>
-              <div className={styles.fotocontainer}>
-                <img
-                  className={styles.profilepictureRita}
-                  src="../assets/images/people/rita.png"
-                  width="150"
-                  height="150"
-                  alt="profile picture"
-                />
-              </div>
-              <div>
+          
+          { edit ? (
+              <div className={styles.containerGlobal}>
+              <section className={styles.card_container}>
+                <div className={styles.fotocontainer}>
+                  <img
+                    className={styles.profilepictureRita}
+                    src={"../assets/images/people/" + myLotgenoot.photo + ".png"}
+                    alt="profile picture"
+                  />
+                </div>
                 <div>
-                  <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p>
-                  <p className={styles.text_person}>
-                    {myLotgenoot.description}
-                  </p>
+                  <div>
+                    <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p>
+                    <p className={styles.text_person}>
+                      {myLotgenoot.description}
+                    </p>
+                  </div>
+                  <div className={styles.buttonInfo}>
+                    <button className="App-button_secundair-outline">
+                      Doneer aan dit team
+                    </button>
+                    <NavLink
+                      className="App-button_secundair"
+                      to={ROUTES.supporterorgroup}
+                    >
+                      Schrijf je in voor deze race
+                    </NavLink>
+                  </div>
                 </div>
-                <div className={styles.buttonInfo}>
-                  <button className="App-button_secundair-outline">
-                    Doneer aan dit team
-                  </button>
-                  <NavLink
-                    className="App-button_secundair"
-                    to={ROUTES.supporterorgroup}
-                  >
-                    Schrijf je in voor deze race
-                  </NavLink>
+  
+                <div>
+                  <div className={styles.info_person_container}>
+                    <img
+                      className={styles.info_icon__teamcaptain}
+                      src="../assets/images/icons/crown.svg"
+                      alt="crown icon"
+                    />
+                    <div>
+                      <p className="App-body-bold">Teamcaptain/lotgenoot</p>
+                      <p className={styles.info_musicname}>{myLotgenoot.teamCaptain}</p>
+                    </div>
+                  </div>
+                  <div className={styles.info_person_container}>
+                    <img
+                      className={styles.info_icon__music}
+                      src="../assets/images/icons/song.svg"
+                      alt="song"
+                    />
+                    <div>
+                      <p className="App-body-bold">Groepslied</p>
+                      <p className={styles.info_musicname}>
+                      {myLotgenoot.teamSong}
+                    </p>
+                    </div>
+                  </div>
+                  <div className={styles.info_person_container}>
+                    <img
+                      className={styles.info_icon}
+                      src="../assets/images/icons/dessert.svg"
+                      alt="dessert"
+                    />
+                    <div>
+                      <p className="App-body-bold">Bakken / Dessert</p>
+                      <p className={styles.info_musicname}>
+                      {myLotgenoot.dessert}
+                    </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </section>
+              <button onClick={() => this.setState({ edit: false })}>Edit</button>
+            </div>
+            ) : (
+              <div className={styles.containerGlobal}>
+              <section className={styles.card_container}>
+                <div className={styles.fotocontainer}>
+                  <img
+                    className={styles.profilepictureRita}
+                    src={"../assets/images/people/" + myLotgenoot.photo + ".png"}
+                    alt="profile picture"
+                  />
+                </div>
+                <div>
+                  <div>
+                    <TextField className={styles.hashtag} id="outlined-basic" label="teamName" variant="outlined" />  
+                    {/* <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p> */}
+                    <p className={styles.text_person}>
+                      {myLotgenoot.description}
+                    </p>
+                  </div>
+                  <div className={styles.buttonInfo}>
+                    <button className="App-button_secundair-outline">
+                      Doneer aan dit team
+                    </button>
+                    <NavLink
+                      className="App-button_secundair"
+                      to={ROUTES.supporterorgroup}
+                    >
+                      Schrijf je in voor deze race
+                    </NavLink>
+                  </div>
+                </div>
+  
+                <div>
+                  <div className={styles.info_person_container}>
+                    <img
+                      className={styles.info_icon__teamcaptain}
+                      src="../assets/images/icons/crown.svg"
+                      alt="crown icon"
+                    />
+                    <div>
+                      <p className="App-body-bold">Teamcaptain/lotgenoot</p>
+                      <p className={styles.info_musicname}>{myLotgenoot.teamCaptain}</p>
+                    </div>
+                  </div>
+                  <div className={styles.info_person_container}>
+                    <img
+                      className={styles.info_icon__music}
+                      src="../assets/images/icons/song.svg"
+                      alt="song"
+                    />
+                    <div>
+                      <p className="App-body-bold">Groepslied</p>
+                      <p className={styles.info_musicname}>
+                      {myLotgenoot.teamSong}
+                    </p>
+                    </div>
+                  </div>
+                  <div className={styles.info_person_container}>
+                    <img
+                      className={styles.info_icon}
+                      src="../assets/images/icons/dessert.svg"
+                      alt="dessert"
+                    />
+                    <div>
+                      <p className="App-body-bold">Bakken / Dessert</p>
+                      <p className={styles.info_musicname}>
+                      {myLotgenoot.dessert}
+                    </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <button onClick={() => this.setState({ edit: true })}>Save</button>
+            </div>
+            )
+          }
 
-              <div>
-                <div className={styles.info_person_container}>
-                  <img
-                    className={styles.info_icon__teamcaptain}
-                    src="../assets/images/icons/crown.svg"
-                    alt="crown icon"
-                  />
-                  <div>
-                    <p className="App-body-bold">Teamcaptain/lotgenoot</p>
-                    <p className={styles.info_musicname}>{myLotgenoot.teamCaptain}</p>
-                  </div>
-                </div>
-                <div className={styles.info_person_container}>
-                  <img
-                    className={styles.info_icon__music}
-                    src="../assets/images/icons/song.svg"
-                    alt="song"
-                  />
-                  <div>
-                    <p className="App-body-bold">Groepslied</p>
-                    <p className={styles.info_musicname}>
-                    {myLotgenoot.teamSong}
-                  </p>
-                  </div>
-                </div>
-                <div className={styles.info_person_container}>
-                  <img
-                    className={styles.info_icon}
-                    src="../assets/images/icons/dessert.svg"
-                    alt="dessert"
-                  />
-                  <div>
-                    <p className="App-body-bold">Bakken / Dessert</p>
-                    <p className={styles.info_musicname}>
-                    {myLotgenoot.dessert}
-                  </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
+          
+
+
           <section className={styles.section2}>
             <p className="App-h1-number-primaircolor">01</p>
             <h2 className="App-h1-primaircolor">
@@ -120,8 +201,6 @@ class Info extends Component {
             </h2>
             <p className={styles.subtitle}>(38 supporters, 124 km samen)</p>
             <div className={styles.supporterContainer}>
-
-            
             {mysubscriptionLijst.map((sSupporter, index) => (
               (myLotgenoot.teamName === sSupporter.teamName) ? (
                 <SupporterCard key={index} sSupporter={sSupporter}/>
@@ -129,11 +208,8 @@ class Info extends Component {
                   <>
                     </>
               )
-                
               ))
               }
-
-
             </div>
           </section>
 

@@ -193,7 +193,12 @@ class Detail extends Component {
             <div className={styles.section2_container}>
               
               {mysubscriptionLijst.map((sLotgenoot, index) => (
-                <TeamCard key={index} sLotgenoot={sLotgenoot}/>
+                (myRace.country === sLotgenoot.country) ? (
+                    <TeamCard key={index} sLotgenoot={sLotgenoot}/>
+                ) : (
+                    <>
+                    </>
+                )
               ))
               }
 

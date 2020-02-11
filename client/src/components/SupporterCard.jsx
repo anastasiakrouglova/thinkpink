@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
 
-import styles from "../containers/Detail.module.css";
+import styles from "../containers/Info.module.css";
 
 import { ROUTES } from "../constants";
 import { NavLink } from "react-router-dom";
@@ -17,7 +17,7 @@ class SupporterCard extends Component {
       const { sSupporter } = this.props;
       
     return (
-      <div>
+      <div className={styles.supporterContainer}>
         {
           sSupporter.role === 'supporter' || sSupporter.role === 'group' ? (
             <>
@@ -41,7 +41,7 @@ class SupporterCard extends Component {
                 )          
               }          
 
-              <div className={styles.containertext}>
+              <div className={styles.containertext_supporter}>
             <h3 className={styles.bold}>{sSupporter.supporter}</h3>
              {sSupporter.typeRace === "run" ? (
               <>

@@ -208,7 +208,11 @@
 }
 
 .profile_detail {
-  margin-top: -3rem;
+  margin-top: -4rem;
+  border-radius: 50%;
+  width: 8rem;
+  border: 8px solid white;
+
 }
 
 .card_text {

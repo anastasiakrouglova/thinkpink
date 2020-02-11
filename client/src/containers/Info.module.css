@@ -21,7 +21,9 @@
 
 .profilepictureRita {
     margin-bottom: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    width: 12rem;
 }
 
 
@@ -105,6 +107,8 @@
 .supporterContainer {
     display: flex;
     margin-top: 3rem;
+    margin-right: 9rem;
+
 }
 
 .supporterContainer_challenge {
@@ -129,6 +133,11 @@
 
 .containertext {
     margin-left: 1rem;
+}
+
+.containertext_supporter {
+    margin-left: 1rem;
+    width: 12rem;
 }
 
 .cursief {

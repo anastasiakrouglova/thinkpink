@@ -14,6 +14,7 @@ import {
   
   class SubscriptionStore {
     subscriptionlijst = [];
+    edit = false;
   
     constructor(rootStore) {
       this.rootStore = rootStore;
