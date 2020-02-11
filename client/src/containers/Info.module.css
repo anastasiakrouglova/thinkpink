@@ -10,7 +10,6 @@
     background-color: white;
     color: black;
     border-radius: 0.5rem;
-    display: flex;
     text-decoration: none;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -40,7 +39,7 @@
     margin: 2rem;
 }
 
-.tekst_person {
+.text_person {
     composes: App-body from "../styles/App.css";
     width: 30rem;
     padding: 0 2rem;
@@ -100,7 +99,7 @@
 
 .subtitle {
     margin-top: -1.5rem;
-    composes: App-subtitle from "../styles/App.css"
+    composes: App-subtitle from "../styles/App.css";
 }
 
 .supporterContainer {
@@ -113,18 +112,18 @@
 }
 
 .bold {
+    composes: App-body from "../styles/App.css";
     margin-top: 1.8rem;
     font-family: 'poppinsbold';
     font-size: 1.5rem;
-    composes: App-body from "../styles/App.css";
     margin-bottom: 0.2rem;
 }
 
 .bold2 {
-    margin-top: 0.8rem;
+    composes: App-body from "../styles/App.css";
     font-family: 'poppinsbold';
     font-size: 1.5rem;
-    composes: App-body from "../styles/App.css";
+    margin-top: 0.8rem;
     margin-bottom: 0.2rem;
 }
 
@@ -154,9 +153,10 @@
 
 .progress_aantal {
     font-size: 1rem;
+    opacity: 0.3;
     margin-left: 1rem;
     margin-top: 0.1rem;
-    opacity: 0.3;
+    
 }
 
 
@@ -169,9 +169,9 @@
 
 
 .imgChallenge {
-    margin-right: 1rem;
-    width: 3rem;
+    width: 3rem; 
     margin-top: -1rem;
+    margin-right: 1rem;
 }
 
 
@@ -185,7 +185,7 @@
 
 .hashtag {
     font-family: 'poppinsextrabold_italic';
+    color: var(--brown-title);
     margin-left: 2rem;
     margin-bottom: 1rem;
-    color: var(--brown-title)
 }

@@ -5,12 +5,10 @@
     text-decoration: none;
 }
 
-
 .nav_link__active {
     font-family: 'poppinsbold';
     color: #EE77A0;
 }
-
 
 .nav_container {
     display: flex;
@@ -19,9 +17,8 @@
     width: 100vw;
 }
 
-
 .nav_link__dropdown{
-    background-color: transparent;
+    background-color: transparent; 
     color: white;
     border: none;
     font-size: 1rem;
@@ -44,7 +41,6 @@
     margin-bottom: -0.1rem;
     margin-right: 0.5rem;
 }
-
 
 .personFoto {
     margin-bottom: -0.6rem;

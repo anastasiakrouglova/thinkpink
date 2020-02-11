@@ -39,13 +39,13 @@ const Info = ({ uiStore }) => {
             <div>
               <div>
               <p className={styles.hashtag}>#TeamRitaVerbeek</p>
-                <p className={styles.tekst_person}>
+                <p className={styles.text_person}>
                   Rita een leuke dame uit Brugge die vorig jaar overleden is aan
                   borstkanker. Om haar herinnering in leve te houden, hebben we
                   besloten om deel te nemen met Race for the Cure.
                 </p>
                 <br />
-                <p className={styles.tekst_person}>
+                <p className={styles.text_person}>
                   Supporter voor Rita!
                   <br/> Dankuwel!
                 </p>

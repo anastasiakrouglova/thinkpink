@@ -11,11 +11,13 @@ const NavbarDark = ({ uiStore }) => {
         e.preventDefault();
         uiStore.logout();
       };
-    return (
+    return ( 
         <div className={styles.nav_container}>
                 <NavLink to={ROUTES.home}><img src="../assets/images/logoWhite.svg" className="App-logo" alt="logo" /></NavLink> 
                 <div className={styles.nav_link}>
+                    <NavLink to={ROUTES.home}  className={styles.nav_link__text} activeClassName={styles.nav_link__active}>Home</NavLink>
                     <NavLink className={styles.nav_link__text} activeClassName={styles.nav_link__active} to={ROUTES.races}>Kies een race</NavLink> 
+                    <a className={styles.nav_link__text} activeClassName={styles.nav_link__active}>FAQ</a> 
                     {!uiStore.authUser ? (
                     <>
                         {/* <img className={styles.personIcon} src="../assets/images/icons/peopleBlack.svg" alt="icon man"/> */}

@@ -7,11 +7,10 @@
 }
 
 .h1 {
+    composes: App-h1 from "../styles/App.css";
     margin-top: 2rem;
-    text-align: center;
-    composes: App-h1 from "../styles/App.css"
+    text-align: center;  
 }
-
 
 .race_container {
     display: flex;

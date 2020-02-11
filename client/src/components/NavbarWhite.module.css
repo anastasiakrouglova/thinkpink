@@ -5,20 +5,17 @@
     text-decoration: none;
 }
 
-
 .nav_link__active {
     font-family: 'poppinsbold';
     color: #EE77A0;
 }
 
-
 .nav_container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     width: 100%;
 }
-
 
 .nav_link__dropdown{
     background-color: transparent;
@@ -40,12 +37,10 @@
     margin-bottom: -0.3rem;
 }
 
-
 .personIcon {
     margin-bottom: -0.1rem;
     margin-right: 0.5rem;
 }
-
 
 .personFoto {
     margin-bottom: -0.6rem;
