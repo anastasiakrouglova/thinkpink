@@ -33,14 +33,11 @@ app.use(bodyParser.json());
 
 require("./app/routes/auth.routes.js")(app);
 require("./app/routes/races.routes.js")(app);
+require("./app/routes/subscriptions.routes.js")(app);
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client/build/", "index.html"));
 });
-
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../client/src", "index.js"));
-// });
 
 app.use(cors({ credentials: true, origin: "*" }));
 

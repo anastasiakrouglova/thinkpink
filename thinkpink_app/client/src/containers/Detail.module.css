@@ -277,6 +277,10 @@
 }
 
 .section4 {
+  flex-flow: ;
+}
+
+.section4 {
   width: auto;
   height: auto;
 }

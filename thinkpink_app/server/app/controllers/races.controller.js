@@ -2,6 +2,7 @@ const Race = require("../models/race.model.js");
 
 exports.create = (req, res) => {
   if (!req.body.city) {
+    console.log(Race);
     return res.status(500).send({ err: "city can not be empty." });
   }
 
@@ -99,7 +100,7 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
   try {
     const race = await Race.findOneAndRemove({
-      _id: req.params.raceId
+      _id: req.params.id
     });
     if (!race) {
       return res.status(404).send("No race found (delete function)");

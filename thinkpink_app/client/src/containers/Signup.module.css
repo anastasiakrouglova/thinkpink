@@ -284,6 +284,7 @@
 
 .inputTextfield {
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .cardRita {
@@ -324,4 +325,11 @@
   margin-bottom: 1rem;
   width: 30rem;
   composes: App-body from "../styles/App.css";
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+}
+
+
+.checkboxPrivacy {
+  margin-top: 3rem;
 }

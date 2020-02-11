@@ -12,7 +12,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-
+import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 
 const PinkRadio = withStyles({
@@ -25,6 +25,16 @@ const PinkRadio = withStyles({
   checked: {},
 })(props => <Radio color="default" {...props} />);
 
+const PinkCheckbox = withStyles({
+  root: {
+    color: pink[300],
+    '&$checked': {
+      color: pink[300],
+    },
+  },
+  checked: {},
+})(props => <Checkbox color="default" {...props} />);
+
 
 export class StepTwo extends React.Component {
   constructor () {
@@ -35,15 +45,11 @@ export class StepTwo extends React.Component {
     return (
     <div className={styles.form_container}>
        <div className={styles.container_signup}>
-
-
          <section>
            {store.uiStore.role === `lotgenoot` ? (
               <div className={styles.step3_container}>
                 <div className={styles.step3_containerLid}>
                   <h1 className="App-form-h1">Is dit juist?</h1>
-                  <p className="App-body">Jouw profielfoto zal gebruikt worden als teamfoto op je pagina. 
-                  Je kunt het achteraf nog wijzigen</p>
                   
                   <div className={styles.cardRita}>
                     <img className={styles.foto_cardRita} width="130" src="../assets/images/people/ritaBelgium.png" alt="person"></img>
@@ -68,6 +74,13 @@ export class StepTwo extends React.Component {
                 </div>
                 <div>
                   <h1 className="App-form-h1">Vertel je team wie je bent</h1>
+                  <TextField id="outlined-basic" fullWidth label="Teamnaam of eigen naam" variant="outlined" />
+                  {/* <div className="App-form-input-container">
+                    <label htmlFor="lastname" className={styles.label}>Teamnaam of eigen naam</label>
+                    <input required name="lastname" id="lastname" className={styles.input} placeholder="badeendjes" type="text" />
+                  </div> */}
+                  <img className={styles.foto_cardRita} width="130" src="../assets/images/icons/fotobutton.svg" alt="foto button"></img>
+                  <p className={styles.foto_textuitleg}>Upload een teamfoto of een foto van jezelf</p>
                   <div className={styles.inputTextfield}>
                   <TextField 
                     id="outlined-multiline-static"
@@ -89,14 +102,21 @@ export class StepTwo extends React.Component {
                       </RadioGroup>
                     </FormControl>
                   </FormGroup>
+                  <FormControlLabel className={styles.checkboxPrivacy}
+                      control={
+                        <PinkCheckbox
+                          //checked={state.checkedG}
+                          value="checkedPrivacy"
+                        />
+                      }
+                      label="Ik ga akkoord dat ik opzoekbaar ben als teamcaptain en neem zelf verantwoordelijkheid op voor de beschrijving van mezelf/mijn team"
+                    />
                 </div>
              </div>
            ) : store.uiStore.role === `teamcaptain` ? (
             <div className={styles.step3_container}>
             <div className={styles.step3_containerLid}>
               <h1 className="App-form-h1">Wie is de lotgenoot?</h1>
-              
-              
                 <img className={styles.foto_cardRita} width="130" src="../assets/images/icons/fotobutton.svg" alt="foto button"></img>
                 <p className={styles.foto_textuitleg}>Upload een teamfoto of een foto
                   van de lotgenoot <br/> (mits toestemming)</p>
