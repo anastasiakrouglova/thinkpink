@@ -15,7 +15,7 @@ class Info extends Component {
   render() {
     const myLotgenoot = this.props.subscriptionStore.findById(this.props.id);
     //console.log(this.props.subscriptionStore)
-    console.log(myLotgenoot)
+    console.log(myLotgenoot);
 
     if (!myLotgenoot) {
       return <p>loading...</p>;
@@ -28,20 +28,21 @@ class Info extends Component {
           <div className={styles.navlink_top}>
             <NavLink className="App-backbutton_back" to={ROUTES.races}>
               Races
-          </NavLink>
-           &nbsp;/&nbsp;
-           <NavLink className="App-backbutton_back" to={ROUTES.detail}>
-              Antwerpen (België)
-          </NavLink>
+            </NavLink>
             &nbsp;/&nbsp;
-          <NavLink className="App-backbutton" to={ROUTES.info}>
-          #team{myLotgenoot.teamName}
-          </NavLink>
+            <NavLink className="App-backbutton_back" to={ROUTES.detail}>
+              Antwerpen (België)
+            </NavLink>
+            &nbsp;/&nbsp;
+            <NavLink className="App-backbutton" to={ROUTES.info}>
+              #team{myLotgenoot.teamName}
+            </NavLink>
           </div>
           <div className={styles.containerGlobal}>
             <section className={styles.card_container}>
               <div className={styles.fotocontainer}>
-                <img className={styles.profilepictureRita}
+                <img
+                  className={styles.profilepictureRita}
                   src="../assets/images/people/rita.png"
                   width="150"
                   height="150"
@@ -58,8 +59,13 @@ class Info extends Component {
                 <div className={styles.buttonInfo}>
                   <button className="App-button_secundair-outline">
                     Doneer aan dit team
-                </button>
-                  <NavLink className="App-button_secundair" to={ROUTES.supporterorgroup}>Schrijf je in voor deze race</NavLink>
+                  </button>
+                  <NavLink
+                    className="App-button_secundair"
+                    to={ROUTES.supporterorgroup}
+                  >
+                    Schrijf je in voor deze race
+                  </NavLink>
                 </div>
               </div>
 
@@ -108,10 +114,9 @@ class Info extends Component {
             <p className="App-h1-number-primaircolor">01</p>
             <h2 className="App-h1-primaircolor">
               Deze mensen lopen mee voor Rita
-          </h2>
+            </h2>
             <p className={styles.subtitle}>(38 supporters, 124 km samen)</p>
             <div className={styles.supporterContainer}>
-
               {/* {
             uiStore.map(race => (
               <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
@@ -132,7 +137,9 @@ class Info extends Component {
 
           <section className={styles.section2}>
             <p className="App-h1-number-primaircolor">02</p>
-            <h2 className="App-h1-primaircolor">Supporters van het thuisfront</h2>
+            <h2 className="App-h1-primaircolor">
+              Supporters van het thuisfront
+            </h2>
             <p className={styles.subtitle}>(3 donaties)</p>
             <div className={styles.supporterContainer}>
               <img
@@ -145,10 +152,10 @@ class Info extends Component {
                 <h3 className={styles.bold2}>€25</h3>
                 <p className={styles.cursief}>
                   Van Johanna Biesebos op 02/10/2019
-              </p>
+                </p>
                 <p className="App-body">
                   “Doe dat goed meisjes! Veel kusjes van tante Johanna”
-              </p>
+                </p>
               </div>
             </div>
           </section>
@@ -159,7 +166,7 @@ class Info extends Component {
             <p className={styles.subtitle}>
               Hieronder vind je de groepschallenges. Ontgrendel hierdoor leuke
               extraatjes tijdens Race For The Cure.
-          </p>
+            </p>
 
             <div className={styles.containerChallenges}>
               <article className={styles.card_container_challenge}>
@@ -175,7 +182,7 @@ class Info extends Component {
                     <p className="App-body">
                       Bij 100km beweging samen met je supporters , zal jullie
                       groepslied afgespeeld worden bij de finish.
-                  </p>
+                    </p>
                     <div className={styles.barcontainer}>
                       <ProgressBar
                         percent={49}
@@ -202,7 +209,7 @@ class Info extends Component {
                   <div className={styles.containertext}>
                     <p className="App-body">
                       Vanaf 50 supporters krijg je een gepersonaliseerd tentje.
-                  </p>
+                    </p>
                     <div className={styles.barcontainer}>
                       <ProgressBar
                         percent={20}
@@ -230,7 +237,7 @@ class Info extends Component {
                     <p className="App-body">
                       Bak met je team koekjes en verkoop ze op je stand! Je team
                       krijgt dan een gratis massage na de finish.
-                  </p>
+                    </p>
                     <div className={styles.barcontainer}>
                       {/* <label className={styles.container}> */}
                       <img
@@ -239,7 +246,7 @@ class Info extends Component {
                       />
                       <span className={styles.pinkcheckbox} htmlFor="dessert">
                         Brownies met witte chocolade
-                    </span>
+                      </span>
                       {/* <input checked="checked" id="dessert" type="checkbox" /> */}
                       {/* <span class="checkmark"></span> */}
                       {/* </label> */}
@@ -261,7 +268,7 @@ class Info extends Component {
                     <p className="App-body">
                       Vanaf 10 donaties voor je team krijgt elk lid een
                       professionele groepsfoto cadeau getrokken op de race.
-                  </p>
+                    </p>
                     <div className={styles.barcontainer}>
                       <ProgressBar
                         percent={30}
@@ -281,8 +288,7 @@ class Info extends Component {
       </div>
     );
   }
-};
-
+}
 
 Info.propTypes = {
   subscriptionStore: PropTypes.observableObject.isRequired
