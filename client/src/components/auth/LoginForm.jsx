@@ -137,9 +137,9 @@ class LoginForm extends Component {
         </form>
 
         <p className={styles.signupContainer}>
-          Nog geen account?{" "}
+          Nog geen account?&nbsp;&nbsp;
           <Link className={styles.signup} to={ROUTES.signup}>
-            Sign up!
+           Sign up!
           </Link>
         </p>
       </>
@@ -148,58 +148,3 @@ class LoginForm extends Component {
 }
 
 export default inject(`uiStore`)(withRouter(LoginForm));
-
-// import React from "react";
-// import { inject } from "mobx-react";
-// import { withRouter } from "react-router-dom";
-// import { ROUTES } from "../../constants";
-
-// //import stylesForm from "../../styles/form.module.css";
-// import styles from "./LoginForm.module.css";
-
-// const LoginForm = ({ uiStore, history }) => {
-//   const emailInput = React.createRef();
-//   const pwdInput = React.createRef();
-
-//   const handleSubmit = e => {
-//     e.preventDefault();
-
-//     uiStore
-//       .login(emailInput.current.value, pwdInput.current.value)
-//       .then(() => {
-//         history.push(ROUTES.formwelcome);
-//       });
-//   };
-
-//   return (
-//     <>
-//       <form onSubmit={handleSubmit} >
-//         <div >
-//           <label htmlFor="email" >
-//             Email
-//           </label>
-//           <input
-//             type="email"
-//             name="email"
-//             id="email="
-//             ref={emailInput}
-//           />
-//         </div>
-//         <div >
-//           <label htmlFor="username" >
-//             Password
-//           </label>
-//           <input
-//             type="password"
-//             name="password"
-//             id="password"
-//             ref={pwdInput}
-//           />
-//         </div>
-//         <input type="submit" value="Login" />
-//       </form>
-//     </>
-//   );
-// };
-
-// export default inject(`uiStore`)(withRouter(LoginForm));

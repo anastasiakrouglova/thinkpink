@@ -125,6 +125,20 @@
   .section34container {
     flex-direction: column;
   }
+
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+  }
   
   .container_program {
     flex-direction: column;
