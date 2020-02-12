@@ -58,7 +58,7 @@ body {
 
 .section5 {
   z-index: 2;
-  margin-top: 6rem;
+  margin-top: 7rem;
   background-repeat: no-repeat;
   height: 30rem;
   width: 100%;
@@ -274,5 +274,5 @@ body {
 
 .waaromlopen {
   width: 30rem;
-  composes: App-body from "../styles/App.css"
+  composes: App-body-white from "../styles/App.css"
 }

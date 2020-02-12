@@ -139,7 +139,7 @@ function Home() {
         <div className={styles.challenges__title}>
           <p className={styles.number}>04</p>
           <p className={styles.h1}>Waarom lopen of wandelen?</p>
-          <p className="App-body-white">
+          <p className={styles.waaromlopen}>
             Borstkanker nestelt zich heel graag in vetcellen. Door een gezonde
             levensstijl en sportieve kijk op de wereld te hebben, verminder je de
             kans op borstkanker. Het evenement is dus een soort preventie van
