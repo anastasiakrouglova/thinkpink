@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Detail.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
+import Footer from "../components/Footer.jsx";
 import { inject, observer, PropTypes } from "mobx-react";
 
 import { ROUTES } from "../constants";
@@ -107,11 +108,8 @@ class Detail extends Component {
 
           <section className={styles.container_program}>
             <div className={styles.container_map}>
-              <img
-                className={styles.map}
-                src="../assets/images/maps/map.png"
-                alt="map"
-              />
+            <iframe src={myRace.map} width="640" height="480"></iframe>  
+              
               <button className="App-backbutton">Send to maps</button>
             </div>
             <div className={styles.program_section}>
@@ -255,6 +253,7 @@ class Detail extends Component {
             </div>
           </section>
         </div>
+        <Footer/>
       </div>
     );
   }

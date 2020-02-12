@@ -124,7 +124,7 @@ export class StepOne extends React.Component {
              </>
            )}
          </section> 
-       </div>
+        </div>
      </div>
     )
   }

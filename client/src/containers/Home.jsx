@@ -138,7 +138,7 @@ function Home() {
         <div className={styles.section5}>
         <div className={styles.challenges__title}>
           <p className={styles.number}>04</p>
-          <p className={styles.h1}>Waarom lopen?</p>
+          <p className={styles.h1}>Waarom lopen of wandelen?</p>
           <p className="App-body">
             Borstkanker nestelt zich heel graag in vetcellen. Door een gezonde
             levensstijl en sportieve kijk op de wereld te hebben, verminder je de

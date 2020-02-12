@@ -7,6 +7,7 @@ import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import { inject, observer, PropTypes } from "mobx-react";
 import TextField from '@material-ui/core/TextField';
+import Footer from "../components/Footer.jsx";
 
 import SupporterCard from "../components/SupporterCard.jsx";
 
@@ -364,6 +365,7 @@ class Info extends Component {
             </div>
           </section>
         </div>
+        <Footer/>
       </div>
     );
   }

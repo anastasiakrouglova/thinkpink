@@ -12,6 +12,7 @@ const RaceSchema = mongoose.Schema({
   description: String,
   sponsors: Object,
   image: String,
+  map: String
 });
 
 module.exports = mongoose.model("Race", RaceSchema);

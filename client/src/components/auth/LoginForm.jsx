@@ -56,6 +56,8 @@ class LoginForm extends Component {
       default:
         break;
     }
+    
+    
     this.setState({ formErrors, [input.name]: input.value });
   };
 
@@ -65,6 +67,18 @@ class LoginForm extends Component {
     const { uiStore, history } = this.props;
 
     console.log(uiStore);
+
+    //const response = sendRegisterRequest(email, password);
+    //const responseJson = await response.json();
+
+      // if (response.status !== 200) {
+      //     this.setState({error: reponseJson.error});
+      // } else {
+      //     // handle successful registration
+      // }
+    
+    //console.log(uiStore.register(email));
+    //console.log(emailInput.current.value)
 
     if (formValid(this.state)) {
       uiStore

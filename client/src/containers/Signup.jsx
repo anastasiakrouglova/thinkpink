@@ -1,20 +1,11 @@
 import React from "react";
 import styles from "./Signup.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../constants";
+import Footer from "../components/Footer.jsx";
 import { inject } from "mobx-react";
 import RegisterForm from "../components/auth/RegisterForm";
 
-const Signup = ({ uiStore }) => {
-  const firstnameInput = React.createRef();
-  const lastnameInput = React.createRef();
-  const emailInput = React.createRef();
-  const pwdInput = React.createRef();
-  const dayInput = React.createRef();
-  const monthInput = React.createRef();
-  const yearInput = React.createRef();
-  const countryNumberInput = React.createRef();
+const Signup = () => {
 
   return (
     <div className="App-formcontainer">
@@ -272,6 +263,7 @@ const Signup = ({ uiStore }) => {
           </div> */}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
