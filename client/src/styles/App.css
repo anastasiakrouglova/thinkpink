@@ -87,7 +87,7 @@
   border: 2px solid var(--pink-primair);
   color: var(--pink-primair);
   padding: 0.5rem 1rem;
-  max-width: 4rem;
+  /* max-width: 4rem; */
   font-size: 1rem;
   font-family: "poppinsbold";
   border-radius: 0.5rem;
@@ -112,7 +112,7 @@
   border: 1px solid var(--pink-primair);
   color: white;
   padding: 0.5rem 1rem;
-  max-width: 9rem;
+  /* max-width: 9rem; */
   font-size: 1rem;
   font-family: "poppinsbold";
   border-radius: 0.5rem;

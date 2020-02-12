@@ -44,7 +44,7 @@ class Info extends Component {
               Antwerpen (België)
             </NavLink>
             &nbsp;/&nbsp;
-            <NavLink className="App-backbutton" to={ROUTES.info}>
+            <NavLink className="App-backbutton" to="#">
               #team{myLotgenoot.teamName}
             </NavLink>
           </div>

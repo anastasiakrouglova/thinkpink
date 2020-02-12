@@ -107,3 +107,12 @@
 .teamcaptain {
     color: #00A3FF;
 }
+
+
+@media (max-width: 900px) {
+    .container_cards {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

@@ -84,14 +84,11 @@ const SupporterOrGroup = ({uiStore}) => {
               </> 
             )
             }
-
-
-
           </div>
 
         </div>
         <div className={styles.backbutton_container}>
-          <NavLink className={styles.backbutton} to={ROUTES.detail}>&#8592; terug</NavLink>
+          <NavLink className={styles.backbutton} to={ROUTES.races}>&#8592; terug</NavLink>
         </div>
       </div>
       <Footer/>

@@ -90,6 +90,7 @@
     composes: App-button_secundair from "../../styles/App.css";
     margin-top: 1rem;
     margin-left: 10rem;
+    max-width: 9rem;
 }
 
 .loginButtonEmpty {

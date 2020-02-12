@@ -40,6 +40,15 @@
 }
 
 
+@media (max-width: 900px) {
+    .container_cards {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
 .cardlotgenoot_navlink {
     color: white;
     text-decoration:none;
