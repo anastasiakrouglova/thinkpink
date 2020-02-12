@@ -34,11 +34,6 @@ class RaceStore {
     //console.log(this.racelijst);
   };
 
-  // getOne = id => {
-  //   this.api.getById(id).then(d => this._addRace(d));
-
-  //   console.log(this.api.getById(id));
-  // };
 
   findById = id => {
     //console.log(this.racelijst);

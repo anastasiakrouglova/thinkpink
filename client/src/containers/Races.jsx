@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Races.module.css";
 import { inject, observer, PropTypes } from "mobx-react";
 import NavbarWhite from "../components/NavbarWhite.jsx";
+import Footer from "../components/Footer.jsx";
 import Race from "../components/Race.jsx";
 import { NavLink } from "react-router-dom";
 
@@ -33,6 +34,7 @@ const Races = ({ raceStore }) => {
         ))
       }
       </div>
+      <Footer/>
     </div>
   );
 };

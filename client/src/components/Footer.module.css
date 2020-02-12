@@ -1,0 +1,17 @@
+.link {
+    color: grey;
+    font-size: 0.8rem;
+    text-decoration: none;
+    composes: App-bewerkAccount from "../styles/App.css";
+    font-family: 'poppinsregular';
+    opacity: 0.5;
+}
+
+
+.footercontainer {
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}

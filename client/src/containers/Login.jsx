@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Signup.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
-
+import Footer from "../components/Footer.jsx";
 import LoginForm from "../components/auth/LoginForm";
 
 const Login = () => {
@@ -15,6 +15,7 @@ const Login = () => {
           <LoginForm />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

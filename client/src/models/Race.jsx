@@ -13,6 +13,7 @@ class Race {
     description,
     sponsors,
     image,
+    map,
     //raceId,
     id = uuid.v4()
   ) {
@@ -28,6 +29,7 @@ class Race {
     this.description = description;
     this.sponsors = sponsors;
     this.image = image;
+    this.map = map;
   }
 
   setId = value => (this.id = value);
@@ -42,6 +44,7 @@ class Race {
   setDescription = value => (this.description = value);
   setSponsors = value => (this.sponsors = value);
   setImage = value => (this.image = value);
+  setMap = value => (this.map = value);
 
   updateFromServer = values => {
     if (values._id) {
@@ -57,7 +60,8 @@ class Race {
     this.setStartTime (values.startTime);
     this.setDescription(values.description);
     this.setSponsors(values.sponsors);
-    this.setImage(values.image)
+    this.setImage(values.image);
+    this.setMap(values.map);
   };
 
   //   get values() {
@@ -82,6 +86,7 @@ decorate(Race, {
   description: observable,
   sponsors: observable,
   image: observable,
+  map: observable,
 
   setId: action,
   //setRaceId: action,
@@ -94,7 +99,8 @@ decorate(Race, {
   setStartTime :action,
   setDescription :action,
   setSponsors: action,
-  setImage: action
+  setImage: action,
+  setMap: action
   //   values: computed,
   //   totaal: computed,
 });
