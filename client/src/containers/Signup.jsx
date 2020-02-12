@@ -22,7 +22,7 @@ const Signup = ({ uiStore }) => {
       <div className={styles.container_signup}>
         <div className={styles.img_container}></div>
 
-        <div>
+        <div className={styles.signup_form}>
           <h1 className="App-form-h1">Registreer</h1>
           <p className="App-form-text">
             Deze informatie wordt gebruikt om het inschrijvingsproces zo vlot

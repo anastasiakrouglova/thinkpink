@@ -6,7 +6,6 @@ import { inject, observer, PropTypes } from "mobx-react";
 import { ROUTES } from "../constants";
 import { NavLink } from "react-router-dom";
 
-
 import TeamCard from "../components/TeamCard.jsx";
 
 class Detail extends Component {
@@ -16,7 +15,7 @@ class Detail extends Component {
 
   render() {
     const myRace = this.props.raceStore.findById(this.props.id);
-    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst
+    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst;
 
     //console.log(mysubscriptionLijst);
     //console.log(`RACE ID: ${myRace.city}`);
@@ -191,16 +190,13 @@ class Detail extends Component {
             </div>
 
             <div className={styles.section2_container}>
-              
-              {mysubscriptionLijst.map((sLotgenoot, index) => (
-                (myRace.country === sLotgenoot.country) ? (
-                    <TeamCard key={index} sLotgenoot={sLotgenoot}/>
+              {mysubscriptionLijst.map((sLotgenoot, index) =>
+                myRace.country === sLotgenoot.country ? (
+                  <TeamCard key={index} sLotgenoot={sLotgenoot} />
                 ) : (
-                    <>
-                    </>
+                  <></>
                 )
-              ))
-              }
+              )}
 
               <div className={styles.cardSurvivor}>
                 <p className={styles.card_text2}>

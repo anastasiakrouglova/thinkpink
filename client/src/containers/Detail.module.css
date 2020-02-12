@@ -1,14 +1,7 @@
 @import "../styles/colors.module.css";
 
 .detail_container {
-  color: black;
-  margin: 4rem;
-}
-
-@media (max-width: 500px) {
-  .detail_container {
-    margin: 4rem 0;
-  }
+  composes: App-contentContainer from "../styles/App.css";
 }
 
 .container_map {
@@ -29,14 +22,11 @@
 }
 
 .country {
-  font-family: "poppinsextrabold_italic";
-  opacity: 0.3;
-  font-size: 0.9rem;
+  composes: detailCountry from "../styles/typo.module.css";
 }
 
 .city {
-  font-family: "poppinsextrabold_italic";
-  font-size: 3.5rem;
+  composes: detailTitle from "../styles/typo.module.css";
 }
 
 .city_container {
@@ -212,7 +202,6 @@
   border-radius: 50%;
   width: 8rem;
   border: 8px solid white;
-
 }
 
 .card_text {
@@ -281,7 +270,6 @@
 }
 
 .section4 {
-  flex-flow: ;
 }
 
 .section4 {

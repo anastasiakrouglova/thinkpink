@@ -81,11 +81,35 @@
 }
 
 .container_signup {
-  display: flex;
+  composes: App-contentContainer from "../styles/App.css";
+  display: grid;
+  margin-top: 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "signup_img signup_form"
+    "signup_img .";
+}
+
+@media (max-width: 800px) {
+  .container_signup {
+    grid-gap: 0;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-areas: ". signup_form .";
+  }
 }
 
 .img_container {
   composes: App-img_form from "../styles/App.css";
+  grid-area: signup_img;
+  max-height: 30rem;
+}
+
+.signup_form {
+  grid-area: signup_form;
+  width: 100%;
+  max-width: 27rem;
+  margin: 0 auto;
 }
 
 .formcontainer {
@@ -177,7 +201,7 @@
   composes: App-body from "../styles/App.css";
   font-size: 1rem;
   color: var(--pink-primair);
-  font-family: 'poppinsbold';
+  font-family: "poppinsbold";
 }
 
 .form_cursief {
@@ -329,7 +353,6 @@
   font-size: 0.8rem;
   margin-top: -0.5rem;
 }
-
 
 .checkboxPrivacy {
   margin-top: 3rem;
