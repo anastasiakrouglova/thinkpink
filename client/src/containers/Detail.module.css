@@ -2,6 +2,8 @@
 
 .detail_container {
   composes: App-contentContainer from "../styles/App.css";
+  margin: 3rem auto;
+  max-width: 75rem;
 }
 
 .container_map {
@@ -17,8 +19,8 @@
 }
 
 .race_video {
-  width: auto;
-  height: auto;
+  width: 40vw;
+  height: 30rem;
 }
 
 .country {
@@ -64,7 +66,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 80rem;
+  margin: 2rem;
 }
 
 .counter_container {
@@ -120,6 +122,10 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .section34container {
+    flex-direction: column;
+  }
+  
   .container_program {
     flex-direction: column;
     justify-content: center;
@@ -132,6 +138,11 @@
 
   .program_section {
     margin-top: 3rem;
+  }
+
+  .race_video {
+    width: 93vw;
+    height: 30rem;
   }
 
   .detail_container_info {
@@ -151,8 +162,6 @@
   }
 
   .info_image {
-    height: 20rem;
-    width: 30rem;
     margin-top: 3rem;
   }
 }
@@ -169,6 +178,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .card {
@@ -229,6 +239,7 @@
   composes: App-body from "../styles/App.css";
   max-width: 60rem;
   text-align: center;
+  margin: 0 3rem 0 3rem;
 }
 
 .program_time {
@@ -255,18 +266,39 @@
   margin: 2rem;
 }
 
+.section3 {
+  margin-right: 2rem;
+}
+
 .section34container {
   display: flex;
+  margin: 2rem;
 }
 
 @media (max-width: 900px) {
   .section34container {
-    flex-flow: column;
+    flex-direction: column;
+  }
+
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
   }
 }
 
 .section2_container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section4 {
@@ -289,4 +321,9 @@
 
 .button_inschrijven {
   composes: App-button_primair from "../styles/App.css";
+}
+
+.backbutton {
+  composes: App-backbutton from "../styles/App.css";
+  margin-left: 2rem;
 }

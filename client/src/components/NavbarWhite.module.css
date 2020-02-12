@@ -80,7 +80,6 @@
     font-family: 'poppinsbold';
 }
 
-
 .nav_link__textDark_logout {
     background-color: var(--pink-primair);
     color: white;
@@ -106,7 +105,9 @@
     font-family: 'poppinsbold';
 }
     
-
+.nav_link__dropdownDark:focus {
+    outline: none;
+}
 
 
 

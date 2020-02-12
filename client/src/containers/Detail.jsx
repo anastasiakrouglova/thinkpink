@@ -18,10 +18,6 @@ class Detail extends Component {
     const myRace = this.props.raceStore.findById(this.props.id);
     const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst;
 
-    //console.log(mysubscriptionLijst);
-    //console.log(`RACE ID: ${myRace.city}`);
-    console.log(this.props.subscriptionStore.updateSubscription);
-
     if (!myRace) {
       return <p>loading...</p>;
     }
@@ -30,7 +26,7 @@ class Detail extends Component {
       <div>
         <NavbarWhite />
         <div className={styles.detail_container}>
-          <NavLink className="App-backbutton" to={ROUTES.races}>
+          <NavLink className={styles.backbutton} to={ROUTES.races}>
             &#8592; Terug naar raceoverzicht
           </NavLink>
           <section className={styles.detail_container_info}>
@@ -107,7 +103,7 @@ class Detail extends Component {
 
           <section className={styles.container_program}>
             <div className={styles.container_map}>
-              <iframe src={myRace.map} width="640" height="480"></iframe>
+              <iframe src={myRace.map} width="540" height="480"></iframe>
 
               <button className="App-backbutton">Send to maps</button>
             </div>
@@ -189,15 +185,7 @@ class Detail extends Component {
             </div>
 
             <div className={styles.section2_container}>
-              {mysubscriptionLijst.map((sLotgenoot, index) =>
-                myRace.country === sLotgenoot.country ? (
-                  <TeamCard key={index} sLotgenoot={sLotgenoot} />
-                ) : (
-                  <></>
-                )
-              )}
-
-              <div className={styles.cardSurvivor}>
+            <div className={styles.cardSurvivor}>
                 <p className={styles.card_text2}>
                   Nieuwe lotgenoot of Team Captain inschrijven?
                 </p>
@@ -208,6 +196,13 @@ class Detail extends Component {
                   Maak een team
                 </NavLink>
               </div>
+              {mysubscriptionLijst.map((sLotgenoot, index) =>
+                myRace.country === sLotgenoot.country ? (
+                  <TeamCard key={index} sLotgenoot={sLotgenoot} />
+                ) : (
+                  <></>
+                )
+              )}
             </div>
           </section>
 
@@ -217,6 +212,7 @@ class Detail extends Component {
                 <p className="App-h1-number-primaircolor">03</p>
                 <h2 className="App-h1-primaircolor">Sponsors</h2>
               </div>
+              <div>
               <img
                 className={styles.sponsorlogo}
                 src="../assets/images/sponsors/skoda.png"
@@ -231,7 +227,8 @@ class Detail extends Component {
                 className={styles.sponsorlogo}
                 src="../assets/images/sponsors/freemasons.png"
                 alt="freemasons"
-              />
+                />
+              </div>
             </div>
 
             <div className={styles.section4}>
