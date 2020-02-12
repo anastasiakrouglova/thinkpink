@@ -145,7 +145,7 @@ body {
 }
 
 .body {
-  composes: App-body from "../styles/App.css";
+  composes: App-body-white from "../styles/App.css";
   width: 20rem;
 }
 

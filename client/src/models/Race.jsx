@@ -14,6 +14,7 @@ class Race {
     sponsors,
     image,
     map,
+    flag,
     //raceId,
     id = uuid.v4()
   ) {
@@ -30,6 +31,7 @@ class Race {
     this.sponsors = sponsors;
     this.image = image;
     this.map = map;
+    this.flag = flag;
   }
 
   setId = value => (this.id = value);
@@ -45,6 +47,7 @@ class Race {
   setSponsors = value => (this.sponsors = value);
   setImage = value => (this.image = value);
   setMap = value => (this.map = value);
+  setFlag = value => (this.flag = value);
 
   updateFromServer = values => {
     if (values._id) {
@@ -62,6 +65,7 @@ class Race {
     this.setSponsors(values.sponsors);
     this.setImage(values.image);
     this.setMap(values.map);
+    this.setFlag(values.flag);
   };
 
   //   get values() {
@@ -87,6 +91,7 @@ decorate(Race, {
   sponsors: observable,
   image: observable,
   map: observable,
+  flag: observable,
 
   setId: action,
   //setRaceId: action,
@@ -100,7 +105,8 @@ decorate(Race, {
   setDescription :action,
   setSponsors: action,
   setImage: action,
-  setMap: action
+  setMap: action,
+  setFlag: action
   //   values: computed,
   //   totaal: computed,
 });

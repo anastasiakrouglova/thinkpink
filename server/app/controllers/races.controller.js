@@ -18,7 +18,8 @@ exports.create = (req, res) => {
     sponsors: req.body.sponsors,
     raceId: req.body.raceId,
     image: req.body.image,
-    map: req.body.map
+    map: req.body.map,
+    flag: req.body.flag
   });
 
   race
@@ -79,7 +80,8 @@ exports.update = async (req, res) => {
         description: req.body.description,
         sponsors: req.body.sponsors,
         image: req.body.image,
-        map: req.body.map
+        map: req.body.map,
+        flag: req.body.flag
       },
       {
         new: true

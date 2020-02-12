@@ -85,7 +85,7 @@ function Home() {
         <div className={styles.challenges__title}>
           <p className={styles.number}>03</p>
           <p className={styles.h1}>Uitdagingen</p>
-          <p className="App-body">
+          <p className="App-body-white">
             Probeer met je team zoveel mogelijk uitdagingen te volbrengen en word
             beloond!
           </p>
@@ -97,7 +97,7 @@ function Home() {
               src="../assets/images/icons/radio.svg"
               alt="icon radio"
             />
-            <p className="App-body">
+            <p className="App-body-white">
               Bij 150km beweging, zal jullie
               groepslied afgespeeld worden bij de finish.
             </p>
@@ -108,7 +108,7 @@ function Home() {
               src="../assets/images/icons/travel.svg"
               alt="icon travel"
             />
-            <p className="App-body">
+            <p className="App-body-white">
               Vanaf 50 supporters krijg je een gepersonaliseerd tentje.
             </p>
           </div>
@@ -118,7 +118,7 @@ function Home() {
               src="../assets/images/icons/massage.svg"
               alt="icon massage"
             />
-            <p className="App-body">
+            <p className="App-body-white">
               Bak met je team lekkernijen en verkoop ze op je stand voor 2€! Jullie krijgen
               dan een gratis massage na de finish.
             </p>
@@ -129,7 +129,7 @@ function Home() {
               src="../assets/images/icons/photograph.svg"
               alt="icon photograph"
             />
-            <p className="App-body">
+            <p className="App-body-white">
               Vanaf 10 donaties krijgt elk lid een professionele
               groepsfoto cadeau gedaan. Deze wordt genomen tijdens de race.
             </p>
@@ -139,7 +139,7 @@ function Home() {
         <div className={styles.challenges__title}>
           <p className={styles.number}>04</p>
           <p className={styles.h1}>Waarom lopen of wandelen?</p>
-          <p className="App-body">
+          <p className="App-body-white">
             Borstkanker nestelt zich heel graag in vetcellen. Door een gezonde
             levensstijl en sportieve kijk op de wereld te hebben, verminder je de
             kans op borstkanker. Het evenement is dus een soort preventie van
