@@ -20,7 +20,7 @@ class Race extends Component {
 
         <div className={styles.race_textcontainer}>
           <p className={styles.race_city}>{race.city}</p>
-          <p className={styles.race_country}>{race.country}</p>
+          <p className={styles.race_country}>{race.country} {race.flag}</p>
           <div className={styles.race_quantity}>
             <img
               className={styles.race_quantity__teams}

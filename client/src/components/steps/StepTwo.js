@@ -103,13 +103,14 @@ export class StepTwo extends React.Component {
                     </FormControl>
                   </FormGroup>
                   <FormControlLabel className={styles.checkboxPrivacy}
+                    fullWidth
                       control={
                         <PinkCheckbox
                           //checked={state.checkedG}
                           value="checkedPrivacy"
                         />
                       }
-                      label="Ik ga akkoord dat ik opzoekbaar ben als teamcaptain en neem zelf verantwoordelijkheid op voor de beschrijving van mezelf/mijn team"
+                      label="Ik ga akkoord met de algemene voorwaarden en privacy policy"
                     />
                 </div>
              </div>
