@@ -240,10 +240,10 @@ function Home() {
 
         
       <section className={styles.section4Mobile}>
-        <div className={styles.challenges__title}>
+        <div className={styles.challenges__titleMobile}>
           <p className={styles.number}>03</p>
           <p className={styles.h1}>Uitdagingen</p>
-          <p className="App-body">
+          <p className={styles.waaromlopen}>
             Probeer met je team zoveel mogelijk uitdagingen te volbrengen en word
             beloond!
           </p>
@@ -252,7 +252,7 @@ function Home() {
           <div className={styles.container_challenge}>
             <img
               className={styles.challenges__image}
-              src="../assets/images/icons/radioBlack.svg"
+              src="../assets/images/icons/radio.svg"
               alt="icon radio"
             />
             <p className="App-body">
@@ -260,10 +260,10 @@ function Home() {
               groepslied afgespeeld worden bij de finish.
             </p>
           </div>
-          <div className={styles.container_challenge}>
+          <div className={styles.container_challenge2}>
             <img
               className={styles.challenges__image}
-              src="../assets/images/icons/travelBlack.svg"
+              src="../assets/images/icons/travel.svg"
               alt="icon travel"
             />
             <p className="App-body">
@@ -273,7 +273,7 @@ function Home() {
           <div className={styles.container_challenge}>
             <img
               className={styles.challenges__image}
-              src="../assets/images/icons/massageBlack.svg"
+              src="../assets/images/icons/massage.svg"
               alt="icon massage"
             />
             <p className="App-body">
@@ -284,7 +284,7 @@ function Home() {
           <div className={styles.container_challenge}>
             <img
               className={styles.challenges__image}
-              src="../assets/images/icons/photographBlack.svg"
+              src="../assets/images/icons/photograph.svg"
               alt="icon photograph"
             />
             <p className="App-body">
@@ -294,7 +294,7 @@ function Home() {
           </div>
         </div>
         <div className={styles.section5Mobile}>
-        <div className={styles.challenges__title}>
+        <div className={styles.challenges__titleMobile}>
           <p className={styles.number}>04</p>
           <p className={styles.h1}>Waarom lopen of wandelen?</p>
           <p className={styles.waaromlopen}>

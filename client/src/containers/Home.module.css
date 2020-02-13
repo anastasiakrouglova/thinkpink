@@ -161,7 +161,8 @@ body {
 }
 
 .section4Mobile {
-  background-color: white;
+  background-color: #FD75A7;
+  color: white;
 }
 
 .waaromlopen {
@@ -226,15 +227,45 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  margin-left: -3rem;
+}
+
+.container_challenge2 {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-left: -3rem;
+}
+.container_challenge3 {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-left: -3rem;
+}
+.container_challenge4 {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-left: -3rem;
 }
 
 .container_challenges {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area: 'container_challenge container_challenge container_challenge container_challenge';
+  grid-area: 'container_challenge container_challenge2 container_challenge3 container_challenge4';
   padding: 2rem 2rem 2rem 6rem;
   justify-content: center;
+  align-items: center;
 }
 
 .challenges__image {
@@ -372,22 +403,37 @@ body {
 }
 
 @media screen and (max-width: 1170px) {
+
+  .challenges__titleMobile {
+    margin-left: -2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
   .container_challenges {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-area: '. container_challenge container_challenge .'
-    '. container_challenge container_challenge .';
+    grid-area: '. container_challenge container_challenge2 .'
+    '. container_challenge3 container_challenge4 .';
     grid-gap: 6rem;
   }
 
 }
 
 @media screen and (max-width: 670px) {
+
+  .challenges__titleMobile {
+      margin-left: -2rem;
+      padding-top: 2rem;
+      padding-left: 1rem;
+  }
+
   .container_challenges {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 2rem 2rem 2rem;
   }
 
   .container_challenge {
