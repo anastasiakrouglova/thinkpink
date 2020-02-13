@@ -87,7 +87,7 @@ function Home() {
         <div className={styles.challenges__title}>
           <p className={styles.number}>03</p>
           <p className={styles.h1}>Uitdagingen</p>
-          <p className="App-body-white">
+          <p className={styles.lopenTekst}>
             Probeer met je team zoveel mogelijk uitdagingen te volbrengen en word
             beloond!
           </p>
@@ -167,6 +167,9 @@ function Home() {
         </Scene>
         </Controller>
       </div>
+
+
+
       <div className={styles.mobileVersion}>
       <section className={styles.titleMobile}>
         <span className={styles.h0_outlined}>Race</span> <br />
@@ -202,6 +205,109 @@ function Home() {
           title="Lotgenoten"
         ></iframe>
       </section>
+
+      <section className={styles.section3Mobile}>
+        <div className={styles.rolcontainer_title}>
+          <p className={styles.number}>02</p>
+          <p className={styles.h1}>Rollen</p>
+        </div>
+        <div className={styles.role_containerMobile}>
+          <div className={styles.role_subcontainer}>
+            <p className={styles.h2}>Team Captain</p>
+            <p className={styles.body}>
+              Jij bent de verantwoordelijke van een groepsinschrijving.
+              Ben je dus bijvoorbeeld een directeur van een vereniging? Dan is
+              deze taak voor jou!
+            </p>
+          </div>
+          <div className={styles.role_subcontainer2}>
+            <p className={styles.h2}>Lotgenoot</p>
+            <p className={styles.body}>
+              Ik ben een overlever! Ja je bent er één! Neem de roze t-shirt en
+              loop op een prachtig natuurdomein omringd door vele supporters!
+            </p>
+          </div>
+          <div className={styles.role_subcontainer3}>
+            <p className={styles.h2}>Supporter</p>
+            <p className={styles.body}>
+              Wil je alleen lopen of je gewoon toevoegen aan een bestaande groep?
+              Dan staat supporter je op het lijf geschreven.
+            </p>
+          </div>
+        </div>
+      </section> 
+
+
+        
+      <section className={styles.section4Mobile}>
+        <div className={styles.challenges__title}>
+          <p className={styles.number}>03</p>
+          <p className={styles.h1}>Uitdagingen</p>
+          <p className="App-body">
+            Probeer met je team zoveel mogelijk uitdagingen te volbrengen en word
+            beloond!
+          </p>
+        </div>
+        <div className={styles.container_challenges}>
+          <div className={styles.container_challenge}>
+            <img
+              className={styles.challenges__image}
+              src="../assets/images/icons/radioBlack.svg"
+              alt="icon radio"
+            />
+            <p className="App-body">
+              Bij 150km beweging, zal jullie
+              groepslied afgespeeld worden bij de finish.
+            </p>
+          </div>
+          <div className={styles.container_challenge}>
+            <img
+              className={styles.challenges__image}
+              src="../assets/images/icons/travelBlack.svg"
+              alt="icon travel"
+            />
+            <p className="App-body">
+              Vanaf 50 supporters krijg je een gepersonaliseerd tentje.
+            </p>
+          </div>
+          <div className={styles.container_challenge}>
+            <img
+              className={styles.challenges__image}
+              src="../assets/images/icons/massageBlack.svg"
+              alt="icon massage"
+            />
+            <p className="App-body">
+              Bak met je team lekkernijen en verkoop ze op je stand voor 2€! Jullie krijgen
+              dan een gratis massage na de finish.
+            </p>
+          </div>
+          <div className={styles.container_challenge}>
+            <img
+              className={styles.challenges__image}
+              src="../assets/images/icons/photographBlack.svg"
+              alt="icon photograph"
+            />
+            <p className="App-body">
+              Vanaf 10 donaties krijgt elk lid een professionele
+              groepsfoto cadeau gedaan. Deze wordt genomen tijdens de race.
+            </p>
+          </div>
+        </div>
+        <div className={styles.section5Mobile}>
+        <div className={styles.challenges__title}>
+          <p className={styles.number}>04</p>
+          <p className={styles.h1}>Waarom lopen of wandelen?</p>
+          <p className={styles.waaromlopen}>
+            Borstkanker nestelt zich heel graag in vetcellen. Door een gezonde
+            levensstijl en sportieve kijk op de wereld te hebben, verminder je de
+            kans op borstkanker. Het evenement is dus een soort preventie van
+            kanker. Natuurlijk is het niet de enige reden waarom kanker
+            kan opduiken.
+          </p>
+        </div>
+      </div>
+      </section>
+
 
 
       </div>

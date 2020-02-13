@@ -18,12 +18,14 @@ const NavbarWhite = ({ uiStore, location }) => {
     <div className={styles.nav_container}>
       {pathname === '/races' || pathname === '/' ? (
           <div className={styles.containerNavbaaar}>
-          <NavLink to={ROUTES.home}><img src="../assets/images/logoWhite.svg" className="App-logo" alt="logo" /></NavLink>
+          <NavLink className={styles.logoHome} to={ROUTES.home}><img src="../assets/images/logoWhite.svg" className="App-logo" alt="logo" /></NavLink>
           <div className={styles.containerNavbaaar}>
-          <NavLink className={styles.nav_link__textDark} activeClassName={styles.nav_link__active} to={ROUTES.races}>Kies een race</NavLink>
+            <NavLink className={styles.nav_link__textDark} activeClassName={styles.nav_link__active} to={ROUTES.races}>Kies een race</NavLink>
+            <NavLink className={styles.nav_link__textDark_mobile} activeClassName={styles.nav_link__active} to={ROUTES.home}>home</NavLink>
+            <NavLink className={styles.nav_link__textDark_mobile} activeClassName={styles.nav_link__active} to={ROUTES.races}>races</NavLink>
             {!uiStore.authUser ? (
               <>
-                <NavLink className={styles.nav_link__textDark} activeClassName={styles.nav_link__active} to={ROUTES.login}>Log in</NavLink>
+                <NavLink className={styles.nav_link__textDark_login} activeClassName={styles.nav_link__active} to={ROUTES.login}>Log in</NavLink>
                 <select className={styles.nav_link__dropdownDark}>
                   <option value="numberCountry">🇧🇪&nbsp; Nederlands &nbsp;</option>
                   <option value="numberCountry">🇨🇮&nbsp; Italiano &nbsp;</option>

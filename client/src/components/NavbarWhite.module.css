@@ -64,6 +64,60 @@
 
 /* DARK */
 
+
+.nav_link__textDark_mobile {
+    display: none;
+    color: white;
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: 'poppinsbold';
+}
+
+
+
+.nav_link__textDark_login {
+    color: white;
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: 'poppinsbold';
+}
+
+.nav_link__textDark_login:hover {
+    color: var(--pink-primair);
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: 'poppinsbold';
+}
+
+.nav_link__textDark_mobile:hover {
+    color: var(--pink-primair);
+    font-size: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: 'poppinsbold';
+}
+
+@media screen and (max-width: 650px) {
+    .nav_link__textDark_mobile {
+        display: inline;
+    }
+
+    .nav_link__textDark {
+        display: none;
+    }
+
+    .logoHome {
+        display: none;
+    }
+
+    .nav_link__dropdownDark {
+        display: none;
+    }
+}
+
 .nav_link__textDark {
     color: white;
     font-size: 1rem;

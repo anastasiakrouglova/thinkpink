@@ -59,6 +59,9 @@ body {
   height: 70rem;
 }
 
+.mobileVersion {
+  display: none;
+}
 
 @media screen and (max-width: 1120px) {
 .containerComputer {
@@ -66,7 +69,7 @@ body {
 }
 
 .mobileVersion {
-
+  display: inline;
 }
 
 .titleMobile {
@@ -92,6 +95,8 @@ body {
   margin: 0rem 3rem ;
   color: white;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
 .h1 {
@@ -106,6 +111,71 @@ body {
   padding: 0rem;
   width: 85%;
   margin-right: 0rem;
+}
+
+.section3Mobile {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/home/rollen.png");
+  background-position: center;
+  height: 120rem;
+}
+
+.rolcontainer_title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.role_subcontainer {
+  margin-top: 15rem;
+  text-align: center;
+}
+
+
+.role_subcontainer2 {
+  margin-top: 33rem;
+  text-align: center;
+}
+
+.role_subcontainer3 {
+  margin-top: 31rem;
+  text-align: center;
+}
+
+
+.section5Mobile {
+  background-image: url("../assets/images/home/lopen.png");
+  background-size: cover;
+  height: 35rem;
+}
+
+
+.section4 {
+  height: 90rem;
+}
+
+.section4Mobile {
+  background-color: white;
+}
+
+.waaromlopen {
+  color: white;
+  padding: 2rem;
+  width: 100%;
+  font-size: 1.2rem;
+  
+}
+
+.challenges__title {
+  padding-top: 4rem;
+  padding-left: 0;
+  padding-top: 0;
 }
 }
 
@@ -308,23 +378,29 @@ body {
     grid-area: '. container_challenge container_challenge .'
     '. container_challenge container_challenge .';
     grid-gap: 6rem;
-    
   }
 
-  .section4 {
-    height: 90rem;
-  }
 }
 
 @media screen and (max-width: 670px) {
   .container_challenges {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-area: 'container_challenge'
-    'container_challenge'
-    'container_challenge'
-    'container_challenge';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .container_challenge {
+    margin-bottom: 4rem;
+  }
+
+  .lopenTekst {
+    composes: App-body from "../styles/App.css";
+    width: 100%;
+    text-align: center;
+  }
+
+
 }
 
 .homeSupporter_container {
@@ -332,6 +408,6 @@ body {
 }
 
 .waaromlopen {
-  width: 30rem;
+  width: 90%;
   composes: App-body-white from "../styles/App.css"
 }
