@@ -19,13 +19,6 @@ const NavbarWhite = ({ uiStore, location }) => {
 
       {pathname === "/races" || pathname === "/" ? (
         <div className={styles.containerNavbaaar}>
-          <NavLink to={ROUTES.home}>
-            <img
-              src="../assets/images/logoWhite.svg"
-              className="App-logo"
-              alt="logo"
-            />
-          </NavLink>
           <div className={styles.containerNavbaaar}>
           <NavLink className={styles.logoHome} to={ROUTES.home}><img src="../assets/images/logoWhite.svg" className="App-logo" alt="logo" /></NavLink>
           <div className={styles.containerNavbaaar}>
@@ -52,7 +45,7 @@ const NavbarWhite = ({ uiStore, location }) => {
                  <nav>
                   <ul>
                     <li>
-                      <NavLink className={styles.nav_link__textDark} to="#">
+                      <NavLink className={styles.nav_link__textDark_login} to="#">
                         <img
                           className={styles.personFoto}
                           src="../assets/images/people/rita.png"
@@ -109,7 +102,7 @@ const NavbarWhite = ({ uiStore, location }) => {
         </div>
       ) : (
         <div className={styles.containerNavbaaar}>
-          <NavLink to={ROUTES.home}>
+            <NavLink className={styles.logoHome} to={ROUTES.home}>
             <img
               src="../assets/images/logo.svg"
               className="App-logo"
@@ -118,12 +111,14 @@ const NavbarWhite = ({ uiStore, location }) => {
           </NavLink>
           <div className={styles.containerNavbaaar}>
             <NavLink
-              className={styles.nav_link__text}
+              className={styles.nav_link_text_race}
               activeClassName={styles.nav_link__active}
               to={ROUTES.races}
             >
               Kies een race
             </NavLink>
+            <NavLink className={styles.nav_link__text_mobile} activeClassName={styles.nav_link__active} to={ROUTES.home}>home</NavLink>
+            <NavLink className={styles.nav_link__text_mobile} activeClassName={styles.nav_link__active} to={ROUTES.races}>races</NavLink>
             {!uiStore.authUser ? (
               <>
                 <NavLink
@@ -209,4 +204,4 @@ const NavbarWhite = ({ uiStore, location }) => {
   )
 };
       
-      export default inject(`uiStore`)(withRouter(observer(NavbarWhite)));
+export default inject(`uiStore`)(withRouter(observer(NavbarWhite)));
