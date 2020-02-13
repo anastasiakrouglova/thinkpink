@@ -63,7 +63,7 @@ const SupporterOrGroup = ({uiStore}) => {
                   Ik wil graag <span className={styles.teamcaptain}>een groep</span> inschrijven voor een lotgenoot
                 </p>
         
-                <p className={styles.price}>vanaf €12 p.p</p>
+                <p className={styles.price}>vanaf €12 p.p.</p>
                 <div className={styles.container_button}>
                   <button className={styles.card_button}>registreer een groep</button>
                 </div>

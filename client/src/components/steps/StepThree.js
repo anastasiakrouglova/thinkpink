@@ -39,7 +39,7 @@ export class StepThree extends React.Component {
            {store.uiStore.role === `lotgenoot` ? (
               <div className={styles.step3_container}>
               <div className={styles.step3_containerLid}>
-               <h1 className="App-form-h1">Jouw finishsong!</h1>
+                  <h1 className="App-form-h1">Jouw groepslied aan de finish!</h1>
                <p className={styles.form_textWelcome}>Wanneer je groep over de finishlijn gaat, zal een lied worden afgespeeld om jullie prestatie te vieren.
                   Vul een geldige Youtube-link in als je overwinningslied dat gehoord zal worden door alle supporters!
               </p>
@@ -68,7 +68,7 @@ export class StepThree extends React.Component {
            ) : store.uiStore.role === `teamcaptain` ? (
                 <div className={styles.step3_container}>
                   <div className={styles.step3_containerLid}>
-                  <h1 className="App-form-h1">Jullie finishsong!</h1>
+                  <h1 className="App-form-h1">Jouw groepslied aan de finish!</h1>
                   <p className={styles.form_textWelcome}>Wanneer de groep van je lotgenoot over de finishlijn gaat, zal een lied worden afgespeeld om jullie prestatie te vieren.
                       Vul een geldige Youtube-link in als jullie overwinningslied dat gehoord zal worden door alle supporters!</p>
                     
@@ -97,7 +97,7 @@ export class StepThree extends React.Component {
            ) : store.uiStore.role === `supporter` ? (
               <div className={styles.step3_container}>
               <div className={styles.step3_containerLid}>
-                <h1 className="App-form-h1">Jullie finishsong!</h1>
+                <h1 className="App-form-h1">Jouw groepslied aan de finish!</h1>
                 <p className={styles.form_textWelcome}>Je Team Captain Rita heeft ervoor gekozen om <span className={styles.form_pinkText_normal}>“If I Ain’t Got You - Alicia Keys”</span> als finishnummer te gebruiken. Deze song zal dus afgespeeld worden bij het succesvol beëindigen van de run.</p>
                 
                   <div className="App-form-input-container">
