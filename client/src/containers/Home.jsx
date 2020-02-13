@@ -11,9 +11,11 @@ function Home() {
   const ref = useRef();
   return (
     <div className={styles.container}>
+      
       <div className={styles.navbar}>
         <NavbarWhite className={styles.navbar} />
       </div>
+      <div className={styles.containerComputer}>
       <div className={styles.background_image}></div>
       <section className={styles.title}>
         <span className={styles.h0_outlined}>Race</span> <br />
@@ -163,7 +165,46 @@ function Home() {
             </div>
           )}
         </Scene>
-      </Controller>
+        </Controller>
+      </div>
+      <div className={styles.mobileVersion}>
+      <section className={styles.titleMobile}>
+        <span className={styles.h0_outlined}>Race</span> <br />
+        <span className={styles.h0_subtitle}>for the Cure</span> <br />
+        <NavLink to={ROUTES.races}>
+          <button className={styles.primair_button}>
+            Schrijf je in voor een race
+          </button>
+        </NavLink>
+        </section> 
+        
+        
+        <section className={styles.section2Mobile}>
+        <div>
+          <p className={styles.number}>01</p>
+          <p className={styles.h1}>Wat is Race for the Cure?</p>
+          <p className={styles.bodyMobile}>
+            Race for the Cure is een sportief evenement waarin solidariteit een
+            belangrijke rol speelt in het gevecht tegen borstkanker. De race is
+            origineel onstaat vanuit een initiatief van ‘Think Pink’. Dit evenement
+            heeft zich ondertussen uitgebreid over meer dan twintig landen in het
+            Europees continent. De hele dag is gevuld met animatie en intense
+            emoties.
+          </p>
+        </div>
+        <iframe
+          className={styles.video}
+          height="430"
+          src="https://www.youtube.com/embed/oUm-b265nt8"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Lotgenoten"
+        ></iframe>
+      </section>
+
+
+      </div>
     </div>
   );
 }

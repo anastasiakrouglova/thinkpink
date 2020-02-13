@@ -7,6 +7,9 @@ body {
     height: 100vh;
   }
 
+
+  
+
   .section {
     height: 100vh;
     color: black;
@@ -54,6 +57,56 @@ body {
   background-image: url('../assets/images/challengeBackground.png');
   width: 100%;
   height: 70rem;
+}
+
+
+@media screen and (max-width: 1120px) {
+.containerComputer {
+  display: none;
+}
+
+.mobileVersion {
+
+}
+
+.titleMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../assets/images/home/headerMobile.png");
+  background-position: center;
+}
+
+.section2Mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  background-color: #FD75A7;
+}
+
+.bodyMobile {
+  composes: App-body from "../styles/App.css";
+  margin: 0rem 3rem ;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.h1 {
+  margin-left: 4rem;
+}
+
+.number {
+  margin-left: 2rem;
+}
+
+.video {
+  padding: 0rem;
+  width: 85%;
+  margin-right: 0rem;
+}
 }
 
 .section5 {
@@ -122,6 +175,7 @@ body {
 .challenges__title {
   padding-left: 5rem;
   padding-top: 4rem;
+  margin-right: 2rem;
 }
 
 .h0_outlined {
@@ -254,6 +308,11 @@ body {
     grid-area: '. container_challenge container_challenge .'
     '. container_challenge container_challenge .';
     grid-gap: 6rem;
+    
+  }
+
+  .section4 {
+    height: 90rem;
   }
 }
 
