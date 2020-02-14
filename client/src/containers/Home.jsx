@@ -185,7 +185,7 @@ function Home() {
         <section className={styles.section2Mobile}>
         <div>
           <p className={styles.number}>01</p>
-          <p className={styles.h1}>Wat is Race for the Cure?</p>
+          <p className={styles.h1_watIs}>Wat is Race for the Cure?</p>
           <p className={styles.bodyMobile}>
             Race for the Cure is een sportief evenement waarin solidariteit een
             belangrijke rol speelt in het gevecht tegen borstkanker. De race is

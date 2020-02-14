@@ -103,6 +103,10 @@ body {
   margin-left: 4rem;
 }
 
+.h1_watIs {
+  margin-left: 3rem;
+}
+
 .number {
   margin-left: 2rem;
 }
@@ -295,6 +299,10 @@ body {
   composes: App-h1 from "../styles/App.css"
 }
 
+.h1_watIs {
+  composes: App-h1 from "../styles/App.css"
+}
+
 .h2 {
   composes: App-h2-home from "../styles/App.css"
 }
@@ -437,6 +445,14 @@ body {
   .h1 {
     margin: 0 auto;
     padding-left: 0.8rem;
+    padding: 1rem;
+    margin-top: 2rem;
+
+  }
+
+
+  .h1_watIs {
+    margin-left: 3rem;
     margin-top: 2rem;
   }
 
@@ -450,7 +466,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 6rem;
 
   }
 
