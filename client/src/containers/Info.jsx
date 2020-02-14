@@ -60,7 +60,7 @@ class Info extends Component {
                     alt="profile picture"
                   />
                 </div>
-                <div>
+                <div className= {styles.buttonGigacontianer}>
                   <div>
                     <p className={styles.hashtag}>
                       #Team{myLotgenoot.teamName}
@@ -70,19 +70,18 @@ class Info extends Component {
                     </p>
                   </div>
                   <div className={styles.buttonInfo}>
-                    <button className="App-button_secundair-outline">
+                    <button className={styles.eerstebutton}>
                       Doneer aan dit team
                     </button>
                     <NavLink
-                      className="App-button_secundair"
-                      to={ROUTES.supporterorgroup}
-                    >
+                      className={styles.tweedebutton}
+                      to={ROUTES.supporterorgroup}>
                       Schrijf je in voor deze race
                     </NavLink>
                   </div>
                 </div>
 
-                <div>
+                <div className={styles.card_extraInfo}>
                   <div className={styles.info_person_container}>
                     <img
                       className={styles.info_icon__teamcaptain}
@@ -242,8 +241,8 @@ class Info extends Component {
           )}
 
           <section className={styles.section2}>
-            <p className="App-h1-number-primaircolor">01</p>
-            <h2 className="App-h1-primaircolor">
+            <p className={styles.numberrr}>01</p>
+            <h2 className={styles.h2hierzo}>
               Deze mensen lopen mee voor Rita
             </h2>
             <p className={styles.subtitle}>(38 supporters, 124 km samen)</p>
@@ -259,8 +258,8 @@ class Info extends Component {
           </section>
 
           <section className={styles.section2}>
-            <p className="App-h1-number-primaircolor">02</p>
-            <h2 className="App-h1-primaircolor">
+            <p className={styles.numberrr}>02</p>
+            <h2 className={styles.h2hierzo}>
               Supporters van het thuisfront
             </h2>
             <p className={styles.subtitle}>(3 donaties)</p>
@@ -283,7 +282,7 @@ class Info extends Component {
             </div>
           </section>
 
-          <section className={styles.section2}>
+          <section className={styles.section3}>
             <p className="App-h1-number-primaircolor">03</p>
             <h2 className="App-h1-primaircolor">Uitdagingen</h2>
             <p className={styles.subtitle}>
@@ -370,9 +369,6 @@ class Info extends Component {
                       <span className={styles.pinkcheckbox} htmlFor="dessert">
                         Brownies met witte chocolade
                       </span>
-                      {/* <input checked="checked" id="dessert" type="checkbox" /> */}
-                      {/* <span class="checkmark"></span> */}
-                      {/* </label> */}
                     </div>
                   </div>
                 </div>
