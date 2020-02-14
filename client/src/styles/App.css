@@ -219,12 +219,6 @@
   }
 }
 
-@media (min-width: 563px){
-  .App-input_container{
-    margin-top: -3rem;
-  }
-}
-
 @media (min-width: 789px){
   margin-top: 0;
 }

@@ -18,3 +18,15 @@
     margin-top: 2rem;
     flex-wrap: wrap;
 }
+
+
+.search {
+    composes: App-input_container from "../styles/App.css"
+}
+
+
+@media (min-width: 563px){
+    .search{
+      margin-top: -3rem;
+    }
+  }
