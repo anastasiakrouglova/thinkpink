@@ -423,9 +423,26 @@ body {
 @media screen and (max-width: 670px) {
 
   .challenges__titleMobile {
-      margin-left: -2rem;
+      /* margin-left: -2rem; */
       padding-top: 2rem;
-      padding-left: 1rem;
+      /* padding-left: 1rem; */
+
+      display: flex;
+      justify-content:  center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .h1 {
+    margin: 0 auto;
+    padding-left: 0.8rem;
+    margin-top: 2rem;
+  }
+
+
+  .number {
+    display: none;
   }
 
   .container_challenges {
@@ -434,16 +451,32 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem 2rem 2rem;
+
   }
 
   .container_challenge {
     margin-bottom: 4rem;
+
   }
 
   .lopenTekst {
     composes: App-body from "../styles/App.css";
     width: 100%;
     text-align: center;
+
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 3;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
+    /* height: 5rem; */
+    /* width: 100%; */
+ 
+  }
+
+  .waaromlopen {
+    text-align: left;
   }
 
 
@@ -454,6 +487,6 @@ body {
 }
 
 .waaromlopen {
-  width: 90%;
+  width: 80%;
   composes: App-body-white from "../styles/App.css"
 }
