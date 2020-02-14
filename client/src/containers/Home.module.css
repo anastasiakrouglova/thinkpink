@@ -1,27 +1,24 @@
 body {
-    background: #444;
-    height: 100vh;
-  }
+  background: #444;
+  height: 100vh;
+}
 
-  .container {
-    height: 100vh;
-  }
+.container {
+  height: 100vh;
+}
 
+.section {
+  height: 100vh;
+  color: black;
+}
 
-  
-
-  .section {
-    height: 100vh;
-    color: black;
-  }
-
-  .navbar {
-    position: fixed;
-    z-index: 3;
-    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
-    height: 20rem;
-    width: 100%;
-  }
+.navbar {
+  position: fixed;
+  z-index: 3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  height: 20rem;
+  width: 100%;
+}
 
 .title {
   position: absolute;
@@ -54,7 +51,7 @@ body {
   left: 0%;
   z-index: 2;
   margin-top: -3rem;
-  background-image: url('../assets/images/challengeBackground.png');
+  background-image: url("../assets/images/challengeBackground.png");
   width: 100%;
   height: 70rem;
 }
@@ -64,124 +61,119 @@ body {
 }
 
 @media screen and (max-width: 1120px) {
-.containerComputer {
-  display: none;
-}
+  .containerComputer {
+    display: none;
+  }
 
-.mobileVersion {
-  display: inline;
-}
+  .mobileVersion {
+    display: inline;
+  }
 
-.titleMobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: url("../assets/images/home/headerMobile.png");
-  background-position: center;
-}
+  .titleMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../assets/images/home/headerMobile.png");
+    background-position: center;
+  }
 
-.section2Mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4rem;
-  background-color: #FD75A7;
-}
+  .section2Mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    background-color: #fd75a7;
+  }
 
-.bodyMobile {
-  composes: App-body from "../styles/App.css";
-  margin: 0rem 3rem ;
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-}
+  .bodyMobile {
+    composes: App-body from "../styles/App.css";
+    margin: 0rem 3rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 
-.h1 {
-  margin-left: 4rem;
-}
+  .h1 {
+    margin-left: 4rem;
+  }
 
-.h1_watIs {
-  margin-left: 3rem;
-}
+  .h1_watIs {
+    margin-left: 3rem;
+  }
 
-.number {
-  margin-left: 2rem;
-}
+  .number {
+    margin-left: 2rem;
+  }
 
-.video {
-  padding: 0rem;
-  width: 85%;
-  margin-right: 0rem;
-}
+  .video {
+    padding: 0rem;
+    width: 85%;
+    margin-right: 0rem;
+  }
 
-.section3Mobile {
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url("../assets/images/home/rollen.png");
-  background-position: center;
-  height: 120rem;
-}
+  .section3Mobile {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../assets/images/home/rollen.png");
+    background-position: center;
+    height: 120rem;
+  }
 
-.rolcontainer_title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-}
+  .rolcontainer_title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
 
+  .role_subcontainer {
+    margin-top: 15rem;
+    text-align: center;
+  }
 
-.role_subcontainer {
-  margin-top: 15rem;
-  text-align: center;
-}
+  .role_subcontainer2 {
+    margin-top: 33rem;
+    text-align: center;
+  }
 
+  .role_subcontainer3 {
+    margin-top: 31rem;
+    text-align: center;
+  }
 
-.role_subcontainer2 {
-  margin-top: 33rem;
-  text-align: center;
-}
+  .section5Mobile {
+    background-image: url("../assets/images/home/lopen.png");
+    background-size: cover;
+    height: 35rem;
+  }
 
-.role_subcontainer3 {
-  margin-top: 31rem;
-  text-align: center;
-}
+  .section4 {
+    height: 90rem;
+  }
 
+  .section4Mobile {
+    background-color: #fd75a7;
+    color: white;
+  }
 
-.section5Mobile {
-  background-image: url("../assets/images/home/lopen.png");
-  background-size: cover;
-  height: 35rem;
-}
+  .waaromlopen {
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+  }
 
-
-.section4 {
-  height: 90rem;
-}
-
-.section4Mobile {
-  background-color: #FD75A7;
-  color: white;
-}
-
-.waaromlopen {
-  color: white;
-  padding: 2rem;
-  width: 100%;
-  font-size: 1.2rem;
-  
-}
-
-.challenges__title {
-  padding-top: 4rem;
-  padding-left: 0;
-  padding-top: 0;
-}
+  .challenges__title {
+    padding-top: 4rem;
+    padding-left: 0;
+    padding-top: 0;
+  }
 }
 
 .section5 {
@@ -203,7 +195,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 14rem;
+  padding-top: 20rem;
   align-items: flex-start;
 }
 
@@ -217,7 +209,7 @@ body {
 
 .background_image {
   position: absolute;
-  background-image: url('../assets/images/headerHome.jpg');
+  background-image: url("../assets/images/headerHome.jpg");
   width: 100%;
   height: 100vh;
   background-position: center;
@@ -266,7 +258,7 @@ body {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area: 'container_challenge container_challenge2 container_challenge3 container_challenge4';
+  grid-area: "container_challenge container_challenge2 container_challenge3 container_challenge4";
   padding: 2rem 2rem 2rem 6rem;
   justify-content: center;
   align-items: center;
@@ -284,27 +276,27 @@ body {
 }
 
 .h0_outlined {
-  composes: App-h0-outlined from "../styles/App.css"
+  composes: App-h0-outlined from "../styles/App.css";
 }
 
 .h0_subtitle {
-  composes: App-h0-notOutlined from "../styles/App.css"
+  composes: App-h0-notOutlined from "../styles/App.css";
 }
 
 .number {
-  composes: App-h1-number from "../styles/App.css"
+  composes: App-h1-number from "../styles/App.css";
 }
 
 .h1 {
-  composes: App-h1 from "../styles/App.css"
+  composes: App-h1 from "../styles/App.css";
 }
 
 .h1_watIs {
-  composes: App-h1 from "../styles/App.css"
+  composes: App-h1 from "../styles/App.css";
 }
 
 .h2 {
-  composes: App-h2-home from "../styles/App.css"
+  composes: App-h2-home from "../styles/App.css";
 }
 
 .body {
@@ -317,21 +309,24 @@ body {
 }
 
 .primair_button {
-  composes: App-button_primair from "../styles/App.css"
+  composes: App-button_primair from "../styles/App.css";
 }
 
 .play_btn {
   width: 100px;
   height: 100px;
-  background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+  background: radial-gradient(
+    rgba(255, 0, 128, 0.8) 60%,
+    rgba(255, 255, 255, 1) 62%
+  );
   border-radius: 50%;
   position: relative;
   display: block;
   margin: 100px auto;
   box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
 }
-  
-  /* triangle */
+
+/* triangle */
 .play_btn::after {
   content: "";
   position: absolute;
@@ -349,9 +344,9 @@ body {
   -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-  
-  /* pulse wave */
- .play_btn:before {
+
+/* pulse wave */
+.play_btn:before {
   content: "";
   position: absolute;
   width: 150%;
@@ -368,41 +363,43 @@ body {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, .75);
+  border: 5px solid rgba(255, 255, 255, 0.75);
   top: -30%;
   left: -30%;
   background: rgba(198, 16, 0, 0);
 }
-  
+
 @-webkit-keyframes pulsate1 {
   0% {
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
     opacity: 1;
-    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+      0px 0px 25px 10px rgba(255, 255, 255, 0.75);
   }
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 0;
-    box-shadow: none;    
+    box-shadow: none;
   }
-  }
-  
+}
+
 @keyframes pulsate1 {
   0% {
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
     opacity: 1;
-    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+      0px 0px 25px 10px rgba(255, 255, 255, 0.75);
   }
   100% {
     -webkit-transform: scale(1, 1);
     transform: scale(1);
     opacity: 0;
-    box-shadow: none;  
-    }
+    box-shadow: none;
   }
+}
 
 .subcontainer_challenges {
   display: flex;
@@ -411,35 +408,32 @@ body {
 }
 
 @media screen and (max-width: 1170px) {
-
   .challenges__titleMobile {
     margin-left: -2rem;
     padding-top: 2rem;
     padding-left: 1rem;
-}
+  }
 
   .container_challenges {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-area: '. container_challenge container_challenge2 .'
-    '. container_challenge3 container_challenge4 .';
+    grid-area: ". container_challenge container_challenge2 ."
+      ". container_challenge3 container_challenge4 .";
     grid-gap: 6rem;
   }
-
 }
 
 @media screen and (max-width: 670px) {
-
   .challenges__titleMobile {
-      /* margin-left: -2rem; */
-      padding-top: 2rem;
-      /* padding-left: 1rem; */
+    /* margin-left: -2rem; */
+    padding-top: 2rem;
+    /* padding-left: 1rem; */
 
-      display: flex;
-      justify-content:  center;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .h1 {
@@ -447,15 +441,12 @@ body {
     padding-left: 0.8rem;
     padding: 1rem;
     margin-top: 2rem;
-
   }
-
 
   .h1_watIs {
     margin-left: 3rem;
     margin-top: 2rem;
   }
-
 
   .number {
     display: none;
@@ -467,35 +458,29 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem 2rem 6rem;
-
   }
 
   .container_challenge {
     margin-bottom: 4rem;
-
   }
 
   .lopenTekst {
     composes: App-body from "../styles/App.css";
     width: 100%;
     text-align: center;
-
   }
 
   .navbar {
     position: fixed;
     z-index: 3;
-    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     /* height: 5rem; */
     /* width: 100%; */
- 
   }
 
   .waaromlopen {
     text-align: left;
   }
-
-
 }
 
 .homeSupporter_container {
@@ -504,5 +489,5 @@ body {
 
 .waaromlopen {
   width: 80%;
-  composes: App-body-white from "../styles/App.css"
+  composes: App-body-white from "../styles/App.css";
 }
