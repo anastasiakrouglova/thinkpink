@@ -158,6 +158,12 @@
   box-shadow: 0rem 0.2rem 0.7rem rgba(248, 128, 178, 0.2);
 }
 
+@media (min-width: 375px) {
+.App-input_search {
+    max-width: 750px;
+  }
+}
+
 .App-backbutton {
   color: var(--pink-primair);
   text-decoration: none;
@@ -202,18 +208,42 @@
 .App-input_container {
   display: flex;
   justify-content: center;
+
+  margin-top: -2rem;
+}
+
+@media (max-width: 370px){
+  .App-input_container{
+    margin-left: -2rem;
+    magin-right: 2rem;
+  }
+}
+
+@media (min-width: 563px){
+  .App-input_container{
+    margin-top: -3rem;
+  }
+}
+
+@media (min-width: 789px){
+  margin-top: 0;
 }
 
 .App-input_search__button {
   height: 2rem;
   background-color: var(--pink-primair);
   border: none;
-  margin-right: 4rem;
   margin-top: 2rem;
   margin-left: -4rem;
   width: 3rem;
   border-radius: 0 1rem 1rem 1rem;
   transition: 0.2s;
+}
+
+@media (min-width: 375px) {
+  .App-input_search__button{
+    margin-right: 4rem;
+  }
 }
 
 .App-input_search__button:focus {
