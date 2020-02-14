@@ -1,14 +1,9 @@
 @import "../styles/colors.module.css";
 
 .detail_container {
-  color: black;
-  margin: 4rem;
-}
-
-@media (max-width: 500px) {
-  .detail_container {
-    margin: 4rem 0;
-  }
+  composes: App-contentContainer from "../styles/App.css";
+  margin: 3rem auto;
+  max-width: 75rem;
 }
 
 .container_map {
@@ -24,19 +19,16 @@
 }
 
 .race_video {
-  width: auto;
-  height: auto;
+  width: 40vw;
+  height: 30rem;
 }
 
 .country {
-  font-family: "poppinsextrabold_italic";
-  opacity: 0.3;
-  font-size: 0.9rem;
+  composes: detailCountry from "../styles/typo.module.css";
 }
 
 .city {
-  font-family: "poppinsextrabold_italic";
-  font-size: 3.5rem;
+  composes: detailTitle from "../styles/typo.module.css";
 }
 
 .city_container {
@@ -74,12 +66,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 80rem;
+  margin: 2rem;
+}
+
+
+.programma {
+  composes: App-h1-primaircolor from "../styles/App.css";
 }
 
 .counter_container {
   background-color: white;
-  width: 18rem;
+  width: 16rem;
   display: flex;
   position: absolute;
   justify-content: space-between;
@@ -118,7 +115,8 @@
   font-size: 4rem;
 }
 
-.map {
+.map_map {
+  width: 34rem;
 }
 
 .container_program {
@@ -130,6 +128,40 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .section34container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .programma {
+    composes: App-h1-primaircolor from "../styles/App.css";
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+
+  .number {
+    display: none;
+    composes: App-h1-number-primaircolor from "../styles/App.css";
+  }
+  
+
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+  }
+  
   .container_program {
     flex-direction: column;
     justify-content: center;
@@ -142,6 +174,11 @@
 
   .program_section {
     margin-top: 3rem;
+  }
+
+  .race_video {
+    width: 93vw;
+    height: 30rem;
   }
 
   .detail_container_info {
@@ -161,8 +198,6 @@
   }
 
   .info_image {
-    height: 20rem;
-    width: 30rem;
     margin-top: 3rem;
   }
 }
@@ -179,6 +214,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .card {
@@ -208,7 +244,10 @@
 }
 
 .profile_detail {
-  margin-top: -3rem;
+  margin-top: -4rem;
+  border-radius: 50%;
+  width: 8rem;
+  border: 8px solid white;
 }
 
 .card_text {
@@ -236,6 +275,7 @@
   composes: App-body from "../styles/App.css";
   max-width: 60rem;
   text-align: center;
+  margin: 0 3rem 0 3rem;
 }
 
 .program_time {
@@ -262,22 +302,106 @@
   margin: 2rem;
 }
 
+.section3 {
+  margin-right: 2rem;
+}
+
 .section34container {
   display: flex;
+  margin: 2rem;
+}
+
+@media (max-width: 650px) {
+  .map_map {
+    width: 90vw;
+  }
+/* 
+  .tableContainer {
+    display: none;
+  } */
+
+  .program_time {
+    display: none;
+  }
+
+  .info_image {
+    width: 90vw;
+  }
+
+  .counter_container {
+    margin: 0 auto;
+  }
+
+  .counter_gigacontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: -6rem;
+    margin-bottom: 3rem;
+  }
+
+  .container_container_sponsor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .city_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .detail_body {
+    width: 90vw;
+    composes: App-body from "../styles/App.css";
+    margin-bottom: 4rem;
+  }
+
+
+  .info_container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+  .uppertitle_container {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+
 }
 
 @media (max-width: 900px) {
   .section34container {
-    flex-flow: column;
+    flex-direction: column;
+  }
+
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
   }
 }
 
 .section2_container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section4 {
-  flex-flow: ;
 }
 
 .section4 {
@@ -297,4 +421,9 @@
 
 .button_inschrijven {
   composes: App-button_primair from "../styles/App.css";
+}
+
+.backbutton {
+  composes: App-backbutton from "../styles/App.css";
+  margin-left: 2rem;
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Races.module.css";
 import { inject, observer, PropTypes } from "mobx-react";
-import NavbarDark from "../components/NavbarDark.jsx";
+import NavbarWhite from "../components/NavbarWhite.jsx";
+import Footer from "../components/Footer.jsx";
 import Race from "../components/Race.jsx";
 import { NavLink } from "react-router-dom";
 
@@ -13,11 +14,11 @@ const Races = ({ raceStore }) => {
   return (
     <div>
       <div className="App-background-header">
-        <NavbarDark />
+        <NavbarWhite />
         <p className={styles.h1}>Samen staan we sterk!</p>
-        <div className="App-input_container">
+        <div className={styles.search}>
           <input
-            className="App-input_search"
+            className={"App-input_search"}
             type="text"
             placeholder="Search..."
           />
@@ -26,13 +27,14 @@ const Races = ({ raceStore }) => {
           </button>
         </div>
       </div>
-      <div className={styles.race_container}>
+      <div className={styles.race_container}> 
       {
-        racelijst.map(race => (
-          <NavLink key={race.id} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
+        racelijst.map((race, index) => (
+          <NavLink key={index} race={race} className={styles.navlink} to={`/detail/${race.id}`}><Race key={race.id} race={race}/></NavLink> 
         ))
       }
       </div>
+      <Footer/>
     </div>
   );
 };

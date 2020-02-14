@@ -1,5 +1,3 @@
-
-
 body {
     background: #444;
     height: 100vh;
@@ -8,6 +6,9 @@ body {
   .container {
     height: 100vh;
   }
+
+
+  
 
   .section {
     height: 100vh;
@@ -45,8 +46,6 @@ body {
   left: 0%;
   z-index: 2;
   padding-left: 6rem;
-
-
 }
 
 .section4 {
@@ -60,11 +59,134 @@ body {
   height: 70rem;
 }
 
-.section5 {
+.mobileVersion {
+  display: none;
+}
 
+@media screen and (max-width: 1120px) {
+.containerComputer {
+  display: none;
+}
+
+.mobileVersion {
+  display: inline;
+}
+
+.titleMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../assets/images/home/headerMobile.png");
+  background-position: center;
+}
+
+.section2Mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  background-color: #FD75A7;
+}
+
+.bodyMobile {
+  composes: App-body from "../styles/App.css";
+  margin: 0rem 3rem ;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.h1 {
+  margin-left: 4rem;
+}
+
+.h1_watIs {
+  margin-left: 3rem;
+}
+
+.number {
+  margin-left: 2rem;
+}
+
+.video {
+  padding: 0rem;
+  width: 85%;
+  margin-right: 0rem;
+}
+
+.section3Mobile {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/home/rollen.png");
+  background-position: center;
+  height: 120rem;
+}
+
+.rolcontainer_title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.role_subcontainer {
+  margin-top: 15rem;
+  text-align: center;
+}
+
+
+.role_subcontainer2 {
+  margin-top: 33rem;
+  text-align: center;
+}
+
+.role_subcontainer3 {
+  margin-top: 31rem;
+  text-align: center;
+}
+
+
+.section5Mobile {
+  background-image: url("../assets/images/home/lopen.png");
+  background-size: cover;
+  height: 35rem;
+}
+
+
+.section4 {
+  height: 90rem;
+}
+
+.section4Mobile {
+  background-color: #FD75A7;
+  color: white;
+}
+
+.waaromlopen {
+  color: white;
+  padding: 2rem;
+  width: 100%;
+  font-size: 1.2rem;
+  
+}
+
+.challenges__title {
+  padding-top: 4rem;
+  padding-left: 0;
+  padding-top: 0;
+}
+}
+
+.section5 {
   z-index: 2;
-  margin-top: 6rem;
-  /* background-image: url('../assets/images/run.png'); */
+  margin-top: 7rem;
   background-repeat: no-repeat;
   height: 30rem;
   width: 100%;
@@ -76,7 +198,6 @@ body {
   margin-right: 8rem;
 }
 
-
 .role_container {
   width: 90vw;
   display: flex;
@@ -85,7 +206,6 @@ body {
   padding-top: 14rem;
   align-items: flex-start;
 }
-
 
 .challenges {
   width: 100%;
@@ -111,18 +231,45 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  margin-left: -3rem;
+}
+
+.container_challenge2 {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-left: -3rem;
+}
+.container_challenge3 {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-left: -3rem;
+}
+.container_challenge4 {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-left: -3rem;
 }
 
 .container_challenges {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area: 'container_challenge container_challenge container_challenge container_challenge';
-  /* display: flex;
-  padding: 3rem;
-  justify-content: space-between; */
+  grid-area: 'container_challenge container_challenge2 container_challenge3 container_challenge4';
   padding: 2rem 2rem 2rem 6rem;
   justify-content: center;
+  align-items: center;
 }
 
 .challenges__image {
@@ -133,6 +280,7 @@ body {
 .challenges__title {
   padding-left: 5rem;
   padding-top: 4rem;
+  margin-right: 2rem;
 }
 
 .h0_outlined {
@@ -151,13 +299,16 @@ body {
   composes: App-h1 from "../styles/App.css"
 }
 
+.h1_watIs {
+  composes: App-h1 from "../styles/App.css"
+}
 
 .h2 {
   composes: App-h2-home from "../styles/App.css"
 }
 
 .body {
-  composes: App-body from "../styles/App.css";
+  composes: App-body-white from "../styles/App.css";
   width: 20rem;
 }
 
@@ -165,138 +316,193 @@ body {
   padding: 2rem;
 }
 
-
 .primair_button {
   composes: App-button_primair from "../styles/App.css"
 }
 
-
-  .play_btn {
-    width: 100px;
-    height: 100px;
-    background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
-    border-radius: 50%;
-    position: relative;
-    display: block;
-    margin: 100px auto;
-    box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
-  }
+.play_btn {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
+}
   
   /* triangle */
-  .play_btn::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-40%) translateY(-50%);
-    transform: translateX(-40%) translateY(-50%);
-    transform-origin: center center;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 25px solid #fff;
-    z-index: 100;
-    -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+.play_btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  transform-origin: center center;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid #fff;
+  z-index: 100;
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
   
   /* pulse wave */
-  .play_btn:before {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation: pulsate1 2s;
-    animation: pulsate1 2s;
-    -webkit-animation-direction: forwards;
-    animation-direction: forwards;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: steps;
-    animation-timing-function: steps;
+ .play_btn:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, .75);
+  top: -30%;
+  left: -30%;
+  background: rgba(198, 16, 0, 0);
+}
+  
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
     opacity: 1;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, .75);
-    top: -30%;
-    left: -30%;
-    background: rgba(198, 16, 0, 0);
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;    
+  }
   }
   
-  @-webkit-keyframes pulsate1 {
-    0% {
-      -webkit-transform: scale(0.6);
-      transform: scale(0.6);
-      opacity: 1;
-      box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
-    }
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 0;
-      box-shadow: none;
-  
-    }
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
   }
-  
-  @keyframes pulsate1 {
-    0% {
-      -webkit-transform: scale(0.6);
-      transform: scale(0.6);
-      opacity: 1;
-      box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
-    }
-    100% {
-      -webkit-transform: scale(1, 1);
-      transform: scale(1);
-      opacity: 0;
-      box-shadow: none;
-  
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;  
     }
   }
 
-  .subcontainer_challenges {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-
-/* .role_subcontainer {
-  padding-right: 9rem;
-} */
+.subcontainer_challenges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 1170px) {
+
+  .challenges__titleMobile {
+    margin-left: -2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
   .container_challenges {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-area: '. container_challenge container_challenge .'
-    '. container_challenge container_challenge .';
+    grid-area: '. container_challenge container_challenge2 .'
+    '. container_challenge3 container_challenge4 .';
     grid-gap: 6rem;
   }
-}
 
+}
 
 @media screen and (max-width: 670px) {
-  .container_challenges {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-area: 'container_challenge'
-    'container_challenge'
-    'container_challenge'
-    'container_challenge';
-  }
-}
 
+  .challenges__titleMobile {
+      /* margin-left: -2rem; */
+      padding-top: 2rem;
+      /* padding-left: 1rem; */
+
+      display: flex;
+      justify-content:  center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .h1 {
+    margin: 0 auto;
+    padding-left: 0.8rem;
+    padding: 1rem;
+    margin-top: 2rem;
+
+  }
+
+
+  .h1_watIs {
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+
+
+  .number {
+    display: none;
+  }
+
+  .container_challenges {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 2rem 6rem;
+
+  }
+
+  .container_challenge {
+    margin-bottom: 4rem;
+
+  }
+
+  .lopenTekst {
+    composes: App-body from "../styles/App.css";
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 3;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
+    /* height: 5rem; */
+    /* width: 100%; */
+ 
+  }
+
+  .waaromlopen {
+    text-align: left;
+  }
+
+
+}
 
 .homeSupporter_container {
   padding-right: 3rem;
 }
 
-
 .waaromlopen {
-  width: 30rem;
-  composes: App-body from "../styles/App.css"
+  width: 80%;
+  composes: App-body-white from "../styles/App.css"
 }

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import styles from "./Detail.module.css";
 import NavbarWhite from "../components/NavbarWhite.jsx";
+import Footer from "../components/Footer.jsx";
 import { inject, observer, PropTypes } from "mobx-react";
 
 import { ROUTES } from "../constants";
 import { NavLink } from "react-router-dom";
-
 
 import TeamCard from "../components/TeamCard.jsx";
 
@@ -16,10 +16,7 @@ class Detail extends Component {
 
   render() {
     const myRace = this.props.raceStore.findById(this.props.id);
-    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst
-
-    console.log(mysubscriptionLijst);
-    //console.log(`RACE ID: ${myRace.city}`);
+    const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst;
 
     if (!myRace) {
       return <p>loading...</p>;
@@ -29,7 +26,7 @@ class Detail extends Component {
       <div>
         <NavbarWhite />
         <div className={styles.detail_container}>
-          <NavLink className="App-backbutton" to={ROUTES.races}>
+          <NavLink className={styles.backbutton} to={ROUTES.races}>
             &#8592; Terug naar raceoverzicht
           </NavLink>
           <section className={styles.detail_container_info}>
@@ -87,6 +84,7 @@ class Detail extends Component {
                 }
                 alt="image city"
               />
+              <div className={styles.counter_gigacontainer}>
               <div className={styles.counter_container}>
                 <div className={styles.days_container}>
                   <div className={styles.days_number}>04</div>
@@ -101,22 +99,21 @@ class Detail extends Component {
                   <div className={styles.days}>minuten</div>
                 </div>
               </div>
-            </div>
+              </div>
+              </div>
           </section>
 
           <section className={styles.container_program}>
             <div className={styles.container_map}>
-              <img
-                className={styles.map}
-                src="../assets/images/maps/map.png"
-                alt="map"
-              />
+              <iframe className={styles.map_map} src={myRace.map} height="480"></iframe>
+
               <button className="App-backbutton">Send to maps</button>
             </div>
             <div className={styles.program_section}>
-              <p className="App-h1-number-primaircolor">01</p>
-              <h2 className="App-h1-primaircolor">Programma</h2>
-              <table>
+              <div></div>
+              <p className={styles.number}>01</p>
+              <h2 className={styles.programma}>Programma</h2>
+              <table className={styles.tableContainer}>
                 <div>
                   <tr className={styles.program_tr}>
                     <td className={styles.program_time}>9u</td>
@@ -170,8 +167,8 @@ class Detail extends Component {
 
           <section className={styles.section2} id="inschrijven">
             <div className={styles.section2_container_title}>
-              <p className="App-h1-number-primaircolor">02</p>
-              <h2 className="App-h1-primaircolor">Loop voor...</h2>
+              <p className={styles.number}>02</p>
+              <h2 className={styles.programma}>Loop voor...</h2>
               <p className={styles.info_lotgenoot}>
                 Om je in te schrijven, dien je een team te kiezen om te steunen.
                 Tijdens het evenement kan je op je eigen tempo lopen. Dit
@@ -191,13 +188,7 @@ class Detail extends Component {
             </div>
 
             <div className={styles.section2_container}>
-              
-              {mysubscriptionLijst.map(sLotgenoot => (
-                <TeamCard key={sLotgenoot.id} sLotgenoot={sLotgenoot}/>
-              ))
-              }
-
-              <div className={styles.cardSurvivor}>
+            <div className={styles.cardSurvivor}>
                 <p className={styles.card_text2}>
                   Nieuwe lotgenoot of Team Captain inschrijven?
                 </p>
@@ -208,15 +199,23 @@ class Detail extends Component {
                   Maak een team
                 </NavLink>
               </div>
+              {mysubscriptionLijst.map((sLotgenoot, index) =>
+                myRace.country === sLotgenoot.country ? (
+                  <TeamCard key={index} sLotgenoot={sLotgenoot} />
+                ) : (
+                  <></>
+                )
+              )}
             </div>
           </section>
 
           <section className={styles.section34container}>
             <div className={styles.section3}>
               <div className={styles.section3_container_title}>
-                <p className="App-h1-number-primaircolor">03</p>
-                <h2 className="App-h1-primaircolor">Sponsors</h2>
+                <p className={styles.number}>03</p>
+                <h2 className={styles.programma}>Sponsors</h2>
               </div>
+              <div className={styles.container_container_sponsor}>
               <img
                 className={styles.sponsorlogo}
                 src="../assets/images/sponsors/skoda.png"
@@ -231,13 +230,14 @@ class Detail extends Component {
                 className={styles.sponsorlogo}
                 src="../assets/images/sponsors/freemasons.png"
                 alt="freemasons"
-              />
+                />
+              </div>
             </div>
 
             <div className={styles.section4}>
               <div className={styles.section4_container_title}>
-                <p className="App-h1-number-primaircolor">04</p>
-                <h2 className="App-h1-primaircolor">Vorige editie</h2>
+                <p className={styles.number}>04</p>
+                <h2 className={styles.programma}>Vorige editie</h2>
               </div>
               <iframe
                 src="https://www.youtube.com/embed/_Ta1huWC9i8"
@@ -249,6 +249,7 @@ class Detail extends Component {
             </div>
           </section>
         </div>
+        <Footer />
       </div>
     );
   }

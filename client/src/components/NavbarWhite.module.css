@@ -1,55 +1,268 @@
 .nav_link__text {
-    color: black;
-    font-size: 1rem;
-    margin: 2rem;
-    text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
 }
 
+.nav_link_text_race {
+  color: black;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__text:hover {
+  color: var(--pink-primair);
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
 
 .nav_link__active {
-    font-family: 'poppinsbold';
-    color: #EE77A0;
+  font-family: "poppinsbold";
+  color: #ee77a0;
 }
-
 
 .nav_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
 }
 
-
-.nav_link__dropdown{
-    background-color: transparent;
-    color: black;
-    border: none;
-    font-size: 1rem;
-    margin-left: 0.7rem;
-    margin-right: 1rem;
-    height: 2rem;
+.nav_link__dropdown {
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  margin-left: 0.7rem;
+  margin-right: 1rem;
+  height: 2rem;
+  font-family: "poppinsbold";
 }
 
 .nav_link__dropdown:focus {
-    outline: none;
+  outline: none;
 }
 
 .language_flag {
-    width: 1.2rem;
-    margin-left: 3rem;
-    margin-bottom: -0.3rem;
+  width: 1.2rem;
+  margin-left: 3rem;
+  margin-bottom: -0.3rem;
 }
-
 
 .personIcon {
-    margin-bottom: -0.1rem;
-    margin-right: 0.5rem;
+  margin-bottom: -0.1rem;
+  margin-right: 0.5rem;
 }
 
-
 .personFoto {
-    margin-bottom: -0.6rem;
-    margin-right: 0.5rem;
-    width: 2rem;
-    height: 2rem;
+  margin-bottom: -0.6rem;
+  margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* DARK */
+
+.nav_link__text_mobile {
+  display: none;
+  color: black;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__text_mobile:hover {
+  color: var(--pink-primair);
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark_mobile {
+  display: none;
+  color: white;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark_login {
+  color: white;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark_login:hover {
+  color: var(--pink-primair);
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark_mobile:hover {
+  color: var(--pink-primair);
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+@media screen and (max-width: 700px) {
+  .nav_link__textDark_mobile {
+    display: inline;
+  }
+
+  .nav_link__textDark {
+    display: none;
+  }
+
+  .logoHome {
+    display: none;
+  }
+
+  .nav_link__dropdownDark {
+    display: none;
+  }
+
+  .nav_link__text_mobile {
+    display: inline;
+  }
+
+  .nav_link__dropdown {
+    display: none;
+  }
+
+  .nav_link_text_race {
+    display: none;
+  }
+}
+
+.nav_link__textDark {
+  color: white;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark:hover {
+  color: var(--pink-primair);
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark_logout {
+  background-color: var(--pink-primair);
+  color: white;
+  font-size: 1rem;
+  margin: 2rem;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  font-family: "poppinsbold";
+}
+
+.nav_link__textDark_logout:hover {
+  background-color: var(--pink-primair-focus);
+}
+
+.nav_link__dropdownDark {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  margin-left: 0.7rem;
+  margin-right: 1rem;
+  height: 2rem;
+  font-family: "poppinsbold";
+}
+
+.nav_link__dropdownDark:focus {
+  outline: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+/* nav a:hover { 
+	background-color: red; 
+} */
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 42px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+.arrowdown {
+  font-size: 0.7rem;
+}
+
+.containerNavbaaar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 7px;
+  }
+
+  .nav_container {
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 5%;
+    transform: translate(-5%, -50%);
+  }
+
+  .containerNavbaaar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.logoutIcon {
+  width: 1rem;
+  padding-right: 0.5rem;
+  margin-bottom: -0.1rem;
 }

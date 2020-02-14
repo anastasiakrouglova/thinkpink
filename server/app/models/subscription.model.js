@@ -3,15 +3,14 @@ const mongoose = require("mongoose");
 const SubscriptionSchema = mongoose.Schema({
   role: String,
   teamName: String,
-  // surname: String,
-  // month: String,
-  // date: Number,
-  // year: Number,
-  // startLocation: String,
-  // startTime: String,
-  // description: String,
-  // sponsors: Object,
-  // image: String
+  description: String,
+  teamCaptain: String,
+  teamSong: String,
+  dessert: String,
+  supporter: String,
+  country: String,
+  typeRace: String,
+  photo: String
 });
 
 module.exports = mongoose.model("Subscription", SubscriptionSchema);

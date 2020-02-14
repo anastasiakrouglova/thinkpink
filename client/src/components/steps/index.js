@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import Footer from "../../components/Footer.jsx";
 
 const getNavStyles = (indx, length) => {
   let styles = []
@@ -93,7 +94,8 @@ export default function MultiStep(props) {
           >
             Volgende &rarr;
           </button>
-        </div>
+      </div>
+      <Footer/>
       </div>
   )
 }

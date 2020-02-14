@@ -21,15 +21,14 @@ class TeamCard extends Component {
               <div className={styles.card}>
                 <img
                   className={styles.profile_detail}
-                  src="../assets/images/people/rita.png"
-                  width="100"
+                  src={"../assets/images/people/" + sLotgenoot.photo + ".png"}
                   alt="profile picture"
                 />
                 <p className={styles.card_text}>#{sLotgenoot.teamName}</p>
                 <div>
                   <NavLink
                     className={styles.button_secundair_outlined}
-                    to={ROUTES.info}
+                    to={`/info/${sLotgenoot.id}`}
                   >
                     info
                   </NavLink>
@@ -42,7 +41,6 @@ class TeamCard extends Component {
                 </div>
               </div>
             </>
-      
           ) : (
           <>
           </>

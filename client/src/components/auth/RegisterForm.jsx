@@ -3,6 +3,7 @@ import { inject } from "mobx-react";
 import { withRouter } from "react-router-dom";
 import { ROUTES } from "../../constants/index";
 import styles from "./LoginForm.module.css";
+import { Link } from "react-router-dom";
 //import stylesForm from "../../styles/form.module.css";
 
 class RegisterForm extends Component {
@@ -117,7 +118,7 @@ class RegisterForm extends Component {
 
           <label htmlFor="phoneNumber" className={styles.label}>
             Gsm nummer
-            <div className={styles.name_container}>
+            <div className={styles.gsm_container}>
               <select className={styles.selectCountry} value={country} onChange={this.handleChange} name="country" id="country">
                     <option value="empty" >--select country--</option>
                     <option value="Belgium" >🇧🇪(+32)</option>
@@ -140,7 +141,7 @@ class RegisterForm extends Component {
 
 
           <div className="App-form-input-container">
-            <label htmlFor="tShirtSize" className={styles.label}>
+            <label htmlFor="tShirtSize" className={styles.label_Tshirt}>
               T-shirt maat
             </label>
             <div>
@@ -239,13 +240,12 @@ class RegisterForm extends Component {
             />
             )
           }
-          <input
-            //className={styles.submit}
-            ref={submitfield}
-            type="submit"
-            value="Register"
-            disabled={pwd && pwd !== pwd2}
-          />
+          <p className={styles.signupContainer_register}>
+            Heb je al een account?&nbsp;&nbsp;
+            <Link className={styles.signup} to={ROUTES.login}>
+            Log in!
+            </Link>
+          </p>
         </form>
       </>
     );
