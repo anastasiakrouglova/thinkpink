@@ -6,7 +6,7 @@ import { ROUTES } from "../constants";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import { inject, observer, PropTypes } from "mobx-react";
-import TextField from '@material-ui/core/TextField';
+import TextField from "@material-ui/core/TextField";
 import Footer from "../components/Footer.jsx";
 
 import SupporterCard from "../components/SupporterCard.jsx";
@@ -14,11 +14,11 @@ import SupporterCard from "../components/SupporterCard.jsx";
 class Info extends Component {
   constructor(props) {
     super(props);
-    this.state = {edit: true}
+    this.state = { edit: true };
   }
 
-  setEditMode = value => this.setState({ edit: value })
-  
+  setEditMode = value => this.setState({ edit: value });
+
   render() {
     const myLotgenoot = this.props.subscriptionStore.findById(this.props.id);
     const mysubscriptionLijst = this.props.subscriptionStore.subscriptionlijst;
@@ -26,11 +26,10 @@ class Info extends Component {
     if (!myLotgenoot) {
       return <p>loading...</p>;
     }
-    
-    
+
     const { edit } = this.state;
     const { sLotgenoot, onUpdate } = this.props;
-    
+
     return (
       <div className={styles.uppercontainer}>
         <NavbarWhite />
@@ -40,7 +39,7 @@ class Info extends Component {
               Races
             </NavLink>
             &nbsp;/&nbsp;
-            <NavLink className="App-backbutton_back" to={ROUTES.detail}>
+            <NavLink className="App-backbutton_back" to={ROUTES.races}>
               Antwerpen (België)
             </NavLink>
             &nbsp;/&nbsp;
@@ -48,20 +47,24 @@ class Info extends Component {
               #team{myLotgenoot.teamName}
             </NavLink>
           </div>
-          
-          { edit ? (
-              <div className={styles.containerGlobal}>
+
+          {edit ? (
+            <div className={styles.containerGlobal}>
               <section className={styles.card_container}>
                 <div className={styles.fotocontainer}>
                   <img
                     className={styles.profilepictureRita}
-                    src={"../assets/images/people/" + myLotgenoot.photo + ".png"}
+                    src={
+                      "../assets/images/people/" + myLotgenoot.photo + ".png"
+                    }
                     alt="profile picture"
                   />
                 </div>
                 <div>
                   <div>
-                    <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p>
+                    <p className={styles.hashtag}>
+                      #Team{myLotgenoot.teamName}
+                    </p>
                     <p className={styles.text_person}>
                       {myLotgenoot.description}
                     </p>
@@ -78,7 +81,7 @@ class Info extends Component {
                     </NavLink>
                   </div>
                 </div>
-  
+
                 <div>
                   <div className={styles.info_person_container}>
                     <img
@@ -88,7 +91,9 @@ class Info extends Component {
                     />
                     <div>
                       <p className="App-body-bold">Teamcaptain/lotgenoot</p>
-                      <p className={styles.info_musicname}>{myLotgenoot.teamCaptain}</p>
+                      <p className={styles.info_musicname}>
+                        {myLotgenoot.teamCaptain}
+                      </p>
                     </div>
                   </div>
                   <div className={styles.info_person_container}>
@@ -100,8 +105,8 @@ class Info extends Component {
                     <div>
                       <p className="App-body-bold">Groepslied</p>
                       <p className={styles.info_musicname}>
-                      {myLotgenoot.teamSong}
-                    </p>
+                        {myLotgenoot.teamSong}
+                      </p>
                     </div>
                   </div>
                   <div className={styles.info_person_container}>
@@ -113,45 +118,61 @@ class Info extends Component {
                     <div>
                       <p className="App-body-bold">Bakken / Dessert</p>
                       <p className={styles.info_musicname}>
-                      {myLotgenoot.dessert}
-                    </p>
+                        {myLotgenoot.dessert}
+                      </p>
                     </div>
                   </div>
                 </div>
               </section>
               <div className={styles.buttonContainer_bewerken}>
-              <button className="App-bewerkAccount" onClick={() => this.setState({ edit: false })}>Bewerk account</button>
+                <button
+                  className="App-bewerkAccount"
+                  onClick={() => this.setState({ edit: false })}
+                >
+                  Bewerk account
+                </button>
               </div>
             </div>
-            ) : (
-              <div className={styles.containerGlobal}>
+          ) : (
+            <div className={styles.containerGlobal}>
               <section className={styles.card_container}>
                 <div className={styles.fotocontainer}>
                   <img
                     className={styles.profilepictureRita}
-                    src={"../assets/images/people/" + myLotgenoot.photo + ".png"}
+                    src={
+                      "../assets/images/people/" + myLotgenoot.photo + ".png"
+                    }
                     alt="profile picture"
                   />
                 </div>
                 <div>
                   <div className={styles.hashtag_textfield}>
-                    <TextField fullWidth value={myLotgenoot.teamName}  id="outlined-basic" label="teamName" variant="outlined" onChange={e => myLotgenoot.setTeamName(e.target.value)} />  
-                    {/* <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p> */}
-                   <div className={styles.textfieldBig_container}>
-                    <TextField 
-                    id="outlined-multiline-static"
-                    label="Vertel over jezelf"
-                    multiline
-                    rows="4"
-                    defaultValue={myLotgenoot.description}
-                    variant="outlined"
-                    fullWidth
-                    onChange={e => myLotgenoot.setDescription(e.target.value)}
+                    <TextField
+                      fullWidth
+                      value={myLotgenoot.teamName}
+                      id="outlined-basic"
+                      label="teamName"
+                      variant="outlined"
+                      onChange={e => myLotgenoot.setTeamName(e.target.value)}
                     />
-                   </div>
+                    {/* <p className={styles.hashtag}>#Team{myLotgenoot.teamName}</p> */}
+                    <div className={styles.textfieldBig_container}>
+                      <TextField
+                        id="outlined-multiline-static"
+                        label="Vertel over jezelf"
+                        multiline
+                        rows="4"
+                        defaultValue={myLotgenoot.description}
+                        variant="outlined"
+                        fullWidth
+                        onChange={e =>
+                          myLotgenoot.setDescription(e.target.value)
+                        }
+                      />
+                    </div>
                   </div>
                 </div>
-  
+
                 <div>
                   <div className={styles.info_person_container}>
                     <img
@@ -160,7 +181,16 @@ class Info extends Component {
                       alt="crown icon"
                     />
                     <div>
-                        <TextField fullWidth value={myLotgenoot.teamCaptain}  id="outlined-basic" label="teamCaptain/lotgenoot" variant="outlined" onChange={e => myLotgenoot.setTeamCamptain(e.target.value)} /> 
+                      <TextField
+                        fullWidth
+                        value={myLotgenoot.teamCaptain}
+                        id="outlined-basic"
+                        label="teamCaptain/lotgenoot"
+                        variant="outlined"
+                        onChange={e =>
+                          myLotgenoot.setTeamCamptain(e.target.value)
+                        }
+                      />
                     </div>
                   </div>
                   <div className={styles.info_person_container}>
@@ -170,7 +200,14 @@ class Info extends Component {
                       alt="song"
                     />
                     <div>
-                    <TextField fullWidth value={myLotgenoot.teamSong}  id="outlined-basic" label="teamCaptain/lotgenoot" variant="outlined" onChange={e => myLotgenoot.setTeamSong(e.target.value)} /> 
+                      <TextField
+                        fullWidth
+                        value={myLotgenoot.teamSong}
+                        id="outlined-basic"
+                        label="teamCaptain/lotgenoot"
+                        variant="outlined"
+                        onChange={e => myLotgenoot.setTeamSong(e.target.value)}
+                      />
                     </div>
                   </div>
                   <div className={styles.info_person_container}>
@@ -180,21 +217,29 @@ class Info extends Component {
                       alt="dessert"
                     />
                     <div>
-                    <TextField fullWidth value={myLotgenoot.dessert}  id="outlined-basic" label="teamCaptain/lotgenoot" variant="outlined" onChange={e => myLotgenoot.setDessert(e.target.value)} /> 
+                      <TextField
+                        fullWidth
+                        value={myLotgenoot.dessert}
+                        id="outlined-basic"
+                        label="teamCaptain/lotgenoot"
+                        variant="outlined"
+                        onChange={e => myLotgenoot.setDessert(e.target.value)}
+                      />
                     </div>
                   </div>
                 </div>
-                </section>
-                <div className={styles.buttonContainer_bewerken}>
-                <button className="App-bewerkAccount" onClick={() => this.setState({ edit: true })}>Opslaan</button>
-                </div>
+              </section>
+              <div className={styles.buttonContainer_bewerken}>
+                <button
+                  className="App-bewerkAccount"
+                  onClick={() => this.setState({ edit: true })}
+                >
+                  Opslaan
+                </button>
+              </div>
               {/* <button className={styles.save} onClick={() => { onUpdate(sLotgenoot); this.setEditMode(false); }}>save</button>           */}
-               </div> 
-            )
-          }
-
-          
-
+            </div>
+          )}
 
           <section className={styles.section2}>
             <p className="App-h1-number-primaircolor">01</p>
@@ -203,15 +248,13 @@ class Info extends Component {
             </h2>
             <p className={styles.subtitle}>(38 supporters, 124 km samen)</p>
             <div className={styles.supporterContainer}>
-            {mysubscriptionLijst.map((sSupporter, index) => (
-              (myLotgenoot.teamName === sSupporter.teamName) ? (
-                <SupporterCard key={index} sSupporter={sSupporter}/>
-              ) : (
-                  <>
-                    </>
-              )
-              ))
-              }
+              {mysubscriptionLijst.map((sSupporter, index) =>
+                myLotgenoot.teamName === sSupporter.teamName ? (
+                  <SupporterCard key={index} sSupporter={sSupporter} />
+                ) : (
+                  <></>
+                )
+              )}
             </div>
           </section>
 
@@ -365,7 +408,7 @@ class Info extends Component {
             </div>
           </section>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
